@@ -447,8 +447,10 @@
     }
     .cert-badge-img {
       width: 72px; height: 72px; flex-shrink: 0;
-      border-radius: 50%;
-      box-shadow: 0 4px 16px rgba(0,0,0,.25);
+      object-fit: contain;
+    }
+    .cert-badge-img--wide {
+      width: auto; max-width: 110px; height: 48px;
     }
     .cert-card-title { min-width: 0; }
     .cert-card h3 {
@@ -914,7 +916,7 @@
       <div class="certs-grid">
         <article class="cert-card">
           <div class="cert-card-header">
-            <img src="assets/cissp-badge.svg" alt="ISC² CISSP Certified" class="cert-badge-img" width="72" height="72" loading="lazy">
+            <img src="isc2-logo.png" alt="ISC² CISSP Certified" class="cert-badge-img" width="72" height="72" loading="lazy">
             <div class="cert-card-title">
               <h3>CISSP</h3>
               <div class="cert-full-name">Certified Information Systems Security Professional</div>
@@ -933,7 +935,7 @@
         </article>
         <article class="cert-card">
           <div class="cert-card-header">
-            <img src="assets/itil-badge.svg" alt="ITIL Certified" class="cert-badge-img" width="72" height="72" loading="lazy">
+            <img src="itil-logo.webp" alt="ITIL Certified" class="cert-badge-img cert-badge-img--wide" width="110" height="48" loading="lazy">
             <div class="cert-card-title">
               <h3>ITIL</h3>
               <div class="cert-full-name">Information Technology Infrastructure Library</div>
