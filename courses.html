@@ -1,0 +1,971 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Courses | AI, Networking &amp; Security | AlerоSec</title>
+  <meta name="description" content="Expert-led courses in AI & Security, Networking, and Cybersecurity from AlerоSec — over a decade of real-world experience distilled into structured learning tracks with video lessons and in-depth blog articles.">
+  <meta name="keywords" content="cybersecurity courses, AI security training, networking courses, NIST CSF training, GDPR training, security certification, AlerоSec">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Courses | AI, Networking &amp; Security | AlerоSec">
+  <meta property="og:description" content="Expert-led courses in AI, Networking, and Cybersecurity — built by CISSP & ITIL certified practitioners with 10+ years of experience.">
+  <meta property="og:image" content="https://placehold.co/1200x630/060f1e/00c8ff?text=AlerоSec+Courses">
+  <meta property="og:url" content="https://alerosec.com/courses.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Courses | AI, Networking &amp; Security | AlerоSec">
+  <meta name="twitter:description" content="Expert-led courses in AI, Networking, and Cybersecurity — 10+ years of real-world expertise.">
+  <meta name="twitter:image" content="https://placehold.co/1200x630/060f1e/00c8ff?text=AlerоSec+Courses">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a1628'/%3E%3Cpath d='M50 8 L82 24 L82 54 C82 72 67 87 50 93 C33 87 18 72 18 54 L18 24 Z' fill='none' stroke='%2300c8ff' stroke-width='5'/%3E%3Ccircle cx='50' cy='50' r='5' fill='%2300c8ff'/%3E%3Cline x1='50' y1='45' x2='35' y2='35' stroke='%2300c8ff' stroke-width='2.5'/%3E%3Cline x1='50' y1='45' x2='65' y2='35' stroke='%23fff' stroke-width='2.5'/%3E%3Cline x1='50' y1='55' x2='50' y2='68' stroke='%2300c8ff' stroke-width='2.5'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Inter + Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "AlerоSec Courses",
+    "description": "Expert-led courses in AI Security, Networking, and Cybersecurity by CISSP and ITIL certified practitioners.",
+    "url": "https://alerosec.com/courses.html",
+    "provider": { "@type": "Organization", "name": "AlerоSec" }
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+      --ai-color: #a855f7;
+      --ai-dim: rgba(168,85,247,.15);
+      --net-color: #22d3ee;
+      --net-dim: rgba(34,211,238,.12);
+      --sec-color: #00c8ff;
+      --sec-dim: rgba(0,200,255,.12);
+    }
+
+    /* DARK THEME */
+    [data-theme="dark"] {
+      --bg: #060f1e;
+      --bg-2: #0a1628;
+      --bg-3: #0d1f3c;
+      --bg-card: rgba(255,255,255,.02);
+      --border: rgba(0,200,255,.12);
+      --border-strong: rgba(0,200,255,.4);
+      --text-primary: #ffffff;
+      --text-secondary: #cdd5e0;
+      --text-muted: #7a8fa6;
+      --text-faint: #2a3a52;
+      --cyan: #00c8ff;
+      --cyan-dim: rgba(0,200,255,.15);
+      --cyan-glow: rgba(0,200,255,.35);
+      --header-bg: rgba(6,15,30,.92);
+      --header-border: rgba(0,200,255,.2);
+      --hero-bg: #0a1628;
+      --cta-bg: linear-gradient(135deg, #0d1f3c, #112244);
+      --shadow-card: 0 12px 32px rgba(0,200,255,.1);
+    }
+
+    /* LIGHT THEME */
+    [data-theme="light"] {
+      --bg: #f0f4f8;
+      --bg-2: #ffffff;
+      --bg-3: #e8eef5;
+      --bg-card: #ffffff;
+      --border: rgba(0,120,180,.15);
+      --border-strong: rgba(0,120,180,.5);
+      --text-primary: #0a1628;
+      --text-secondary: #1e3a5f;
+      --text-muted: #4a6080;
+      --text-faint: #b0c0d4;
+      --cyan: #006fa8;
+      --cyan-dim: rgba(0,111,168,.12);
+      --cyan-glow: rgba(0,111,168,.3);
+      --header-bg: rgba(240,244,248,.95);
+      --header-border: rgba(0,120,180,.2);
+      --hero-bg: #ffffff;
+      --cta-bg: linear-gradient(135deg, #dce6f0, #e8eef5);
+      --shadow-card: 0 8px 24px rgba(0,100,160,.12);
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--bg); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; transition: background .3s, color .3s; }
+
+    /* THEME TOGGLE */
+    .theme-toggle {
+      display: flex; align-items: center; justify-content: center;
+      width: 38px; height: 38px;
+      background: var(--cyan-dim);
+      border: 1px solid var(--border-strong);
+      border-radius: 8px; cursor: pointer;
+      font-size: 1.1rem;
+      transition: background .2s, transform .2s;
+      flex-shrink: 0; margin-left: .5rem;
+    }
+    .theme-toggle:hover { transform: rotate(15deg) scale(1.1); }
+
+    /* HEADER */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--header-bg);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--header-border);
+      transition: background .3s, border-color .3s;
+    }
+    .header-inner {
+      max-width: 1160px; margin: 0 auto;
+      padding: 0 2rem;
+      display: flex; align-items: center;
+      justify-content: space-between;
+      height: 70px; gap: 1rem;
+    }
+    .logo { display: flex; align-items: center; gap: .75rem; text-decoration: none; flex-shrink: 0; }
+    .logo-svg { height: 44px; width: auto; filter: drop-shadow(0 0 8px var(--cyan-glow)); }
+    [data-theme="light"] .logo-subtext { fill: #4a6080 !important; }
+    nav { display: flex; align-items: center; gap: .1rem; }
+    nav a { color: var(--text-muted); text-decoration: none; font-size: .85rem; font-weight: 600; padding: .45rem .9rem; border-radius: 6px; transition: color .15s, background .15s; white-space: nowrap; }
+    nav a:hover { color: var(--cyan); background: var(--cyan-dim); }
+    nav a.active { color: var(--cyan); background: var(--cyan-dim); font-weight: 700; }
+    .nav-cta { background: var(--cyan) !important; color: #fff !important; font-weight: 800 !important; margin-left: .5rem; border-radius: 6px !important; }
+    [data-theme="dark"] .nav-cta { color: #060f1e !important; }
+    .nav-cta:hover { opacity: .88 !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: .5rem; background: none; border: none; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--text-primary); border-radius: 2px; transition: all .3s; }
+    .nav-open .hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-open .hamburger span:nth-child(2) { opacity: 0; }
+    .nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* PAGE HERO */
+    .page-hero {
+      background: var(--hero-bg);
+      padding: 5rem 2rem 4rem;
+      position: relative; overflow: hidden;
+      border-bottom: 1px solid var(--border);
+      transition: background .3s;
+    }
+    .page-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 70% at 70% 50%, rgba(168,85,247,.06) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 50% at 20% 60%, rgba(0,200,255,.07) 0%, transparent 55%);
+      pointer-events: none;
+    }
+    .page-hero::after {
+      content: ''; position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(0,200,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,200,255,.03) 1px, transparent 1px);
+      background-size: 60px 60px; pointer-events: none;
+    }
+    .page-hero-inner { max-width: 1160px; margin: 0 auto; position: relative; z-index: 1; }
+    .breadcrumb { display: flex; align-items: center; gap: .5rem; margin-bottom: 1.5rem; }
+    .breadcrumb a { color: var(--text-muted); text-decoration: none; font-size: .8rem; font-weight: 600; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--cyan); }
+    .breadcrumb span { color: var(--text-faint); font-size: .8rem; }
+    .page-eyebrow { display: inline-flex; align-items: center; gap: .5rem; background: var(--cyan-dim); border: 1px solid rgba(0,200,255,.3); color: var(--cyan); font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: .35rem .9rem; border-radius: 20px; margin-bottom: 1.25rem; }
+    .page-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 700; letter-spacing: -.03em; line-height: 1.1; margin-bottom: 1rem; color: var(--text-primary);
+    }
+    .page-hero h1 span { background: linear-gradient(135deg, var(--cyan), #0080ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .page-hero-desc { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.75; max-width: 620px; margin-bottom: 2rem; }
+    .track-pills { display: flex; gap: .75rem; flex-wrap: wrap; }
+    .track-pill { display: inline-flex; align-items: center; gap: .5rem; border-radius: 20px; padding: .4rem 1rem; font-size: .8rem; font-weight: 700; border: 1px solid; text-decoration: none; transition: transform .15s, box-shadow .15s; }
+    .track-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,.2); }
+    .track-pill.ai { color: var(--ai-color); border-color: rgba(168,85,247,.4); background: var(--ai-dim); }
+    .track-pill.net { color: var(--net-color); border-color: rgba(34,211,238,.35); background: var(--net-dim); }
+    .track-pill.sec { color: var(--sec-color); border-color: rgba(0,200,255,.35); background: var(--sec-dim); }
+
+    /* LAYOUT */
+    .page-body { max-width: 1160px; margin: 0 auto; padding: 3rem 2rem; display: grid; grid-template-columns: 240px 1fr; gap: 3rem; align-items: start; }
+    .sidebar { position: sticky; top: 90px; }
+    .sidebar-section { margin-bottom: 2rem; }
+    .sidebar-label { font-family: var(--font-display); font-size: .65rem; font-weight: 700; text-transform: uppercase; letter-spacing: .2em; color: var(--cyan); margin-bottom: .75rem; }
+    .sidebar-nav { list-style: none; padding: 0; }
+    .sidebar-nav li a { display: flex; align-items: center; gap: .6rem; padding: .55rem .75rem; border-radius: 6px; color: var(--text-muted); text-decoration: none; font-size: .85rem; font-weight: 500; transition: color .15s, background .15s; }
+    .sidebar-nav li a:hover { color: var(--text-primary); background: rgba(0,200,255,.06); }
+    .sidebar-nav li a.active { color: var(--cyan); background: var(--cyan-dim); font-weight: 700; }
+    .sidebar-nav li a .nav-icon { font-size: 1rem; flex-shrink: 0; }
+    .sidebar-divider { height: 1px; background: var(--border); margin: 1.25rem 0; }
+    .sidebar-back { display: flex; align-items: center; gap: .5rem; color: var(--text-muted); text-decoration: none; font-size: .8rem; font-weight: 600; padding: .5rem .75rem; border-radius: 6px; transition: color .15s; }
+    .sidebar-back:hover { color: var(--cyan); }
+
+    /* SHARED CONTENT */
+    .section-tag { display: inline-block; font-size: .7rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; color: var(--cyan); background: var(--cyan-dim); border: 1px solid rgba(0,200,255,.25); padding: .3rem .85rem; border-radius: 20px; margin-bottom: 1.25rem; }
+    .section-title { font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; letter-spacing: -.025em; line-height: 1.1; margin-bottom: .75rem; color: var(--text-primary); }
+    .section-sub { font-size: .95rem; color: var(--text-muted); max-width: 660px; margin-bottom: 2.5rem; line-height: 1.7; }
+
+    /* TRACK HEADER */
+    .track-header { margin-bottom: 2.5rem; padding: 2.5rem; border-radius: 16px; position: relative; overflow: hidden; }
+    .track-header.ai { background: linear-gradient(135deg, rgba(168,85,247,.12), rgba(168,85,247,.04)); border: 1px solid rgba(168,85,247,.3); }
+    .track-header.net { background: linear-gradient(135deg, rgba(34,211,238,.1), rgba(34,211,238,.03)); border: 1px solid rgba(34,211,238,.25); }
+    .track-header.sec { background: linear-gradient(135deg, rgba(0,200,255,.1), rgba(0,200,255,.03)); border: 1px solid rgba(0,200,255,.25); }
+    .track-header-inner { display: flex; align-items: center; gap: 1.5rem; }
+    .track-big-icon { font-size: 3rem; flex-shrink: 0; }
+    .track-title-block h2 { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; letter-spacing: -.02em; margin-bottom: .35rem; }
+    .track-title-block h2.ai { color: var(--ai-color); }
+    .track-title-block h2.net { color: var(--net-color); }
+    .track-title-block h2.sec { color: var(--sec-color); }
+    .track-title-block p { font-size: .9rem; color: var(--text-muted); max-width: 520px; }
+    .track-meta { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
+    .track-meta-item { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--text-muted); display: flex; align-items: center; gap: .3rem; }
+    .track-meta-item span { color: var(--text-primary); }
+
+    .track-section { margin-bottom: 5rem; }
+
+    /* SUBSECTION LABELS */
+    .subsection-label { font-size: .7rem; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; display: flex; align-items: center; gap: .6rem; }
+    .subsection-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    /* ── YOUTUBE VIDEO EMBEDS ── */
+    .videos-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+
+    .video-embed-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color .2s, transform .2s, box-shadow .2s;
+      display: flex; flex-direction: column;
+    }
+    .video-embed-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-card); }
+    .video-embed-card.ai:hover { border-color: rgba(168,85,247,.5); }
+    .video-embed-card.net:hover { border-color: rgba(34,211,238,.45); }
+    .video-embed-card.sec:hover { border-color: rgba(0,200,255,.45); }
+
+    /* YouTube iframe wrapper — always 16:9 */
+    .yt-wrap {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 */
+      background: #000;
+    }
+    .yt-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Placeholder shown when no real video ID is set */
+    .yt-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: .75rem;
+      background: linear-gradient(135deg, rgba(20,30,50,.9), rgba(10,20,40,.95));
+      cursor: pointer;
+    }
+    .yt-placeholder .play-circle {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: rgba(255,255,255,.15);
+      border: 2px solid rgba(255,255,255,.4);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      transition: background .2s, transform .2s;
+    }
+    .yt-placeholder:hover .play-circle { background: rgba(255,0,0,.8); transform: scale(1.1); }
+    .yt-placeholder .yt-label { font-size: .75rem; color: rgba(255,255,255,.6); font-weight: 600; text-align: center; padding: 0 1rem; }
+
+    /* Add-video notice */
+    .yt-add-notice {
+      font-size: .7rem; color: var(--text-muted);
+      background: var(--cyan-dim);
+      border-top: 1px solid var(--border);
+      padding: .5rem 1rem;
+      text-align: center;
+      font-style: italic;
+    }
+    .yt-add-notice code {
+      font-family: 'Courier New', monospace;
+      background: rgba(0,200,255,.12);
+      padding: .1rem .35rem;
+      border-radius: 3px;
+      font-size: .68rem;
+      color: var(--cyan);
+    }
+
+    .video-info { padding: 1.25rem; flex: 1; }
+    .video-level { font-size: .65rem; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; margin-bottom: .5rem; }
+    .video-level.ai { color: var(--ai-color); }
+    .video-level.net { color: var(--net-color); }
+    .video-level.sec { color: var(--sec-color); }
+    .video-title { font-family: var(--font-display); font-size: .95rem; font-weight: 600; color: var(--text-primary); margin-bottom: .4rem; line-height: 1.3; }
+    .video-desc { font-size: .8rem; color: var(--text-muted); line-height: 1.55; }
+    .video-footer { display: flex; align-items: center; justify-content: space-between; padding: .75rem 1.25rem; border-top: 1px solid var(--border); }
+    .video-instructor { font-size: .75rem; color: var(--text-muted); }
+
+    /* BLOG POSTS */
+    .blog-list { display: flex; flex-direction: column; gap: 1.25rem; }
+    .blog-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem 2rem;
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 1rem; align-items: start;
+      text-decoration: none; color: inherit;
+      transition: border-color .2s, transform .2s;
+      position: relative; overflow: hidden;
+    }
+    .blog-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; }
+    .blog-card.ai::before { background: linear-gradient(180deg, var(--ai-color), rgba(168,85,247,.3)); }
+    .blog-card.net::before { background: linear-gradient(180deg, var(--net-color), rgba(34,211,238,.3)); }
+    .blog-card.sec::before { background: linear-gradient(180deg, var(--sec-color), rgba(0,200,255,.3)); }
+    .blog-card:hover { transform: translateX(4px); }
+    .blog-card.ai:hover { border-color: rgba(168,85,247,.35); }
+    .blog-card.net:hover { border-color: rgba(34,211,238,.3); }
+    .blog-card.sec:hover { border-color: rgba(0,200,255,.3); }
+    .blog-tag { font-size: .65rem; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; margin-bottom: .5rem; display: flex; align-items: center; gap: .4rem; }
+    .blog-tag.ai { color: var(--ai-color); }
+    .blog-tag.net { color: var(--net-color); }
+    .blog-tag.sec { color: var(--sec-color); }
+    .blog-title { font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; color: var(--text-primary); margin-bottom: .4rem; line-height: 1.35; }
+    .blog-excerpt { font-size: .85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: .75rem; }
+    .blog-meta { display: flex; align-items: center; gap: 1rem; font-size: .75rem; color: var(--text-faint); }
+    .blog-meta span { display: flex; align-items: center; gap: .3rem; }
+    .blog-arrow { font-size: 1.5rem; color: var(--text-faint); transition: color .2s, transform .2s; align-self: center; }
+    .blog-card:hover .blog-arrow { transform: translateX(4px); }
+    .blog-card.ai:hover .blog-arrow { color: var(--ai-color); }
+    .blog-card.net:hover .blog-arrow { color: var(--net-color); }
+    .blog-card.sec:hover .blog-arrow { color: var(--sec-color); }
+
+    /* CTA BAND */
+    .cta-band { background: var(--cta-bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 5rem 2rem; text-align: center; position: relative; overflow: hidden; transition: background .3s; }
+    .cta-band::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 80% at 50% 50%, var(--cyan-dim) 0%, transparent 70%); pointer-events: none; }
+    .cta-band h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; letter-spacing: -.03em; color: var(--text-primary); margin-bottom: .75rem; position: relative; }
+    .cta-band h2 span { background: linear-gradient(135deg, var(--cyan), #0080ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .cta-band p { font-size: 1rem; color: var(--text-muted); margin-bottom: 2.5rem; max-width: 500px; margin-left: auto; margin-right: auto; position: relative; }
+    .btn { display: inline-block; text-decoration: none; font-family: var(--font-body); font-weight: 800; font-size: .95rem; padding: .85rem 2rem; border-radius: 8px; border: 2px solid transparent; transition: all .2s; }
+    .btn-primary { background: linear-gradient(135deg, var(--cyan), #0080ff); color: #fff; }
+    .btn-primary:hover { opacity: .85; transform: translateY(-2px); box-shadow: 0 8px 24px var(--cyan-glow); }
+
+    /* FOOTER — always dark */
+    footer { background: #060f1e; color: #7a8fa6; border-top: 1px solid rgba(0,200,255,.15); padding: 3.5rem 2rem 2rem; }
+    .footer-inner { max-width: 1160px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 2.5rem; border-bottom: 1px solid rgba(255,255,255,.06); }
+    .footer-logo { display: flex; align-items: center; gap: .75rem; margin-bottom: .75rem; }
+    .footer-logo svg { height: 36px; width: auto; filter: drop-shadow(0 0 6px rgba(0,200,255,.4)); }
+    .footer-tagline { font-size: .85rem; color: #7a8fa6; line-height: 1.6; max-width: 280px; }
+    .footer-col h4 { font-family: var(--font-display); font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .15em; color: #00c8ff; margin-bottom: 1rem; }
+    .footer-col a { display: block; color: #7a8fa6; text-decoration: none; font-size: .85rem; padding: .3rem 0; transition: color .15s; }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding-top: 1.5rem; font-size: .75rem; }
+    .footer-badges { display: flex; gap: .75rem; flex-wrap: wrap; }
+    .badge { border: 1px solid rgba(0,200,255,.2); color: #00c8ff; font-size: .65rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: .25rem .7rem; border-radius: 4px; background: rgba(0,200,255,.08); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .page-body { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+      .videos-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .hamburger { display: flex; }
+      nav { display: none; position: absolute; top: 70px; left: 0; right: 0; background: rgba(6,15,30,.98); flex-direction: column; padding: 1rem; border-bottom: 1px solid rgba(0,200,255,.2); }
+      [data-theme="light"] nav { background: rgba(240,244,248,.98); }
+      .nav-open nav { display: flex; }
+      nav a { padding: .75rem 1rem; border-radius: 6px; }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .track-header-inner { flex-direction: column; }
+      .blog-card { grid-template-columns: 1fr; }
+      .blog-arrow { display: none; }
+      .logo-svg { height: 38px; max-width: min(220px, calc(100vw - 130px)); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="AlerоSec home">
+        <svg class="logo-svg" viewBox="0 0 268 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M10 8 L28 16 L28 30 C28 39 20 45 19 46 C18 45 10 39 10 30 Z" fill="none" stroke="#00c8ff" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M10 8 L28 16 L28 30 C28 39 20 45 19 46 C18 45 10 39 10 30 Z" fill="rgba(0,200,255,0.07)"/>
+          <circle cx="19" cy="26" r="2.5" fill="#00c8ff"/>
+          <line x1="19" y1="23" x2="13" y2="18" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="19" y1="23" x2="25" y2="18" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="19" y1="28.5" x2="19" y2="35" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
+          <text x="36" y="22" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="14" fill="#ffffff" letter-spacing="-0.3">Aler</text>
+          <text x="62" y="22" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="14" fill="#00c8ff" letter-spacing="-0.3">o</text>
+          <text x="70" y="22" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="14" fill="#ffffff" letter-spacing="-0.3">Sec</text>
+          <text class="logo-subtext" x="36" y="36" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-weight="600" font-size="5.8" fill="#7a8fa6" letter-spacing="0.35">CYBERSECURITY · NETWORK INFRASTRUCTURE · AI · CUSTOM APPLICATIONS</text>
+        </svg>
+      </a>
+      <button class="hamburger" aria-label="Toggle navigation" onclick="document.querySelector('header').classList.toggle('nav-open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav aria-label="Primary navigation">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#certifications">Certifications</a>
+        <a href="index.html#governance">Governance</a>
+        <a href="courses.html" class="active">Courses</a>
+        <a href="index.html#contact" class="nav-cta">Get in Touch</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme" title="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">AlerоSec</a>
+        <span>›</span>
+        <span style="color:var(--text-primary)">Courses</span>
+      </div>
+      <div class="page-eyebrow">Education &amp; Training</div>
+      <h1>AI, Networking &amp; <span>Security Courses</span></h1>
+      <p class="page-hero-desc">Expert-led learning built by practitioners — drawing on over a decade of real-world cybersecurity and collaboration experience. Video lessons and in-depth blog articles across three specialist tracks.</p>
+      <div class="track-pills">
+        <a href="#ai" class="track-pill ai">🤖 AI &amp; Security</a>
+        <a href="#networking" class="track-pill net">🌐 Networking</a>
+        <a href="#security" class="track-pill sec">🔒 Cybersecurity Core</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE BODY: SIDEBAR + CONTENT -->
+  <div class="page-body">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Course navigation">
+      <a href="index.html" class="sidebar-back">← Back to Home</a>
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Learning Tracks</div>
+        <ul class="sidebar-nav">
+          <li><a href="#ai" class="active"><span class="nav-icon">🤖</span> AI &amp; Security</a></li>
+          <li><a href="#networking"><span class="nav-icon">🌐</span> Networking</a></li>
+          <li><a href="#security"><span class="nav-icon">🔒</span> Cybersecurity Core</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Content Types</div>
+        <ul class="sidebar-nav">
+          <li><a href="#ai-videos"><span class="nav-icon">🎥</span> Video Lessons</a></li>
+          <li><a href="#ai-blog"><span class="nav-icon">📝</span> Blog Articles</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Our Services</div>
+        <ul class="sidebar-nav">
+          <li><a href="index.html#services"><span class="nav-icon">🏛️</span> Governance</a></li>
+          <li><a href="index.html#services"><span class="nav-icon">📋</span> Policy Development</a></li>
+          <li><a href="index.html#services"><span class="nav-icon">👤</span> vCISO Services</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+      <!-- ═══ TRACK 1: AI & SECURITY ═══ -->
+      <section id="ai" class="track-section" aria-label="AI and Security track">
+        <div class="track-header ai">
+          <div class="track-header-inner">
+            <div class="track-big-icon">🤖</div>
+            <div class="track-title-block">
+              <h2 class="ai">AI &amp; Security</h2>
+              <p>Navigate the intersection of artificial intelligence and cybersecurity. From AI-driven threat detection to governing AI risk — essential knowledge for the modern security professional.</p>
+              <div class="track-meta">
+                <span class="track-meta-item">🎥 Videos: <span>4 lessons</span></span>
+                <span class="track-meta-item">📝 Blog: <span>4 articles</span></span>
+                <span class="track-meta-item">⏱ Level: <span>Intermediate</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- VIDEO LESSONS — AI -->
+        <div id="ai-videos">
+          <div class="subsection-label">🎥 Video Lessons</div>
+          <div class="videos-grid">
+
+            <!-- VIDEO 1 — replace VIDEO_ID_1 with your YouTube video ID e.g. dQw4w9WgXcQ -->
+            <div class="video-embed-card ai">
+              <div class="yt-wrap">
+                <div class="yt-placeholder" data-videoid="SEC_VIDEO_ID_1">
+                  <div class="play-circle">▶</div>
+                  <div class="yt-label">Introduction to AI in Cybersecurity<br><small>Click to embed your YouTube video</small></div>
+                </div>
+              </div>
+              <div class="video-info">
+                <div class="video-level ai">Foundations</div>
+                <div class="video-title">Introduction to AI in Cybersecurity</div>
+                <div class="video-desc">How machine learning is reshaping threat detection, anomaly analysis, and security operations — and what it means for your organisation.</div>
+              </div>
+              <div class="video-footer">
+                <span class="video-instructor">AlerоSec Expert</span>
+              </div>
+            </div>
+
+            <!-- VIDEO 2 -->
+            <div class="video-embed-card ai">
+              <div class="yt-wrap">
+                <div class="yt-placeholder" data-videoid="VIDEO_ID_2">
+                  <div class="play-circle">▶</div>
+                  <div class="yt-label">AI Risk Governance Frameworks<br><small>Click to embed your YouTube video</small></div>
+                </div>
+              </div>
+              <div class="video-info">
+                <div class="video-level ai">Risk Management</div>
+                <div class="video-title">AI Risk Governance Frameworks</div>
+                <div class="video-desc">Applying NIST AI RMF and ISO/IEC 42001 principles to govern AI deployment risks — bias, adversarial attacks, and model integrity.</div>
+              </div>
+              <div class="video-footer">
+                <span class="video-instructor">AlerоSec Expert</span>
+              </div>
+            </div>
+
+            <!-- VIDEO 3 -->
+            <div class="video-embed-card ai">
+              <div class="yt-wrap">
+                <div class="yt-placeholder" data-videoid="VIDEO_ID_3">
+                  <div class="play-circle">▶</div>
+                  <div class="yt-label">Adversarial AI: Attack &amp; Defence<br><small>Click to embed your YouTube video</small></div>
+                </div>
+              </div>
+              <div class="video-info">
+                <div class="video-level ai">Advanced</div>
+                <div class="video-title">Adversarial AI: Attack &amp; Defence</div>
+                <div class="video-desc">Deep dive into adversarial machine learning — prompt injection, model poisoning, and evasion attacks — and the defensive controls that counter them.</div>
+              </div>
+              <div class="video-footer">
+                <span class="video-instructor">AlerоSec Expert</span>
+              </div>
+            </div>
+
+            <!-- VIDEO 4 -->
+            <div class="video-embed-card ai">
+              <div class="yt-wrap">
+                <div class="yt-placeholder" data-videoid="VIDEO_ID_4">
+                  <div class="play-circle">▶</div>
+                  <div class="yt-label">Securing Generative AI Deployments<br><small>Click to embed your YouTube video</small></div>
+                </div>
+              </div>
+              <div class="video-info">
+                <div class="video-level ai">Practical</div>
+                <div class="video-title">Securing Generative AI Deployments</div>
+                <div class="video-desc">Practical controls for LLM deployments — data handling, access controls, output validation, and compliance with GDPR for AI-generated content.</div>
+              </div>
+              <div class="video-footer">
+                <span class="video-instructor">AlerоSec Expert</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- BLOG — AI -->
+        <div id="ai-blog">
+          <div class="subsection-label">📝 Blog Articles</div>
+          <div class="blog-list">
+            <a href="#" class="blog-card ai">
+              <div class="blog-content">
+                <div class="blog-tag ai">🤖 AI &amp; Security · Analysis</div>
+                <div class="blog-title">The Hidden Security Risks in Your AI Supply Chain</div>
+                <div class="blog-excerpt">Third-party AI models carry risks that traditional vendor assessments miss. We explore how to extend your security program to cover AI dependencies — from training data provenance to model update integrity.</div>
+                <div class="blog-meta"><span>📅 June 2025</span><span>⏱ 8 min read</span><span>👤 AlerоSec</span></div>
+              </div>
+              <span class="blog-arrow">›</span>
+            </a>
+            <a href="#" class="blog-card ai">
+              <div class="blog-content">
+                <div class="blog-tag ai">🤖 AI &amp; Security · Governance</div>
+                <div class="blog-title">Building an AI Acceptable Use Policy: A Practitioner's Guide</div>
+                <div class="blog-excerpt">With staff using AI tools across every function, organisations need clear, enforceable policies. This guide walks through every clause your AI AUP should include — and why.</div>
+                <div class="blog-meta"><span>📅 May 2025</span><span>⏱ 11 min read</span><span>👤 AlerоSec</span></div>
+              </div>
+              <span class="blog-arrow">›</span>
+            </a>
+            <a href="#" class="blog-card ai">
+              <div class="blog-content">
+                <div class="blog-tag ai">🤖 AI &amp; Security · Compliance</div>
+                <div class="blog-title">GDPR &amp; AI: What the EU AI Act Means for Security Teams</div>
+                <div class="blog-excerpt">The EU AI Act introduces tiered risk classifications for AI systems. We break down the obligations relevant to security practitioners and what you need to document, test, and report.</div>
+                <div class="blog-meta"><span>📅 April 2025</span><span>⏱ 10 min read</span><span>👤 AlerоSec</span></div>
+              </div>
+              <span class="blog-arrow">›</span>
+            </a>
+            <a href="#" class="blog-card ai">
+              <div class="blog-content">
+                <div class="blog-tag ai">🤖 AI &amp; Security · Threat Intelligence</div>
+                <div class="blog-title">How Attackers Are Using AI: A 2025 Threat Landscape Overview</div>
+                <div class="blog-excerpt">From AI-generated phishing at scale to automated vulnerability discovery, we map the current AI-augmented threat landscape and the defensive measures security teams should prioritise now.</div>
+                <div class="blog-meta"><span>📅 March 2025</span><span>⏱ 9 min read</span><span>👤 AlerоSec</span></div>
+              </div>
+              <span class="blog-arrow">›</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ TRACK 2: NETWORKING ═══ -->
+      <section id="networking" class="track-section" aria-label="Networking track">
+        <div class="track-header net">
+          <div class="track-header-inner">
+            <div class="track-big-icon">🌐</div>
+            <div class="track-title-block">
+              <h2 class="net">Networking Fundamentals &amp; Security</h2>
+              <p>From TCP/IP basics to Zero Trust architecture — understand how networks operate and how to defend them. Built for security professionals who need solid networking foundations.</p>
+              <div class="track-meta">
+                <span class="track-meta-item">🎥 Videos: <span>4 lessons</span></span>
+                <span class="track-meta-item">📝 Blog: <span>4 articles</span></span>
+                <span class="track-meta-item">⏱ Level: <span>Foundational–Intermediate</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="net-videos">
+          <div class="subsection-label">🎥 Video Lessons</div>
+          <div class="videos-grid">
+
+            <div class="video-embed-card net">
+              <div class="yt-wrap">
+                <div class="yt-placeholder" data-videoid="video_id">
+                  <div class="play-circle">▶</div>
+                  <div class="yt-label">Networking Fundamentals for Security Professionals<br><small>Click to embed your YouTube video</small></div>
+                </div>
+              </div>
+              <div class="video-info">
+                <div class="video-level net">Foundational</div>
+                <div class="video-title">Networking Fundamentals for Security Professionals</div>
+                <div class="video-desc">OSI model, TCP/IP stack, routing, switching, and DNS demystified — with a security lens applied throughout. The foundation every security practitioner needs.</div>
+              </div>
+              <div class="video-footer"><span class="video-instructor">AlerоSec Expert</span></div>
+            </div>
+
+            <div class="video-embed-card net">
+              <div class="yt-wrap">
+                <div class="yt-placeholder" data-videoid="NET_VIDEO_ID_2">
+                  <div class="play-circle">▶</div>
+                  <div class="yt-label">Firewalls, IDS/IPS &amp; Network Segmentation<br><small>Click to embed your YouTube video</small></div>
+                </div>
+              </div>
+              <div class="video-info">
+                <div class="video-level net">Intermediate</div>
+                <div class="video-title">Firewalls, IDS/IPS &amp; Network Segmentation</div>
+                <div class="video-desc">Designing layered network defences — firewall rule logic, intrusion detection vs. prevention, VLAN segmentation, and DMZ architecture for enterprise environments.</div>
+              </div>
+              <div class="video-footer"><span class="video-instructor">AlerоSec Expert</span></div>
+            </div>
+
+            <div class="video-embed-card net">
+              <div class="yt-wrap">
+                <div class="yt-placeholder" data-videoid="NET_VIDEO_ID_3">
+                  <div class="play-circle">▶</div>
+                  <div class="yt-label">Zero Trust Network Architecture<br><small>Click to embed your YouTube video</small></div>
+                </div>
+              </div>
+              <div class="video-info">
+                <div class="video-level net">Advanced</div>
+                <div class="video-title">Zero Trust Network Architecture</div>
+                <div class="video-desc">Moving beyond perimeter security — implementing Zero Trust principles across identity, device, workload, and network layers with practical architecture patterns.</div>
+              </div>
+              <div class="video-footer"><span class="video-instructor">AlerоSec Expert</span></div>
+            </div>
+
+            <div class="video-embed-card net">
+              <div class="yt-wrap">
+                <div class="yt-placeholder" data-videoid="NET_VIDEO_ID_4">
+                  <div class="play-circle">▶</div>
+                  <div class="yt-label">Securing Wireless &amp; Remote Access<br><small>Click to embed your YouTube video</small></div>
+                </div>
+              </div>
+              <div class="video-info">
+                <div class="video-level net">Practical</div>
+                <div class="video-title">Securing Wireless &amp; Remote Access</div>
+                <div class="video-desc">WPA3, rogue AP detection, VPN architecture, and ZTNA for remote workforces — covering the secure connectivity challenges modern organisations face every day.</div>
+              </div>
+              <div class="video-footer"><span class="video-instructor">AlerоSec Expert</span></div>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="net-blog">
+          <div class="subsection-label">📝 Blog Articles</div>
+          <div class="blog-list">
+            <a href="#" class="blog-card net">
+              <div class="blog-content">
+                <div class="blog-tag net">🌐 Networking · Architecture</div>
+                <div class="blog-title">Network Segmentation: Why Most Organisations Get It Wrong</div>
+                <div class="blog-excerpt">Poor segmentation is one of the most common — and costly — misconfigurations we encounter. This article outlines the principles of effective segmentation and the common pitfalls to avoid.</div>
+                <div class="blog-meta"><span>📅 June 2025</span><span>⏱ 9 min read</span><span>👤 AlerоSec</span></div>
+              </div>
+              <span class="blog-arrow">›</span>
+            </a>
+            <a href="#" class="blog-card net">
+              <div class="blog-content">
+                <div class="blog-tag net">🌐 Networking · Zero Trust</div>
+                <div class="blog-title">Zero Trust in Practice: Where to Start Without Starting Over</div>
+                <div class="blog-excerpt">Zero Trust doesn't require ripping and replacing your infrastructure. We show how to incrementally adopt Zero Trust principles across identity, endpoints, and network access — in a realistic order.</div>
+                <div class="blog-meta"><span>📅 May 2025</span><span>⏱ 12 min read</span><span>👤 AlerоSec</span></div>
+              </div>
+              <span class="blog-arrow">›</span>
+            </a>
+            <a href="#" class="blog-card net">
+              <div class="blog-content">
+                <div class="blog-tag net">🌐 Networking · Monitoring</div>
+                <div class="blog-title">Network Traffic Analysis for Threat Hunters</div>
+                <div class="blog-excerpt">What are you actually looking for in your packet captures and flow data? A practical guide to the network indicators that matter most when hunting for lateral movement, C2 beaconing, and data exfiltration.</div>
+                <div class="blog-meta"><span>📅 April 2025</span><span>⏱ 10 min read</span><span>👤 AlerоSec</span></div>
+              </div>
+              <span class="blog-arrow">›</span>
+            </a>
+            <a href="#" class="blog-card net">
+              <div class="blog-content">
+                <div class="blog-tag net">🌐 Networking · Remote Work</div>
+                <div class="blog-title">VPN vs. ZTNA: Choosing the Right Secure Access Model</div>
+                <div class="blog-excerpt">Traditional VPNs create implicit trust — the very thing Zero Trust aims to eliminate. We compare legacy VPN, split-tunnel, and modern ZTNA approaches across security, usability, and cost dimensions.</div>
+                <div class="blog-meta"><span>📅 March 2025</span><span>⏱ 8 min read</span><span>👤 AlerоSec</span></div>
+              </div>
+              <span class="blog-arrow">›</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ TRACK 3: CYBERSECURITY CORE ═══ -->
+      <section id="security" class="track-section" aria-label="Cybersecurity core track">
+        <div class="track-header sec">
+          <div class="track-header-inner">
+            <div class="track-big-icon">🔒</div>
+            <div class="track-title-block">
+              <h2 class="sec">Cybersecurity Core</h2>
+              <p>The essential cybersecurity curriculum — governance, risk, compliance, incident response, and policy — grounded in NIST CSF and GDPR. Real-world knowledge, not textbook theory.</p>
+              <div class="track-meta">
+                <span class="track-meta-item">🎥 Videos: <span>4 lessons</span></span>
+                <span class="track-meta-item">📝 Blog: <span>4 articles</span></span>
+                <span class="track-meta-item">⏱ Level: <span>All levels</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="sec-videos">
+          <div class="subsection-label">🎥 Video Lessons</div>
+          <div class="videos-grid">
+
+            <div class="video-embed-card sec">
+              <div class="yt-wrap">
+                <div class="yt-placeholder" data-videoid="SEC_VIDEO_ID_1">
+                  <div class="play-circle">▶</div>
+                  <div class="yt-label">Building a Security Governance Framework<br><small>Click to embed your YouTube video</small></div>
+                </div>
+              </div>
+              <div class="video-info">
+                <div class="video-level sec">GRC</div>
+                <div class="video-title">Building a Security Governance Framework</div>
+                <div class="video-desc">Structure your security program with clear ownership, accountability, and reporting lines. Covers RACI design, committee charters, and board-level cyber risk communication.</div>
+              </div>
+              <div class="video-footer"><span class="video-instructor">AlerоSec Expert</span></div>
+              <div class="yt-add-notice">Replace <code>SEC_VIDEO_ID_1</code> with your YouTube video ID.</div>
+            </div>
+
+            <div class="video-embed-card sec">
+              <div class="yt-wrap">
+                <div class="yt-placeholder" data-videoid="SEC_VIDEO_ID_2">
+                  <div class="play-circle">▶</div>
+                  <div class="yt-label">Writing Effective Security Policies<br><small>Click to embed your YouTube video</small></div>
+                </div>
+              </div>
+              <div class="video-info">
+                <div class="video-level sec">Policy</div>
+                <div class="video-title">Writing Effective Security Policies</div>
+                <div class="video-desc">What makes a security policy enforceable, readable, and aligned to NIST CSF? A practical walkthrough of policy architecture — from top-level policy to operational procedures.</div>
+              </div>
+              <div class="video-footer"><span class="video-instructor">AlerоSec Expert</span></div>
+              <div class="yt-add-notice">Replace <code>SEC_VIDEO_ID_2</code> with your YouTube video ID.</div>
+            </div>
+
+            <div class="video-embed-card sec">
+              <div class="yt-wrap">
+                <div class="yt-placeholder" data-videoid="SEC_VIDEO_ID_3">
+                  <div class="play-circle">▶</div>
+                  <div class="yt-label">Incident Response Planning &amp; GDPR Notification<br><small>Click to embed your YouTube video</small></div>
+                </div>
+              </div>
+              <div class="video-info">
+                <div class="video-level sec">Incident Response</div>
+                <div class="video-title">Incident Response Planning &amp; GDPR Notification</div>
+                <div class="video-desc">Build a defensible incident response plan — covering detection, containment, eradication, recovery, and the critical 72-hour GDPR breach notification obligation.</div>
+              </div>
+              <div class="video-footer"><span class="video-instructor">AlerоSec Expert</span></div>
+              <div class="yt-add-notice">Replace <code>SEC_VIDEO_ID_3</code> with your YouTube video ID.</div>
+            </div>
+
+            <div class="video-embed-card sec">
+              <div class="yt-wrap">
+                <div class="yt-placeholder" data-videoid="SEC_VIDEO_ID_4">
+                  <div class="play-circle">▶</div>
+                  <div class="yt-label">NIST CSF 2.0: What's Changed and Why It Matters<br><small>Click to embed your YouTube video</small></div>
+                </div>
+              </div>
+              <div class="video-info">
+                <div class="video-level sec">Compliance</div>
+                <div class="video-title">NIST CSF 2.0: What's Changed and Why It Matters</div>
+                <div class="video-desc">A practical comparison of NIST CSF 1.1 and 2.0 — new Govern function, supply chain risk, and how to update your security program to meet the revised framework requirements.</div>
+              </div>
+              <div class="video-footer"><span class="video-instructor">AlerоSec Expert</span></div>
+              <div class="yt-add-notice">Replace <code>SEC_VIDEO_ID_4</code> with your YouTube video ID.</div>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="sec-blog">
+          <div class="subsection-label">📝 Blog Articles</div>
+          <div class="blog-list">
+            <a href="#" class="blog-card sec">
+              <div class="blog-content">
+                <div class="blog-tag sec">🔒 Cybersecurity · GRC</div>
+                <div class="blog-title">What Does a Mature Security Program Actually Look Like?</div>
+                <div class="blog-excerpt">Maturity is more than a score on a spreadsheet. We define what genuine security program maturity looks like — across governance, technical controls, and culture — and how to measure progress honestly.</div>
+                <div class="blog-meta"><span>📅 June 2025</span><span>⏱ 11 min read</span><span>👤 AlerоSec</span></div>
+              </div>
+              <span class="blog-arrow">›</span>
+            </a>
+            <a href="#" class="blog-card sec">
+              <div class="blog-content">
+                <div class="blog-tag sec">🔒 Cybersecurity · GDPR</div>
+                <div class="blog-title">GDPR for Security Teams: Beyond the Privacy Notice</div>
+                <div class="blog-excerpt">GDPR isn't just a privacy team problem — it has direct security obligations. Data protection by design, Article 32 technical measures, and breach notification are security responsibilities. Here's how to own them.</div>
+                <div class="blog-meta"><span>📅 May 2025</span><span>⏱ 10 min read</span><span>👤 AlerоSec</span></div>
+              </div>
+              <span class="blog-arrow">›</span>
+            </a>
+            <a href="#" class="blog-card sec">
+              <div class="blog-content">
+                <div class="blog-tag sec">🔒 Cybersecurity · Risk</div>
+                <div class="blog-title">Risk Registers That Actually Get Used: A Practical Guide</div>
+                <div class="blog-excerpt">Most risk registers are abandoned within months. We explain why — and how to build a risk register that integrates into decision-making, earns executive buy-in, and stays relevant over time.</div>
+                <div class="blog-meta"><span>📅 April 2025</span><span>⏱ 9 min read</span><span>👤 AlerоSec</span></div>
+              </div>
+              <span class="blog-arrow">›</span>
+            </a>
+            <a href="#" class="blog-card sec">
+              <div class="blog-content">
+                <div class="blog-tag sec">🔒 Cybersecurity · vCISO</div>
+                <div class="blog-title">When You Need a vCISO (And When You Don't)</div>
+                <div class="blog-excerpt">The fractional CISO model isn't right for every organisation. We set out the indicators that signal it's time to engage a vCISO — and the questions you should ask before making that decision.</div>
+                <div class="blog-meta"><span>📅 March 2025</span><span>⏱ 7 min read</span><span>👤 AlerоSec</span></div>
+              </div>
+              <span class="blog-arrow">›</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- CTA BAND -->
+  <section class="cta-band" aria-label="Call to action">
+    <h2>Ready to <span>Apply</span> What You've Learned?</h2>
+    <p>Our certified practitioners can help you implement what you've learned — building real security programs, governance frameworks, and policies for your organisation.</p>
+    <a href="index.html#contact" class="btn btn-primary">Talk to an Expert</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer aria-label="Footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">
+            <svg viewBox="0 0 268 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="AlerоSec logo">
+              <path d="M10 8 L28 16 L28 30 C28 39 20 45 19 46 C18 45 10 39 10 30 Z" fill="none" stroke="#00c8ff" stroke-width="2.2" stroke-linejoin="round"/>
+              <path d="M10 8 L28 16 L28 30 C28 39 20 45 19 46 C18 45 10 39 10 30 Z" fill="rgba(0,200,255,0.07)"/>
+              <circle cx="19" cy="26" r="2.5" fill="#00c8ff"/>
+              <line x1="19" y1="23" x2="13" y2="18" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="19" y1="23" x2="25" y2="18" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="19" y1="28.5" x2="19" y2="35" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
+              <text x="36" y="22" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="14" fill="#ffffff" letter-spacing="-0.3">Aler</text>
+              <text x="62" y="22" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="14" fill="#00c8ff" letter-spacing="-0.3">o</text>
+              <text x="70" y="22" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="14" fill="#ffffff" letter-spacing="-0.3">Sec</text>
+              <text x="36" y="36" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-weight="600" font-size="5.8" fill="#7a8fa6" letter-spacing="0.35">CYBERSECURITY · NETWORK INFRASTRUCTURE · AI · CUSTOM APPLICATIONS</text>
+            </svg>
+          </div>
+          <p class="footer-tagline">Expert-led courses in cybersecurity, networking, AI, and custom applications — built by CISSP &amp; ITIL certified practitioners with over a decade of real-world experience.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Tracks</h4>
+          <a href="#ai">AI &amp; Security</a>
+          <a href="#networking">Networking</a>
+          <a href="#security">Cybersecurity Core</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="index.html#services">Governance</a>
+          <a href="index.html#services">Policy Development</a>
+          <a href="index.html#services">Risk &amp; Compliance</a>
+          <a href="index.html#services">vCISO Services</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="index.html#contact">Get in Touch</a>
+          <a href="index.html#contact">Request a Review</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 AlerоSec. All rights reserved.</span>
+        <div class="footer-badges">
+          <span class="badge">CISSP</span>
+          <span class="badge">ITIL</span>
+          <span class="badge">NIST CSF</span>
+          <span class="badge">GDPR</span>
+          <span class="badge">10+ Years</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  // Theme toggle — synced with index.html via localStorage
+  const toggle = document.getElementById('themeToggle');
+  const html = document.documentElement;
+  const saved = localStorage.getItem('alerosec-theme') || 'dark';
+  html.setAttribute('data-theme', saved);
+  toggle.textContent = saved === 'dark' ? '☀️' : '🌙';
+
+  toggle.addEventListener('click', () => {
+    const current = html.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    toggle.textContent = next === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem('alerosec-theme', next);
+  });
+
+  // YouTube placeholder click → embed real iframe
+  document.querySelectorAll('.yt-placeholder').forEach(placeholder => {
+    placeholder.addEventListener('click', () => {
+      const videoId = placeholder.dataset.videoid;
+      // Only swap if a real video ID has been set (not the placeholder text)
+      if (!videoId || videoId.includes('VIDEO_ID') || videoId.includes('NET_VIDEO') || videoId.includes('SEC_VIDEO')) {
+        alert('To embed a video here:\n\n1. Open courses.html\n2. Find the data-videoid attribute on this placeholder\n3. Replace the placeholder text with your YouTube video ID\n   (e.g. data-videoid="dQw4w9WgXcQ")\n4. Save and re-upload the file');
+        return;
+      }
+      const wrap = placeholder.closest('.yt-wrap');
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      iframe.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:0;';
+      placeholder.remove();
+      wrap.appendChild(iframe);
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,1292 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AlerоSec | Cyber Governance and Security Solutions</title>
+  <meta name="description" content="AlerоSec — Cybersecurity, network infrastructure, AI, and custom applications. CISSP & ITIL certified specialists in security program development, governance, and enterprise solutions.">
+  <meta name="keywords" content="cybersecurity, CISSP, ITIL, security program, security policy, governance, NIST CSF, GDPR, GRC, vCISO, AI security, networking, collaboration">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="AlerоSec | Cyber Governance and Security Solutions">
+  <meta property="og:description" content="Over a decade of expertise in cybersecurity and collaboration. CISSP & ITIL certified specialists in NIST CSF and GDPR security program development.">
+  <meta property="og:image" content="https://placehold.co/1200x630/060f1e/00c8ff?text=AlerоSec">
+  <meta property="og:url" content="https://alerosec.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AlerоSec | Cyber Governance and Security Solutions">
+  <meta name="twitter:description" content="Over a decade of expertise in cybersecurity and collaboration. CISSP & ITIL certified specialists.">
+  <meta name="twitter:image" content="https://placehold.co/1200x630/060f1e/00c8ff?text=AlerоSec">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a1628'/%3E%3Cpath d='M50 8 L82 24 L82 54 C82 72 67 87 50 93 C33 87 18 72 18 54 L18 24 Z' fill='none' stroke='%2300c8ff' stroke-width='5'/%3E%3Ccircle cx='50' cy='50' r='5' fill='%2300c8ff'/%3E%3Cline x1='50' y1='45' x2='35' y2='35' stroke='%2300c8ff' stroke-width='2.5'/%3E%3Cline x1='50' y1='45' x2='65' y2='35' stroke='%23fff' stroke-width='2.5'/%3E%3Cline x1='50' y1='55' x2='50' y2='68' stroke='%2300c8ff' stroke-width='2.5'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Inter + Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AlerоSec",
+    "description": "Over a decade of expertise in cybersecurity, collaboration, and governance. CISSP and ITIL certified specialists in security program development, policy, and governance.",
+    "url": "https://alerosec.com",
+    "knowsAbout": ["NIST CSF", "GDPR", "Security Governance", "Policy Development", "vCISO", "AI Security", "Networking", "Collaboration"]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── FONTS ── */
+    :root {
+      --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+    }
+
+    /* ── DARK THEME (default) ── */
+    [data-theme="dark"] {
+      --bg: #060f1e;
+      --bg-2: #0a1628;
+      --bg-3: #0d1f3c;
+      --bg-4: #112244;
+      --bg-card: rgba(255,255,255,.02);
+      --bg-card-hover: rgba(255,255,255,.04);
+      --border: rgba(0,200,255,.12);
+      --border-strong: rgba(0,200,255,.4);
+      --text-primary: #ffffff;
+      --text-secondary: #cdd5e0;
+      --text-muted: #7a8fa6;
+      --text-faint: #2a3a52;
+      --cyan: #00c8ff;
+      --cyan-dim: rgba(0,200,255,.15);
+      --cyan-glow: rgba(0,200,255,.35);
+      --header-bg: rgba(6,15,30,.92);
+      --header-border: rgba(0,200,255,.2);
+      --trust-bg: linear-gradient(135deg, #0d1f3c, #112244);
+      --experience-bg: linear-gradient(135deg, #0d1f3c, #112244);
+      --cta-bg: linear-gradient(135deg, #0d1f3c 0%, #112244 100%);
+      --footer-bg: #0a1628;
+      --footer-border: rgba(255,255,255,.06);
+      --badge-bg: rgba(0,200,255,.15);
+      --badge-border: rgba(0,200,255,.2);
+      --shadow-card: 0 12px 32px rgba(0,200,255,.1);
+      --toggle-icon: "☀️";
+    }
+
+    /* ── LIGHT THEME ── */
+    [data-theme="light"] {
+      --bg: #f0f4f8;
+      --bg-2: #ffffff;
+      --bg-3: #e8eef5;
+      --bg-4: #dce6f0;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f7fafd;
+      --border: rgba(0,120,180,.15);
+      --border-strong: rgba(0,120,180,.5);
+      --text-primary: #0a1628;
+      --text-secondary: #1e3a5f;
+      --text-muted: #4a6080;
+      --text-faint: #b0c0d4;
+      --cyan: #006fa8;
+      --cyan-dim: rgba(0,111,168,.12);
+      --cyan-glow: rgba(0,111,168,.3);
+      --header-bg: rgba(240,244,248,.95);
+      --header-border: rgba(0,120,180,.2);
+      --trust-bg: linear-gradient(135deg, #dce6f0, #e8eef5);
+      --experience-bg: linear-gradient(135deg, #e8eef5, #f0f4f8);
+      --cta-bg: linear-gradient(135deg, #dce6f0 0%, #e8eef5 100%);
+      --footer-bg: #0a1628;
+      --footer-border: rgba(255,255,255,.06);
+      --badge-bg: rgba(0,111,168,.12);
+      --badge-border: rgba(0,111,168,.2);
+      --shadow-card: 0 8px 24px rgba(0,100,160,.12);
+      --toggle-icon: "🌙";
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+      transition: background .3s, color .3s;
+    }
+
+    /* ── THEME TOGGLE ── */
+    .theme-toggle {
+      display: flex; align-items: center; justify-content: center;
+      width: 38px; height: 38px;
+      background: var(--cyan-dim);
+      border: 1px solid var(--border-strong);
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background .2s, border-color .2s, transform .2s;
+      flex-shrink: 0;
+      margin-left: .5rem;
+    }
+    .theme-toggle:hover { transform: rotate(15deg) scale(1.1); background: var(--cyan-dim); }
+
+    /* ── HEADER ── */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--header-bg);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--header-border);
+      transition: background .3s, border-color .3s;
+    }
+    .header-inner {
+      max-width: 1160px; margin: 0 auto;
+      padding: 0 2rem;
+      display: flex; align-items: center;
+      justify-content: space-between;
+      height: 70px; gap: 1rem;
+    }
+    .logo {
+      display: flex; align-items: center; gap: .75rem;
+      text-decoration: none; flex-shrink: 0;
+    }
+    .logo-svg {
+      height: 44px; width: auto;
+      filter: drop-shadow(0 0 8px var(--cyan-glow));
+    }
+    [data-theme="light"] .logo-subtext { fill: #4a6080 !important; }
+
+    nav { display: flex; align-items: center; gap: .1rem; }
+    nav a {
+      color: var(--text-muted); text-decoration: none;
+      font-family: var(--font-body);
+      font-size: .85rem; font-weight: 600;
+      padding: .45rem .9rem; border-radius: 6px;
+      transition: color .15s, background .15s;
+      white-space: nowrap;
+    }
+    nav a:hover { color: var(--cyan); background: var(--cyan-dim); }
+    .nav-cta {
+      background: var(--cyan) !important;
+      color: #fff !important;
+      font-weight: 800 !important; margin-left: .5rem;
+      border-radius: 6px !important;
+    }
+    [data-theme="dark"] .nav-cta { color: #060f1e !important; }
+    .nav-cta:hover { opacity: .88 !important; background: var(--cyan) !important; }
+
+    /* hamburger */
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: .5rem; background: none; border: none; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--text-primary); border-radius: 2px; transition: all .3s; }
+    .nav-open .hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-open .hamburger span:nth-child(2) { opacity: 0; }
+    .nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--bg-2);
+      padding: 7rem 2rem 6rem;
+      position: relative; overflow: hidden;
+      transition: background .3s;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 80% 50%, rgba(0,200,255,.08) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 40% at 10% 80%, rgba(0,100,200,.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    [data-theme="light"] .hero::before {
+      background:
+        radial-gradient(ellipse 70% 60% at 80% 50%, rgba(0,111,168,.06) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 40% at 10% 80%, rgba(0,100,180,.05) 0%, transparent 60%);
+    }
+    .hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(0,200,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,200,255,.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+    [data-theme="light"] .hero::after {
+      background-image:
+        linear-gradient(rgba(0,120,180,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,120,180,.04) 1px, transparent 1px);
+    }
+    .hero-inner {
+      max-width: 1160px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; align-items: center;
+      position: relative; z-index: 1;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: var(--cyan-dim);
+      border: 1px solid rgba(0,200,255,.3);
+      color: var(--cyan);
+      font-family: var(--font-body);
+      font-size: .68rem; font-weight: 700;
+      letter-spacing: .1em; text-transform: uppercase;
+      padding: .4rem 1rem; border-radius: 20px;
+      margin-bottom: 1.5rem;
+      max-width: 520px; line-height: 1.5;
+    }
+    .hero-eyebrow::before { content: '●'; font-size: .5rem; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 700; line-height: 1.05;
+      letter-spacing: -.03em; margin-bottom: 1.5rem;
+      color: var(--text-primary);
+    }
+    .hero h1 .accent {
+      background: linear-gradient(135deg, var(--cyan), #0080ff);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-desc {
+      font-size: 1.05rem; color: var(--text-secondary);
+      line-height: 1.75; margin-bottom: 2rem;
+      max-width: 500px;
+    }
+
+    .hero-certs {
+      display: flex; gap: .75rem; flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .cert-badge {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: var(--cyan-dim);
+      border: 1px solid rgba(0,200,255,.25);
+      border-radius: 6px;
+      padding: .45rem 1rem;
+      font-size: .8rem; font-weight: 700;
+      color: var(--cyan); letter-spacing: .04em;
+    }
+    .cert-badge .badge-icon { display: none; }
+
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; text-decoration: none;
+      font-family: var(--font-body);
+      font-weight: 800; font-size: .95rem;
+      padding: .85rem 2rem; border-radius: 8px;
+      border: 2px solid transparent;
+      transition: all .2s; cursor: pointer;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--cyan), #0080ff);
+      color: #fff;
+    }
+    .btn-primary:hover { opacity: .85; transform: translateY(-2px); box-shadow: 0 8px 24px var(--cyan-glow); }
+    .btn-ghost { background: transparent; color: var(--text-primary); border-color: var(--text-faint); }
+    .btn-ghost:hover { border-color: var(--cyan); color: var(--cyan); transform: translateY(-2px); }
+
+    /* hero right — stat cards */
+    .hero-stats {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.75rem 1.5rem;
+      display: flex; flex-direction: column; gap: .4rem;
+      transition: border-color .2s, transform .2s, box-shadow .2s;
+    }
+    .stat-card:hover { border-color: var(--cyan); transform: translateY(-3px); box-shadow: var(--shadow-card); }
+    .stat-num {
+      font-family: var(--font-display);
+      font-size: 2.4rem; font-weight: 700;
+      background: linear-gradient(135deg, var(--cyan), #0080ff);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1; letter-spacing: -.03em;
+    }
+    .stat-label { font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--text-primary); }
+    .stat-desc { font-size: .75rem; color: var(--text-muted); line-height: 1.4; }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      background: var(--trust-bg);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+      transition: background .3s;
+    }
+    .trust-inner {
+      max-width: 1160px; margin: 0 auto;
+      display: flex; align-items: center;
+      gap: 2rem; flex-wrap: wrap;
+    }
+    .trust-label {
+      font-size: .7rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: .15em;
+      color: var(--cyan); white-space: nowrap; flex-shrink: 0;
+    }
+    .trust-items { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .trust-item {
+      font-size: .8rem; font-weight: 700;
+      color: var(--text-secondary); white-space: nowrap;
+      display: flex; align-items: center; gap: .4rem;
+    }
+    .trust-item::before { content: '◆'; font-size: .5rem; color: var(--cyan); }
+
+    /* ── EXPERIENCE BAND ── */
+    .experience-band {
+      background: var(--experience-bg);
+      border-bottom: 1px solid var(--border);
+      padding: 4rem 2rem;
+      transition: background .3s;
+    }
+    .experience-inner {
+      max-width: 1160px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 2fr;
+      gap: 4rem; align-items: center;
+    }
+    .experience-decade { text-align: center; }
+    .decade-number {
+      font-family: var(--font-display);
+      font-size: 7rem; font-weight: 700; line-height: 1;
+      background: linear-gradient(135deg, var(--cyan), #0080ff);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -.05em;
+    }
+    .decade-label {
+      font-family: var(--font-display);
+      font-size: 1rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .2em;
+      color: var(--text-primary); margin-top: .5rem;
+    }
+    .decade-sub { font-size: .8rem; color: var(--text-muted); margin-top: .25rem; }
+    .experience-content h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700; letter-spacing: -.025em;
+      margin-bottom: 1rem; line-height: 1.2;
+      color: var(--text-primary);
+    }
+    .experience-content h2 span {
+      background: linear-gradient(135deg, var(--cyan), #0080ff);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .experience-content p { font-size: .95rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: 1.25rem; }
+    .experience-pillars {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1rem; margin-top: 1.5rem;
+    }
+    .pillar {
+      background: var(--cyan-dim);
+      border: 1px solid rgba(0,200,255,.2);
+      border-radius: 8px;
+      padding: 1.25rem 1rem;
+      text-align: center;
+    }
+    .pillar-icon { font-size: 1.5rem; margin-bottom: .5rem; }
+    .pillar-name {
+      font-family: var(--font-display);
+      font-size: .8rem; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--text-primary);
+    }
+    .pillar-desc { font-size: .72rem; color: var(--text-muted); margin-top: .3rem; line-height: 1.4; }
+
+    /* ── SHARED SECTION ── */
+    section { padding: 5rem 2rem; transition: background .3s; }
+    .section-inner { max-width: 1160px; margin: 0 auto; }
+    .section-tag {
+      display: inline-block;
+      font-size: .7rem; font-weight: 800;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: var(--cyan);
+      background: var(--cyan-dim);
+      border: 1px solid rgba(0,200,255,.25);
+      padding: .3rem .85rem; border-radius: 20px;
+      margin-bottom: 1.25rem;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 700; letter-spacing: -.025em;
+      line-height: 1.1; margin-bottom: .75rem;
+      color: var(--text-primary);
+    }
+    .section-sub {
+      font-size: 1rem; color: var(--text-muted);
+      max-width: 580px; margin-bottom: 2rem; line-height: 1.7;
+    }
+
+    /* ── CERTIFICATIONS ── */
+    .certs-section { background: var(--bg-2); }
+    .certs-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+    .cert-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem 1.75rem;
+      position: relative; overflow: hidden;
+      transition: border-color .2s, transform .2s, box-shadow .2s;
+      display: flex; flex-direction: column; gap: .85rem;
+    }
+    .cert-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--cyan), #0080ff);
+    }
+    .cert-card:hover { border-color: var(--border-strong); transform: translateY(-2px); box-shadow: var(--shadow-card); }
+    .cert-card-header {
+      display: flex; align-items: center; gap: 1.1rem;
+    }
+    .cert-badge-img {
+      width: 72px; height: 72px; flex-shrink: 0;
+      border-radius: 50%;
+      box-shadow: 0 4px 16px rgba(0,0,0,.25);
+    }
+    .cert-card-title { min-width: 0; }
+    .cert-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem; font-weight: 700; color: var(--text-primary);
+      margin-bottom: .15rem; letter-spacing: -.01em; line-height: 1.2;
+    }
+    .cert-card .cert-full-name {
+      font-size: .68rem; color: var(--cyan); font-weight: 700;
+      text-transform: uppercase; letter-spacing: .06em; line-height: 1.35;
+    }
+    .cert-card .cert-summary {
+      font-size: .84rem; color: var(--text-muted); line-height: 1.6; margin: 0;
+    }
+    .cert-domains {
+      display: flex; flex-wrap: wrap; gap: .4rem;
+    }
+    .cert-domains span {
+      font-size: .68rem; font-weight: 600;
+      color: var(--text-secondary);
+      background: var(--cyan-dim);
+      border: 1px solid rgba(0,200,255,.15);
+      padding: .22rem .55rem; border-radius: 4px;
+      letter-spacing: .02em;
+    }
+    .cert-issuer {
+      font-size: .68rem; font-weight: 700;
+      color: var(--text-muted); text-transform: uppercase; letter-spacing: .06em;
+      margin-top: auto; padding-top: .25rem;
+    }
+    .cert-issuer span { color: var(--cyan); }
+
+    /* ── SERVICES ── */
+    .services-section { background: var(--bg); }
+    .cards-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      background: var(--bg-card);
+      text-decoration: none; color: inherit;
+      display: flex; flex-direction: column;
+      transition: border-color .2s, box-shadow .2s, transform .2s;
+      position: relative; overflow: hidden;
+    }
+    .card::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--cyan), #0080ff);
+      transform: scaleX(0); transform-origin: left; transition: transform .3s;
+    }
+    .card:hover { border-color: var(--border-strong); box-shadow: var(--shadow-card); transform: translateY(-4px); }
+    .card:hover::after { transform: scaleX(1); }
+    .card-icon-wrap {
+      width: 48px; height: 48px;
+      background: var(--cyan-dim);
+      border: 1px solid rgba(0,200,255,.25);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; margin-bottom: 1.25rem; flex-shrink: 0;
+    }
+    .card h3 {
+      font-family: var(--font-display);
+      font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; margin-bottom: .6rem; color: var(--text-primary);
+    }
+    .card p { font-size: .875rem; color: var(--text-muted); line-height: 1.6; flex: 1; }
+    .card-link { display: inline-flex; align-items: center; gap: .4rem; margin-top: 1.25rem; font-size: .8rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: var(--cyan); text-decoration: none; }
+
+    /* ── GOVERNANCE ── */
+    .governance { background: var(--bg-2); }
+    .gov-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .gov-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px; padding: 2.25rem 2rem;
+      transition: border-color .2s, transform .2s, box-shadow .2s;
+      position: relative; overflow: hidden;
+    }
+    .gov-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--cyan), #0080ff); }
+    .gov-card:hover { border-color: var(--border-strong); transform: translateY(-4px); box-shadow: var(--shadow-card); }
+    .gov-num { font-size: .65rem; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: var(--cyan); margin-bottom: 1.25rem; display: block; }
+    .gov-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.1rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--text-primary); margin-bottom: .75rem;
+    }
+    .gov-card p { font-size: .875rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1.5rem; }
+    .gov-list { list-style: none; padding: 0; }
+    .gov-list li { font-size: .8rem; color: var(--text-muted); padding: .4rem 0; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: .6rem; }
+    .gov-list li::before { content: ''; width: 6px; height: 6px; background: var(--cyan); border-radius: 50%; flex-shrink: 0; }
+
+    /* ── FRAMEWORK ── */
+    .framework { background: var(--bg); }
+    .phases { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 2rem; }
+    .phase {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px; padding: 2.5rem 2rem;
+      position: relative; overflow: hidden;
+      transition: border-color .2s, transform .2s;
+    }
+    .phase:hover { border-color: var(--border-strong); transform: translateY(-3px); }
+    .phase-num {
+      font-family: var(--font-display);
+      font-size: 3rem; font-weight: 700; color: var(--border); line-height: 1; margin-bottom: .75rem; letter-spacing: -.04em;
+    }
+    .phase-tag { display: inline-block; background: var(--cyan-dim); border: 1px solid rgba(0,200,255,.25); color: var(--cyan); font-size: .65rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; padding: .2rem .7rem; border-radius: 20px; margin-bottom: 1rem; }
+    .phase h3 {
+      font-family: var(--font-display);
+      font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; margin-bottom: .75rem; color: var(--text-primary);
+    }
+    .phase p { font-size: .85rem; color: var(--text-muted); line-height: 1.6; }
+    .phase-active { background: linear-gradient(135deg, var(--cyan-dim), rgba(0,128,255,.08)); border-color: var(--border-strong); }
+    .phase-active h3 { color: var(--cyan); }
+
+    /* ── CAPABILITIES ── */
+    .capabilities { background: var(--bg-2); }
+    .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .feature {
+      padding: 2rem; border: 1px solid var(--border);
+      border-radius: 12px; background: var(--bg-card);
+      position: relative; overflow: hidden;
+      transition: border-color .2s, transform .2s;
+    }
+    .feature::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: linear-gradient(180deg, var(--cyan), #0080ff); }
+    .feature:hover { border-color: var(--border-strong); transform: translateY(-3px); }
+    .feature h3 {
+      font-family: var(--font-display);
+      font-size: .95rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; margin-bottom: .6rem; color: var(--text-primary);
+    }
+    .feature p { font-size: .875rem; color: var(--text-muted); line-height: 1.6; }
+
+    /* ── COURSES PROMO ── */
+    .courses-promo { background: var(--bg); padding: 5rem 2rem; }
+    .courses-promo-inner {
+      max-width: 1160px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; align-items: center;
+    }
+    .courses-promo-content h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 700; letter-spacing: -.025em;
+      line-height: 1.1; margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+    .courses-promo-content h2 span {
+      background: linear-gradient(135deg, var(--cyan), #0080ff);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .courses-promo-content p { font-size: .95rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: 1.5rem; }
+    .course-tracks { display: flex; flex-direction: column; gap: .75rem; }
+    .course-track {
+      display: flex; align-items: center; gap: 1rem;
+      background: var(--cyan-dim);
+      border: 1px solid var(--border);
+      border-radius: 8px; padding: 1rem 1.25rem;
+      text-decoration: none; color: inherit;
+      transition: border-color .2s, transform .2s;
+    }
+    .course-track:hover { border-color: var(--cyan); transform: translateX(4px); }
+    .track-icon { font-size: 1.5rem; flex-shrink: 0; }
+    .track-info { flex: 1; }
+    .track-name { font-family: var(--font-display); font-size: .9rem; font-weight: 600; color: var(--text-primary); }
+    .track-desc { font-size: .78rem; color: var(--text-muted); margin-top: .2rem; }
+    .track-arrow { color: var(--cyan); font-size: 1.2rem; }
+
+    .courses-promo-visual {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2.5rem;
+      text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .courses-promo-visual::before {
+      content: '';
+      position: absolute; top: -30%; right: -20%;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, var(--cyan-dim), transparent 70%);
+      pointer-events: none;
+    }
+    .course-stat-big {
+      font-family: var(--font-display);
+      font-size: 4.5rem; font-weight: 700; line-height: 1;
+      background: linear-gradient(135deg, var(--cyan), #0080ff);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; letter-spacing: -.04em;
+    }
+    .course-stat-label { font-size: .85rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--text-muted); margin-top: .5rem; }
+    .course-stats-row { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; }
+    .mini-stat { text-align: center; }
+    .mini-stat-num { font-size: 1.6rem; font-weight: 900; color: var(--cyan); }
+    .mini-stat-label { font-size: .7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: .08em; }
+
+    /* ── CTA BAND ── */
+    .cta-band {
+      background: var(--cta-bg);
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      padding: 5rem 2rem; text-align: center;
+      position: relative; overflow: hidden;
+      transition: background .3s;
+    }
+    .cta-band::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 80% at 50% 50%, var(--cyan-dim) 0%, transparent 70%); pointer-events: none; }
+    .cta-band h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; letter-spacing: -.03em; color: var(--text-primary); margin-bottom: .75rem; position: relative;
+    }
+    .cta-band h2 span { background: linear-gradient(135deg, var(--cyan), #0080ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .cta-band p { font-size: 1rem; color: var(--text-muted); margin-bottom: 2.5rem; max-width: 500px; margin-left: auto; margin-right: auto; position: relative; }
+    .btn-cyan { background: linear-gradient(135deg, var(--cyan), #0080ff); color: #fff; font-weight: 900; box-shadow: 0 8px 24px var(--cyan-glow); }
+    .btn-cyan:hover { opacity: .85; transform: translateY(-3px); box-shadow: 0 12px 32px var(--cyan-glow); }
+
+    /* ── CONTACT SECTION ── */
+    .contact-section { background: var(--bg-2); padding: 5rem 2rem; }
+    .contact-inner { max-width: 700px; margin: 0 auto; text-align: center; }
+    .contact-inner .section-title { margin-bottom: .5rem; }
+    .contact-inner .section-sub { margin: 0 auto 2.5rem; }
+    .contact-form {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2.5rem;
+      text-align: left;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem; }
+    .form-group { display: flex; flex-direction: column; gap: .5rem; }
+    .form-group label {
+      font-size: .8rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .08em;
+      color: var(--text-muted);
+    }
+    .form-group input,
+    .form-group textarea {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: .75rem 1rem;
+      font-family: var(--font-body);
+      font-size: .9rem;
+      color: var(--text-primary);
+      transition: border-color .2s, box-shadow .2s;
+      outline: none;
+      width: 100%;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 0 3px var(--cyan-dim);
+    }
+    .form-group textarea { resize: vertical; min-height: 130px; }
+    .form-submit { margin-top: 1.5rem; text-align: center; }
+    .btn-form {
+      background: linear-gradient(135deg, var(--cyan), #0080ff);
+      color: #fff; font-weight: 800; font-size: 1rem;
+      padding: .95rem 2.5rem; border-radius: 8px;
+      border: none; cursor: pointer;
+      transition: opacity .2s, transform .2s, box-shadow .2s;
+      font-family: var(--font-body);
+      display: inline-block; text-decoration: none;
+    }
+    .btn-form:hover { opacity: .85; transform: translateY(-2px); box-shadow: 0 8px 24px var(--cyan-glow); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #060f1e; color: #7a8fa6;
+      border-top: 1px solid rgba(0,200,255,.15);
+      padding: 3.5rem 2rem 2rem;
+    }
+    .footer-inner { max-width: 1160px; margin: 0 auto; }
+    .footer-top {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem; padding-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .footer-logo { display: flex; align-items: center; gap: .75rem; margin-bottom: .75rem; }
+    .footer-logo svg { height: 36px; width: auto; filter: drop-shadow(0 0 6px rgba(0,200,255,.4)); }
+    .footer-tagline { font-size: .85rem; color: #7a8fa6; line-height: 1.6; max-width: 280px; }
+    .footer-col h4 {
+      font-family: var(--font-display);
+      font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .15em; color: #00c8ff; margin-bottom: 1rem;
+    }
+    .footer-col a { display: block; color: #7a8fa6; text-decoration: none; font-size: .85rem; padding: .3rem 0; transition: color .15s; }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding-top: 1.5rem; font-size: .75rem; }
+    .footer-badges { display: flex; gap: .75rem; flex-wrap: wrap; }
+    .badge { border: 1px solid rgba(0,200,255,.2); color: #00c8ff; font-size: .65rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: .25rem .7rem; border-radius: 4px; background: rgba(0,200,255,.08); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .cards-grid { grid-template-columns: repeat(2, 1fr); }
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .experience-pillars { grid-template-columns: repeat(2, 1fr); }
+      .certs-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 860px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-stats { display: none; }
+      .gov-grid { grid-template-columns: 1fr; }
+      .phases { grid-template-columns: repeat(2, 1fr); }
+      .experience-inner { grid-template-columns: 1fr; }
+      .experience-pillars { grid-template-columns: repeat(2, 1fr); }
+      .courses-promo-inner { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .hamburger { display: flex; }
+      nav { display: none; position: absolute; top: 70px; left: 0; right: 0; background: rgba(6,15,30,.98); flex-direction: column; padding: 1rem; border-bottom: 1px solid rgba(0,200,255,.2); }
+      [data-theme="light"] nav { background: rgba(240,244,248,.98); }
+      .nav-open nav { display: flex; }
+      nav a { padding: .75rem 1rem; border-radius: 6px; }
+      .cards-grid { grid-template-columns: 1fr; }
+      .features-grid { grid-template-columns: 1fr; }
+      .phases { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .experience-pillars { grid-template-columns: 1fr; }
+      .course-stats-row { flex-direction: column; gap: 1rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .logo-svg { height: 38px; max-width: min(220px, calc(100vw - 130px)); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="AlerоSec home">
+        <svg class="logo-svg" viewBox="0 0 268 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M10 8 L28 16 L28 30 C28 39 20 45 19 46 C18 45 10 39 10 30 Z" fill="none" stroke="#00c8ff" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M10 8 L28 16 L28 30 C28 39 20 45 19 46 C18 45 10 39 10 30 Z" fill="rgba(0,200,255,0.07)"/>
+          <circle cx="19" cy="26" r="2.5" fill="#00c8ff"/>
+          <line x1="19" y1="23" x2="13" y2="18" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="19" y1="23" x2="25" y2="18" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="19" y1="28.5" x2="19" y2="35" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
+          <text x="36" y="22" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="14" fill="#ffffff" letter-spacing="-0.3">Aler</text>
+          <text x="62" y="22" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="14" fill="#00c8ff" letter-spacing="-0.3">o</text>
+          <text x="70" y="22" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="14" fill="#ffffff" letter-spacing="-0.3">Sec</text>
+          <text class="logo-subtext" x="36" y="36" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-weight="600" font-size="5.8" fill="#7a8fa6" letter-spacing="0.35">CYBERSECURITY · NETWORK INFRASTRUCTURE · AI · CUSTOM APPLICATIONS</text>
+        </svg>
+      </a>
+      <button class="hamburger" aria-label="Toggle navigation" onclick="document.querySelector('header').classList.toggle('nav-open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#governance">Governance</a>
+        <a href="courses.html">Courses</a>
+        <a href="#contact" class="nav-cta">Get in Touch</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme" title="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-eyebrow">Cybersecurity · Network Infrastructure · AI · Custom Applications</div>
+        <h1>Security Programs<br>Built to <span class="accent">Protect</span><br>&amp; Govern.</h1>
+        <p class="hero-desc">Over a decade of hands-on expertise across cybersecurity, enterprise networking, AI integration, and bespoke application development — designing security programs, policies, and governance frameworks aligned to NIST CSF and GDPR. Delivered by CISSP and ITIL certified professionals.</p>
+        <div class="hero-certs">
+          <span class="cert-badge">CISSP Certified</span>
+          <span class="cert-badge">ITIL Certified</span>
+          <span class="cert-badge">10+ Years Experience</span>
+        </div>
+        <div class="hero-actions">
+          <a href="#services" class="btn btn-primary">Explore Services</a>
+          <a href="courses.html" class="btn btn-ghost">View Courses</a>
+        </div>
+      </div>
+      <div class="hero-stats" aria-hidden="true">
+        <div class="stat-card">
+          <span class="stat-num">10+</span>
+          <span class="stat-label">Years Experience</span>
+          <span class="stat-desc">Deep expertise in cybersecurity &amp; collaboration spanning over a decade</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">CISSP</span>
+          <span class="stat-label">Certified Expert</span>
+          <span class="stat-desc">All eight ISC² security domains covered</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">NIST</span>
+          <span class="stat-label">CSF Specialist</span>
+          <span class="stat-desc">CSF 1.1 &amp; 2.0 framework expertise</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">GDPR</span>
+          <span class="stat-label">Compliance Expert</span>
+          <span class="stat-desc">Data protection by design &amp; breach notification</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar" aria-label="Framework expertise">
+    <div class="trust-inner">
+      <span class="trust-label">Frameworks</span>
+      <div class="trust-items">
+        <span class="trust-item">NIST CSF 1.1</span>
+        <span class="trust-item">NIST CSF 2.0</span>
+        <span class="trust-item">GDPR</span>
+        <span class="trust-item">Data Protection by Design</span>
+        <span class="trust-item">72-Hour Breach Notification</span>
+        <span class="trust-item">Network Infrastructure</span>
+        <span class="trust-item">AI Security &amp; Governance</span>
+        <span class="trust-item">Custom Applications</span>
+        <span class="trust-item">Risk Assessment &amp; Governance</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE BAND -->
+  <div class="experience-band" aria-label="Our experience">
+    <div class="experience-inner">
+      <div class="experience-decade">
+        <div class="decade-number">10+</div>
+        <div class="decade-label">Years of Expertise</div>
+        <div class="decade-sub">Cybersecurity · Networks · AI · Applications</div>
+      </div>
+      <div class="experience-content">
+        <h2>A <span>Decade of Mastery</span> Across Security &amp; Technology</h2>
+        <p>Since our founding, AlerоSec has built a track record of excellence at the intersection of cybersecurity governance, network infrastructure, and modern technology delivery. Our practitioners have worked across financial services, healthcare, government, and technology sectors — embedding resilient security cultures and governance frameworks into organisations of every scale.</p>
+        <p>Our depth of experience spans secure network design, AI-enabled solutions, and custom application development — ensuring your infrastructure stays connected, compliant, and protected without sacrificing operational agility.</p>
+        <div class="experience-pillars">
+          <div class="pillar">
+            <div class="pillar-icon">🛡️</div>
+            <div class="pillar-name">Cybersecurity</div>
+            <div class="pillar-desc">GRC, vCISO, policy &amp; program development</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🌐</div>
+            <div class="pillar-name">Network Infrastructure</div>
+            <div class="pillar-desc">Secure architecture, connectivity &amp; resilience</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🤖</div>
+            <div class="pillar-name">AI Solutions</div>
+            <div class="pillar-desc">AI governance, integration &amp; security</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">⚡</div>
+            <div class="pillar-name">Custom Applications</div>
+            <div class="pillar-desc">Bespoke tools built for your workflows</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="certs-section" aria-label="Certifications">
+    <div class="section-inner">
+      <span class="section-tag">Our Credentials</span>
+      <h2 class="section-title">Certified. Experienced. Trusted.</h2>
+      <p class="section-sub">Industry-leading credentials that validate deep expertise — earned and maintained through more than a decade of active practice.</p>
+      <div class="certs-grid">
+        <article class="cert-card">
+          <div class="cert-card-header">
+            <img src="assets/cissp-badge.svg" alt="ISC² CISSP Certified" class="cert-badge-img" width="72" height="72" loading="lazy">
+            <div class="cert-card-title">
+              <h3>CISSP</h3>
+              <div class="cert-full-name">Certified Information Systems Security Professional</div>
+            </div>
+          </div>
+          <p class="cert-summary">The world's premier cybersecurity certification from ISC² — validating enterprise-grade security program design across all eight security domains.</p>
+          <div class="cert-domains">
+            <span>Risk Management</span>
+            <span>Asset Security</span>
+            <span>IAM</span>
+            <span>Security Architecture</span>
+            <span>Security Operations</span>
+            <span>Software Development Security</span>
+          </div>
+          <div class="cert-issuer">Issued by <span>ISC²</span></div>
+        </article>
+        <article class="cert-card">
+          <div class="cert-card-header">
+            <img src="assets/itil-badge.svg" alt="ITIL Certified" class="cert-badge-img" width="72" height="72" loading="lazy">
+            <div class="cert-card-title">
+              <h3>ITIL</h3>
+              <div class="cert-full-name">Information Technology Infrastructure Library</div>
+            </div>
+          </div>
+          <p class="cert-summary">IT service management best practices that align security programs with IT operations — integrating governance into service delivery and change management.</p>
+          <div class="cert-domains">
+            <span>ITSM Best Practices</span>
+            <span>Change Management</span>
+            <span>Incident Response</span>
+            <span>Service Lifecycle</span>
+            <span>Continual Improvement</span>
+          </div>
+          <div class="cert-issuer">Issued by <span>AXELOS</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services-section" aria-label="Services">
+    <div class="section-inner">
+      <span class="section-tag">Our Services</span>
+      <h2 class="section-title">What We Do</h2>
+      <p class="section-sub">End-to-end security program development — from policy drafting to board-level governance support, delivered by certified professionals with over a decade of hands-on experience.</p>
+      <div class="cards-grid">
+        <a href="#governance" class="card">
+          <div class="card-icon-wrap">🏛️</div>
+          <h3>Governance Support</h3>
+          <p>Board-ready governance frameworks, committee charters, and executive reporting structures aligned to your risk appetite.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+        <a href="#framework" class="card">
+          <div class="card-icon-wrap">📋</div>
+          <h3>Policy Development</h3>
+          <p>Comprehensive security policy suites — from acceptable use to incident response — tailored to NIST CSF and GDPR requirements.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+        <a href="#framework" class="card">
+          <div class="card-icon-wrap">🛡️</div>
+          <h3>Security Programs</h3>
+          <p>Full-lifecycle security program design, implementation, and maturity uplift aligned to NIST CSF and GDPR.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+        <a href="#capabilities" class="card">
+          <div class="card-icon-wrap">⚖️</div>
+          <h3>Risk &amp; Compliance</h3>
+          <p>Risk assessments, treatment plans, and compliance gap analyses against NIST CSF and GDPR regulatory obligations.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+        <a href="#capabilities" class="card">
+          <div class="card-icon-wrap">🔍</div>
+          <h3>Security Assurance</h3>
+          <p>Independent reviews, audits, and maturity assessments to validate your security posture and identify improvement opportunities.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+        <a href="#contact" class="card">
+          <div class="card-icon-wrap">👤</div>
+          <h3>vCISO Services</h3>
+          <p>Fractional Chief Information Security Officer support — CISSP-certified strategic leadership without the full-time overhead.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOVERNANCE -->
+  <section id="governance" class="governance" aria-label="Governance services">
+    <div class="section-inner">
+      <span class="section-tag">Governance Services</span>
+      <h2 class="section-title">Security Governance</h2>
+      <p class="section-sub">Structured governance support that gives your leadership team the visibility, accountability, and control they need to manage cyber risk effectively.</p>
+      <div class="gov-grid">
+        <div class="gov-card">
+          <span class="gov-num">01 — Framework Design</span>
+          <h3>Governance Framework</h3>
+          <p>We design and implement security governance frameworks that define roles, responsibilities, and decision-making structures across your organisation.</p>
+          <ul class="gov-list">
+            <li>Security governance structure design</li>
+            <li>RACI matrix development</li>
+            <li>Committee &amp; steering group charters</li>
+            <li>Board reporting templates</li>
+            <li>NIST CSF &amp; GDPR alignment</li>
+          </ul>
+        </div>
+        <div class="gov-card">
+          <span class="gov-num">02 — Policy &amp; Standards</span>
+          <h3>Policy Architecture</h3>
+          <p>A complete, layered policy architecture — from top-level security policy through to operational standards and procedures — built for your context.</p>
+          <ul class="gov-list">
+            <li>Information security policy suite</li>
+            <li>Standards &amp; baseline development</li>
+            <li>Acceptable use &amp; HR policies</li>
+            <li>Policy lifecycle management</li>
+            <li>GDPR &amp; NIST CSF regulatory mapping</li>
+          </ul>
+        </div>
+        <div class="gov-card">
+          <span class="gov-num">03 — Executive Support</span>
+          <h3>Leadership Enablement</h3>
+          <p>Equipping executives and boards with the tools, metrics, and reporting they need to make informed decisions about cyber risk and investment.</p>
+          <ul class="gov-list">
+            <li>Executive risk dashboards</li>
+            <li>Board-level cyber briefings</li>
+            <li>KPI &amp; KRI development</li>
+            <li>Security investment roadmaps</li>
+            <li>Cyber risk appetite statements</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRAMEWORK PHASES -->
+  <section id="framework" class="framework" aria-label="Our methodology">
+    <div class="section-inner">
+      <span class="section-tag">Our Approach</span>
+      <h2 class="section-title">The AlerоSec Methodology</h2>
+      <p class="section-sub">A structured, repeatable four-phase approach to building security programs that are measurable, sustainable, and aligned to your business.</p>
+      <div class="phases">
+        <div class="phase">
+          <div class="phase-num">01</div>
+          <span class="phase-tag">Assess</span>
+          <h3>Understand Your Posture</h3>
+          <p>We evaluate your current security state against NIST CSF and GDPR, identify gaps, and populate a risk register aligned to your risk appetite.</p>
+        </div>
+        <div class="phase phase-active">
+          <div class="phase-num">02</div>
+          <span class="phase-tag">Design</span>
+          <h3>Build the Blueprint</h3>
+          <p>We design your governance framework, draft your policy suite, and build a prioritised roadmap for implementation based on risk and business impact.</p>
+        </div>
+        <div class="phase">
+          <div class="phase-num">03</div>
+          <span class="phase-tag">Implement</span>
+          <h3>Deploy &amp; Embed</h3>
+          <p>We deploy governance structures, embed policies into operations, train your people, and integrate controls into your existing tools and processes.</p>
+        </div>
+        <div class="phase">
+          <div class="phase-num">04</div>
+          <span class="phase-tag">Sustain</span>
+          <h3>Monitor &amp; Improve</h3>
+          <p>We establish ongoing monitoring, review cycles, and executive reporting to ensure your security program remains effective and continuously improves.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPABILITIES -->
+  <section id="capabilities" class="capabilities" aria-label="Capabilities">
+    <div class="section-inner">
+      <span class="section-tag">Why AlerоSec</span>
+      <h2 class="section-title">Our Capabilities</h2>
+      <p class="section-sub">Practical expertise across the full spectrum of security program and governance disciplines — backed by CISSP and ITIL certification and over a decade of real-world delivery.</p>
+      <div class="features-grid">
+        <div class="feature">
+          <h3>CISSP-Backed Expertise</h3>
+          <p>Our CISSP certification spans all eight security domains — giving you confidence that your security program is designed to the highest professional standard.</p>
+        </div>
+        <div class="feature">
+          <h3>ITIL-Aligned Delivery</h3>
+          <p>ITIL certification ensures our security programs integrate cleanly with your IT service management processes — no silos, no friction.</p>
+        </div>
+        <div class="feature">
+          <h3>NIST CSF Specialists</h3>
+          <p>Deep knowledge of NIST CSF 1.1 and 2.0 — we build programs that satisfy framework requirements and speak the language of your auditors.</p>
+        </div>
+        <div class="feature">
+          <h3>GDPR Compliance</h3>
+          <p>Mapping your security program to GDPR obligations — data protection by design, breach notification readiness, and DPA alignment.</p>
+        </div>
+        <div class="feature">
+          <h3>Decade of Field Experience</h3>
+          <p>Over ten years of active engagement in cybersecurity and collaboration — across industries, scales, and regulatory environments. No theoretical advice, just proven practice.</p>
+        </div>
+        <div class="feature">
+          <h3>Vendor-Neutral Advice</h3>
+          <p>No product quotas. No vendor kickbacks. Pure, independent advice focused entirely on your security outcomes and risk reduction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES PROMO -->
+  <section class="courses-promo" aria-label="Courses preview">
+    <div class="courses-promo-inner">
+      <div class="courses-promo-content">
+        <span class="section-tag">Education &amp; Training</span>
+        <h2>Learn from <span>Industry Experts</span> with Real-World Experience</h2>
+        <p>Our courses are built by practitioners, not theorists. Drawing on over a decade of cybersecurity and collaboration expertise, we offer structured learning tracks across the disciplines that matter most to modern organisations.</p>
+        <div class="course-tracks">
+          <a href="courses.html#ai" class="course-track">
+            <span class="track-icon">🤖</span>
+            <div class="track-info">
+              <div class="track-name">AI &amp; Security</div>
+              <div class="track-desc">Navigating AI risks, governance frameworks, and emerging threat landscapes</div>
+            </div>
+            <span class="track-arrow">→</span>
+          </a>
+          <a href="courses.html#networking" class="course-track">
+            <span class="track-icon">🌐</span>
+            <div class="track-info">
+              <div class="track-name">Networking Fundamentals &amp; Security</div>
+              <div class="track-desc">Protocols, architecture, and securing network infrastructure</div>
+            </div>
+            <span class="track-arrow">→</span>
+          </a>
+          <a href="courses.html#security" class="course-track">
+            <span class="track-icon">🔒</span>
+            <div class="track-info">
+              <div class="track-name">Cybersecurity Core</div>
+              <div class="track-desc">GRC, incident response, policy, and NIST/GDPR compliance</div>
+            </div>
+            <span class="track-arrow">→</span>
+          </a>
+        </div>
+        <div style="margin-top:2rem;">
+          <a href="courses.html" class="btn btn-primary">Browse All Courses</a>
+        </div>
+      </div>
+      <div class="courses-promo-visual">
+        <div class="course-stat-big">3</div>
+        <div class="course-stat-label">Learning Tracks</div>
+        <div class="course-stats-row">
+          <div class="mini-stat">
+            <div class="mini-stat-num">🎥</div>
+            <div class="mini-stat-label">Video Lessons</div>
+          </div>
+          <div class="mini-stat">
+            <div class="mini-stat-num">📝</div>
+            <div class="mini-stat-label">Blog Articles</div>
+          </div>
+          <div class="mini-stat">
+            <div class="mini-stat-num">🏅</div>
+            <div class="mini-stat-label">Expert-Led</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band" aria-label="Call to action">
+    <h2>Ready to <span>Strengthen</span> Your Security Posture?</h2>
+    <p>Let's talk about your security program, governance needs, or compliance obligations. No obligation — just a conversation with a certified expert.</p>
+    <a href="#contact" class="btn btn-cyan">Start the Conversation</a>
+  </section>
+
+  <!-- CONTACT / GET IN TOUCH -->
+  <section id="contact" class="contact-section" aria-label="Contact">
+    <div class="contact-inner">
+      <span class="section-tag">Get in Touch</span>
+      <h2 class="section-title">Let's Talk Security</h2>
+      <p class="section-sub">Have a question, want a consultation, or ready to kick off a project? Send us a message and we'll get back to you promptly.</p>
+      <div class="contact-form">
+        <form action="mailto:jalerotech@outlook.com" method="post" enctype="text/plain">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-name">Your Name</label>
+              <input type="text" id="contact-name" name="Name" placeholder="Jane Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email Address</label>
+              <input type="email" id="contact-email" name="Email" placeholder="jane@company.com" required>
+            </div>
+          </div>
+          <div class="form-group" style="margin-bottom:1.25rem;">
+            <label for="contact-subject">Subject</label>
+            <input type="text" id="contact-subject" name="Subject" placeholder="Security program review, vCISO inquiry…">
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="Message" placeholder="Tell us about your security needs or questions…" required></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn-form">Send Message →</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer aria-label="Footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">
+            <svg viewBox="0 0 268 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="AlerоSec logo">
+              <path d="M10 8 L28 16 L28 30 C28 39 20 45 19 46 C18 45 10 39 10 30 Z" fill="none" stroke="#00c8ff" stroke-width="2.2" stroke-linejoin="round"/>
+              <path d="M10 8 L28 16 L28 30 C28 39 20 45 19 46 C18 45 10 39 10 30 Z" fill="rgba(0,200,255,0.07)"/>
+              <circle cx="19" cy="26" r="2.5" fill="#00c8ff"/>
+              <line x1="19" y1="23" x2="13" y2="18" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="19" y1="23" x2="25" y2="18" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="19" y1="28.5" x2="19" y2="35" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
+              <text x="36" y="22" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="14" fill="#ffffff" letter-spacing="-0.3">Aler</text>
+              <text x="62" y="22" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="14" fill="#00c8ff" letter-spacing="-0.3">o</text>
+              <text x="70" y="22" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="14" fill="#ffffff" letter-spacing="-0.3">Sec</text>
+              <text x="36" y="36" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-weight="600" font-size="5.8" fill="#7a8fa6" letter-spacing="0.35">CYBERSECURITY · NETWORK INFRASTRUCTURE · AI · CUSTOM APPLICATIONS</text>
+            </svg>
+          </div>
+          <p class="footer-tagline">Independent specialists in cybersecurity, network infrastructure, AI, and custom applications — with over a decade of expertise in security program development and governance. CISSP &amp; ITIL certified.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="#services">Governance Support</a>
+          <a href="#services">Policy Development</a>
+          <a href="#services">Security Programs</a>
+          <a href="#services">Risk &amp; Compliance</a>
+          <a href="#services">vCISO Services</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="courses.html">Courses</a>
+          <a href="courses.html#ai">AI &amp; Security</a>
+          <a href="courses.html#networking">Networking</a>
+          <a href="#framework">Our Methodology</a>
+          <a href="#certifications">Certifications</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="#contact">Get in Touch</a>
+          <a href="#contact">Request a Review</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 AlerоSec. All rights reserved.</span>
+        <div class="footer-badges">
+          <span class="badge">CISSP</span>
+          <span class="badge">ITIL</span>
+          <span class="badge">NIST CSF</span>
+          <span class="badge">GDPR</span>
+          <span class="badge">10+ Years</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  // Theme toggle
+  const toggle = document.getElementById('themeToggle');
+  const html = document.documentElement;
+  const saved = localStorage.getItem('alerosec-theme') || 'dark';
+  html.setAttribute('data-theme', saved);
+  toggle.textContent = saved === 'dark' ? '☀️' : '🌙';
+
+  toggle.addEventListener('click', () => {
+    const current = html.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    toggle.textContent = next === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem('alerosec-theme', next);
+  });
+</script>
+</body>
+</html>
