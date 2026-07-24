@@ -379,38 +379,35 @@
   </style>
 </head>
 <body>
-
-  <!-- HEADER -->
   <header>
     <div class="header-inner">
-      <a href="index.html" class="logo" aria-label="AlerоSec home">
-        <svg class="logo-svg" viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M10 6 L28 14 L28 28 C28 37 20 43 19 44 C18 43 10 37 10 28 Z" fill="none" stroke="#00c8ff" stroke-width="2.2" stroke-linejoin="round"/>
-          <path d="M10 6 L28 14 L28 28 C28 37 20 43 19 44 C18 43 10 37 10 28 Z" fill="rgba(0,200,255,0.07)"/>
-          <circle cx="19" cy="24" r="2.5" fill="#00c8ff"/>
-          <line x1="19" y1="21" x2="13" y2="16" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
-          <line x1="19" y1="21" x2="25" y2="16" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
-          <line x1="19" y1="26.5" x2="19" y2="33" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
-          <text x="36" y="20" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="13" fill="#ffffff" letter-spacing="-0.3">Aler</text>
-          <text x="60.5" y="20" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="13" fill="#00c8ff" letter-spacing="-0.3">o</text>
-          <text x="68.5" y="20" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="13" fill="#ffffff" letter-spacing="-0.3">Sec</text>
-          <text x="36" y="33" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-weight="600" font-size="6.5" fill="#7a8fa6" letter-spacing="0.5">CYBER GOVERNANCE &amp; SECURITY</text>
+      <a href="#" class="logo" aria-label="AlerоSec home">
+        <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="sg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#00c8ff"/>
+              <stop offset="100%" style="stop-color:#0066ff"/>
+            </linearGradient>
+          </defs>
+          <path d="M50 6 L88 22 L88 56 C88 76 70 91 50 97 C30 91 12 76 12 56 L12 22 Z" fill="url(#sg)" opacity="0.08"/>
+          <path d="M50 6 L88 22 L88 56 C88 76 70 91 50 97 C30 91 12 76 12 56 L12 22 Z" fill="none" stroke="url(#sg)" stroke-width="5"/>
+          <circle cx="50" cy="46" r="7" fill="none" stroke="url(#sg)" stroke-width="3.5"/>
+          <rect x="43" y="51" width="14" height="12" rx="2" fill="none" stroke="url(#sg)" stroke-width="3.5"/>
+          <line x1="50" y1="43" x2="50" y2="38" stroke="url(#sg)" stroke-width="3.5" stroke-linecap="round"/>
         </svg>
+        <span class="logo-wordmark">Alero<em>Sec</em></span>
       </a>
-      <button class="hamburger" aria-label="Toggle navigation" onclick="document.querySelector('header').classList.toggle('nav-open')">
-        <span></span><span></span><span></span>
-      </button>
       <nav aria-label="Primary navigation">
-        <a href="index.html#services">Services</a>
-        <a href="index.html#certifications">Certifications</a>
-        <a href="index.html#governance">Governance</a>
-        <a href="courses.html" class="active">Courses</a>
-        <a href="index.html#contact" class="nav-cta">Get in Touch</a>
+        <a href="#services">Services</a>
+        <a href="#governance">Governance</a>
+        <a href="#framework">Framework</a>
+        <a href="#credentials">Credentials</a>
+        <a href="courses.html">Courses</a>
+        <a href="#contact" class="nav-cta">Get in Touch</a>
       </nav>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme" title="Toggle theme">🌙</button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
     </div>
   </header>
-
   <!-- PAGE HERO -->
   <div class="page-hero">
     <div class="page-hero-inner">
