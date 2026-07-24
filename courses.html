@@ -125,8 +125,7 @@
       height: 70px; gap: 1rem;
     }
     .logo { display: flex; align-items: center; gap: .75rem; text-decoration: none; flex-shrink: 0; }
-    .logo-svg { height: 44px; width: auto; filter: drop-shadow(0 0 8px var(--cyan-glow)); }
-    [data-theme="light"] .logo-subtext { fill: #4a6080 !important; }
+    .logo-svg { height: 42px; width: auto; filter: drop-shadow(0 0 8px var(--cyan-glow)); }
     nav { display: flex; align-items: center; gap: .1rem; }
     nav a { color: var(--text-muted); text-decoration: none; font-size: .85rem; font-weight: 600; padding: .45rem .9rem; border-radius: 6px; transition: color .15s, background .15s; white-space: nowrap; }
     nav a:hover { color: var(--cyan); background: var(--cyan-dim); }
@@ -376,7 +375,6 @@
       .track-header-inner { flex-direction: column; }
       .blog-card { grid-template-columns: 1fr; }
       .blog-arrow { display: none; }
-      .logo-svg { height: 38px; max-width: min(220px, calc(100vw - 130px)); }
     }
   </style>
 </head>
@@ -386,17 +384,17 @@
   <header>
     <div class="header-inner">
       <a href="index.html" class="logo" aria-label="AlerоSec home">
-        <svg class="logo-svg" viewBox="0 0 268 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M10 8 L28 16 L28 30 C28 39 20 45 19 46 C18 45 10 39 10 30 Z" fill="none" stroke="#00c8ff" stroke-width="2.2" stroke-linejoin="round"/>
-          <path d="M10 8 L28 16 L28 30 C28 39 20 45 19 46 C18 45 10 39 10 30 Z" fill="rgba(0,200,255,0.07)"/>
-          <circle cx="19" cy="26" r="2.5" fill="#00c8ff"/>
-          <line x1="19" y1="23" x2="13" y2="18" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
-          <line x1="19" y1="23" x2="25" y2="18" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
-          <line x1="19" y1="28.5" x2="19" y2="35" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
-          <text x="36" y="22" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="14" fill="#ffffff" letter-spacing="-0.3">Aler</text>
-          <text x="62" y="22" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="14" fill="#00c8ff" letter-spacing="-0.3">o</text>
-          <text x="70" y="22" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="14" fill="#ffffff" letter-spacing="-0.3">Sec</text>
-          <text class="logo-subtext" x="36" y="36" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-weight="600" font-size="5.8" fill="#7a8fa6" letter-spacing="0.35">CYBERSECURITY · NETWORK INFRASTRUCTURE · AI · CUSTOM APPLICATIONS</text>
+        <svg class="logo-svg" viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M10 6 L28 14 L28 28 C28 37 20 43 19 44 C18 43 10 37 10 28 Z" fill="none" stroke="#00c8ff" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M10 6 L28 14 L28 28 C28 37 20 43 19 44 C18 43 10 37 10 28 Z" fill="rgba(0,200,255,0.07)"/>
+          <circle cx="19" cy="24" r="2.5" fill="#00c8ff"/>
+          <line x1="19" y1="21" x2="13" y2="16" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="19" y1="21" x2="25" y2="16" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="19" y1="26.5" x2="19" y2="33" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
+          <text x="36" y="20" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="13" fill="#ffffff" letter-spacing="-0.3">Aler</text>
+          <text x="60.5" y="20" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="13" fill="#00c8ff" letter-spacing="-0.3">o</text>
+          <text x="68.5" y="20" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="13" fill="#ffffff" letter-spacing="-0.3">Sec</text>
+          <text x="36" y="33" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-weight="600" font-size="6.5" fill="#7a8fa6" letter-spacing="0.5">CYBER GOVERNANCE &amp; SECURITY</text>
         </svg>
       </a>
       <button class="hamburger" aria-label="Toggle navigation" onclick="document.querySelector('header').classList.toggle('nav-open')">
@@ -494,7 +492,7 @@
             <!-- VIDEO 1 — replace VIDEO_ID_1 with your YouTube video ID e.g. dQw4w9WgXcQ -->
             <div class="video-embed-card ai">
               <div class="yt-wrap">
-                <div class="yt-placeholder" data-videoid="SEC_VIDEO_ID_1">
+                <div class="yt-placeholder" data-videoid="VIDEO_ID_1">
                   <div class="play-circle">▶</div>
                   <div class="yt-label">Introduction to AI in Cybersecurity<br><small>Click to embed your YouTube video</small></div>
                 </div>
@@ -507,6 +505,7 @@
               <div class="video-footer">
                 <span class="video-instructor">AlerоSec Expert</span>
               </div>
+              <div class="yt-add-notice">Replace <code>VIDEO_ID_1</code> in the HTML with your YouTube video ID to embed this lesson.</div>
             </div>
 
             <!-- VIDEO 2 -->
@@ -525,6 +524,7 @@
               <div class="video-footer">
                 <span class="video-instructor">AlerоSec Expert</span>
               </div>
+              <div class="yt-add-notice">Replace <code>VIDEO_ID_2</code> in the HTML with your YouTube video ID to embed this lesson.</div>
             </div>
 
             <!-- VIDEO 3 -->
@@ -543,6 +543,7 @@
               <div class="video-footer">
                 <span class="video-instructor">AlerоSec Expert</span>
               </div>
+              <div class="yt-add-notice">Replace <code>VIDEO_ID_3</code> in the HTML with your YouTube video ID to embed this lesson.</div>
             </div>
 
             <!-- VIDEO 4 -->
@@ -561,6 +562,7 @@
               <div class="video-footer">
                 <span class="video-instructor">AlerоSec Expert</span>
               </div>
+              <div class="yt-add-notice">Replace <code>VIDEO_ID_4</code> in the HTML with your YouTube video ID to embed this lesson.</div>
             </div>
 
           </div>
@@ -633,7 +635,7 @@
 
             <div class="video-embed-card net">
               <div class="yt-wrap">
-                <div class="yt-placeholder" data-videoid="video_id">
+                <div class="yt-placeholder" data-videoid="NET_VIDEO_ID_1">
                   <div class="play-circle">▶</div>
                   <div class="yt-label">Networking Fundamentals for Security Professionals<br><small>Click to embed your YouTube video</small></div>
                 </div>
@@ -644,6 +646,7 @@
                 <div class="video-desc">OSI model, TCP/IP stack, routing, switching, and DNS demystified — with a security lens applied throughout. The foundation every security practitioner needs.</div>
               </div>
               <div class="video-footer"><span class="video-instructor">AlerоSec Expert</span></div>
+              <div class="yt-add-notice">Replace <code>NET_VIDEO_ID_1</code> with your YouTube video ID.</div>
             </div>
 
             <div class="video-embed-card net">
@@ -659,6 +662,7 @@
                 <div class="video-desc">Designing layered network defences — firewall rule logic, intrusion detection vs. prevention, VLAN segmentation, and DMZ architecture for enterprise environments.</div>
               </div>
               <div class="video-footer"><span class="video-instructor">AlerоSec Expert</span></div>
+              <div class="yt-add-notice">Replace <code>NET_VIDEO_ID_2</code> with your YouTube video ID.</div>
             </div>
 
             <div class="video-embed-card net">
@@ -674,6 +678,7 @@
                 <div class="video-desc">Moving beyond perimeter security — implementing Zero Trust principles across identity, device, workload, and network layers with practical architecture patterns.</div>
               </div>
               <div class="video-footer"><span class="video-instructor">AlerоSec Expert</span></div>
+              <div class="yt-add-notice">Replace <code>NET_VIDEO_ID_3</code> with your YouTube video ID.</div>
             </div>
 
             <div class="video-embed-card net">
@@ -689,6 +694,7 @@
                 <div class="video-desc">WPA3, rogue AP detection, VPN architecture, and ZTNA for remote workforces — covering the secure connectivity challenges modern organisations face every day.</div>
               </div>
               <div class="video-footer"><span class="video-instructor">AlerоSec Expert</span></div>
+              <div class="yt-add-notice">Replace <code>NET_VIDEO_ID_4</code> with your YouTube video ID.</div>
             </div>
 
           </div>
@@ -884,20 +890,19 @@
       <div class="footer-top">
         <div>
           <div class="footer-logo">
-            <svg viewBox="0 0 268 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="AlerоSec logo">
-              <path d="M10 8 L28 16 L28 30 C28 39 20 45 19 46 C18 45 10 39 10 30 Z" fill="none" stroke="#00c8ff" stroke-width="2.2" stroke-linejoin="round"/>
-              <path d="M10 8 L28 16 L28 30 C28 39 20 45 19 46 C18 45 10 39 10 30 Z" fill="rgba(0,200,255,0.07)"/>
-              <circle cx="19" cy="26" r="2.5" fill="#00c8ff"/>
-              <line x1="19" y1="23" x2="13" y2="18" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
-              <line x1="19" y1="23" x2="25" y2="18" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
-              <line x1="19" y1="28.5" x2="19" y2="35" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
-              <text x="36" y="22" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="14" fill="#ffffff" letter-spacing="-0.3">Aler</text>
-              <text x="62" y="22" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="14" fill="#00c8ff" letter-spacing="-0.3">o</text>
-              <text x="70" y="22" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="14" fill="#ffffff" letter-spacing="-0.3">Sec</text>
-              <text x="36" y="36" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-weight="600" font-size="5.8" fill="#7a8fa6" letter-spacing="0.35">CYBERSECURITY · NETWORK INFRASTRUCTURE · AI · CUSTOM APPLICATIONS</text>
+            <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="AlerоSec logo">
+              <path d="M10 6 L28 14 L28 28 C28 37 20 43 19 44 C18 43 10 37 10 28 Z" fill="none" stroke="#00c8ff" stroke-width="2.2" stroke-linejoin="round"/>
+              <path d="M10 6 L28 14 L28 28 C28 37 20 43 19 44 C18 43 10 37 10 28 Z" fill="rgba(0,200,255,0.07)"/>
+              <circle cx="19" cy="24" r="2.5" fill="#00c8ff"/>
+              <line x1="19" y1="21" x2="13" y2="16" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="19" y1="21" x2="25" y2="16" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="19" y1="26.5" x2="19" y2="33" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
+              <text x="36" y="20" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="13" fill="#ffffff" letter-spacing="-0.3">Aler</text>
+              <text x="60.5" y="20" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="13" fill="#00c8ff" letter-spacing="-0.3">o</text>
+              <text x="68.5" y="20" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="13" fill="#ffffff" letter-spacing="-0.3">Sec</text>
             </svg>
           </div>
-          <p class="footer-tagline">Expert-led courses in cybersecurity, networking, AI, and custom applications — built by CISSP &amp; ITIL certified practitioners with over a decade of real-world experience.</p>
+          <p class="footer-tagline">Expert-led cybersecurity courses built by CISSP &amp; ITIL certified practitioners with over a decade of real-world experience.</p>
         </div>
         <div class="footer-col">
           <h4>Tracks</h4>
