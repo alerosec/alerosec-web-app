@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AlerоSec | Cyber Governance and Security Solutions</title>
-  <meta name="description" content="AlerоSec — Cybersecurity, network infrastructure, AI, and custom applications. CISSP & ITIL certified specialists in security program development, governance, and enterprise solutions.">
+  <meta name="description" content="AlerоSec — Over a decade of expertise in cybersecurity, collaboration, and governance. CISSP & ITIL certified specialists in NIST CSF and GDPR security program development.">
   <meta name="keywords" content="cybersecurity, CISSP, ITIL, security program, security policy, governance, NIST CSF, GDPR, GRC, vCISO, AI security, networking, collaboration">
   <meta name="robots" content="index, follow">
   <meta property="og:title" content="AlerоSec | Cyber Governance and Security Solutions">
@@ -149,10 +149,9 @@
       text-decoration: none; flex-shrink: 0;
     }
     .logo-svg {
-      height: 44px; width: auto;
+      height: 42px; width: auto;
       filter: drop-shadow(0 0 8px var(--cyan-glow));
     }
-    [data-theme="light"] .logo-subtext { fill: #4a6080 !important; }
 
     nav { display: flex; align-items: center; gap: .1rem; }
     nav a {
@@ -226,11 +225,10 @@
       border: 1px solid rgba(0,200,255,.3);
       color: var(--cyan);
       font-family: var(--font-body);
-      font-size: .68rem; font-weight: 700;
-      letter-spacing: .1em; text-transform: uppercase;
-      padding: .4rem 1rem; border-radius: 20px;
+      font-size: .75rem; font-weight: 700;
+      letter-spacing: .12em; text-transform: uppercase;
+      padding: .35rem .9rem; border-radius: 20px;
       margin-bottom: 1.5rem;
-      max-width: 520px; line-height: 1.5;
     }
     .hero-eyebrow::before { content: '●'; font-size: .5rem; animation: pulse 2s infinite; }
     @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
@@ -266,7 +264,7 @@
       font-size: .8rem; font-weight: 700;
       color: var(--cyan); letter-spacing: .04em;
     }
-    .cert-badge .badge-icon { display: none; }
+    .cert-badge .badge-icon { font-size: 1rem; }
 
     .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
     .btn {
@@ -378,7 +376,7 @@
     }
     .experience-content p { font-size: .95rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: 1.25rem; }
     .experience-pillars {
-      display: grid; grid-template-columns: repeat(4, 1fr);
+      display: grid; grid-template-columns: repeat(3, 1fr);
       gap: 1rem; margin-top: 1.5rem;
     }
     .pillar {
@@ -417,69 +415,57 @@
     }
     .section-sub {
       font-size: 1rem; color: var(--text-muted);
-      max-width: 580px; margin-bottom: 2rem; line-height: 1.7;
+      max-width: 580px; margin-bottom: 3rem; line-height: 1.7;
     }
 
     /* ── CERTIFICATIONS ── */
     .certs-section { background: var(--bg-2); }
     .certs-grid {
       display: grid; grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
+      gap: 2rem; margin-bottom: 3rem;
     }
     .cert-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.5rem 1.75rem;
+      border-radius: 14px;
+      padding: 2.5rem;
       position: relative; overflow: hidden;
       transition: border-color .2s, transform .2s, box-shadow .2s;
-      display: flex; flex-direction: column; gap: .85rem;
     }
     .cert-card::before {
       content: '';
       position: absolute; top: 0; left: 0; right: 0;
-      height: 2px;
+      height: 3px;
       background: linear-gradient(90deg, var(--cyan), #0080ff);
     }
-    .cert-card:hover { border-color: var(--border-strong); transform: translateY(-2px); box-shadow: var(--shadow-card); }
-    .cert-card-header {
-      display: flex; align-items: center; gap: 1.1rem;
+    .cert-card:hover { border-color: var(--border-strong); transform: translateY(-4px); box-shadow: var(--shadow-card); }
+    .cert-logo {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 64px; height: 64px;
+      background: var(--cyan-dim);
+      border: 2px solid rgba(0,200,255,.3);
+      border-radius: 12px;
+      font-size: 1.8rem; margin-bottom: 1.5rem;
     }
-    .cert-badge-img {
-      width: 72px; height: 72px; flex-shrink: 0;
-      object-fit: contain;
-    }
-    .cert-badge-img--wide {
-      width: auto; max-width: 110px; height: 48px;
-    }
-    .cert-card-title { min-width: 0; }
     .cert-card h3 {
       font-family: var(--font-display);
-      font-size: 1.15rem; font-weight: 700; color: var(--text-primary);
-      margin-bottom: .15rem; letter-spacing: -.01em; line-height: 1.2;
+      font-size: 1.3rem; font-weight: 700; color: var(--text-primary); margin-bottom: .25rem; letter-spacing: -.01em;
     }
-    .cert-card .cert-full-name {
-      font-size: .68rem; color: var(--cyan); font-weight: 700;
-      text-transform: uppercase; letter-spacing: .06em; line-height: 1.35;
+    .cert-card .cert-full-name { font-size: .8rem; color: var(--cyan); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 1rem; }
+    .cert-card p { font-size: .9rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem; }
+    .cert-points { list-style: none; padding: 0; }
+    .cert-points li {
+      font-size: .85rem; color: var(--text-secondary);
+      padding: .4rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; gap: .75rem;
     }
-    .cert-card .cert-summary {
-      font-size: .84rem; color: var(--text-muted); line-height: 1.6; margin: 0;
-    }
-    .cert-domains {
-      display: flex; flex-wrap: wrap; gap: .4rem;
-    }
-    .cert-domains span {
-      font-size: .68rem; font-weight: 600;
-      color: var(--text-secondary);
-      background: var(--cyan-dim);
-      border: 1px solid rgba(0,200,255,.15);
-      padding: .22rem .55rem; border-radius: 4px;
-      letter-spacing: .02em;
-    }
+    .cert-points li::before { content: ''; width: 6px; height: 6px; background: var(--cyan); border-radius: 50%; flex-shrink: 0; }
     .cert-issuer {
-      font-size: .68rem; font-weight: 700;
-      color: var(--text-muted); text-transform: uppercase; letter-spacing: .06em;
-      margin-top: auto; padding-top: .25rem;
+      display: inline-flex; align-items: center; gap: .4rem;
+      margin-top: 1.5rem;
+      font-size: .75rem; font-weight: 700;
+      color: var(--text-muted); text-transform: uppercase; letter-spacing: .08em;
     }
     .cert-issuer span { color: var(--cyan); }
 
@@ -756,7 +742,7 @@
       .gov-grid { grid-template-columns: 1fr; }
       .phases { grid-template-columns: repeat(2, 1fr); }
       .experience-inner { grid-template-columns: 1fr; }
-      .experience-pillars { grid-template-columns: repeat(2, 1fr); }
+      .experience-pillars { grid-template-columns: repeat(3, 1fr); }
       .courses-promo-inner { grid-template-columns: 1fr; }
     }
     @media (max-width: 600px) {
@@ -772,7 +758,6 @@
       .experience-pillars { grid-template-columns: 1fr; }
       .course-stats-row { flex-direction: column; gap: 1rem; }
       .form-row { grid-template-columns: 1fr; }
-      .logo-svg { height: 38px; max-width: min(220px, calc(100vw - 130px)); }
     }
   </style>
 </head>
@@ -782,17 +767,17 @@
   <header>
     <div class="header-inner">
       <a href="index.html" class="logo" aria-label="AlerоSec home">
-        <svg class="logo-svg" viewBox="0 0 268 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M10 8 L28 16 L28 30 C28 39 20 45 19 46 C18 45 10 39 10 30 Z" fill="none" stroke="#00c8ff" stroke-width="2.2" stroke-linejoin="round"/>
-          <path d="M10 8 L28 16 L28 30 C28 39 20 45 19 46 C18 45 10 39 10 30 Z" fill="rgba(0,200,255,0.07)"/>
-          <circle cx="19" cy="26" r="2.5" fill="#00c8ff"/>
-          <line x1="19" y1="23" x2="13" y2="18" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
-          <line x1="19" y1="23" x2="25" y2="18" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
-          <line x1="19" y1="28.5" x2="19" y2="35" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
-          <text x="36" y="22" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="14" fill="#ffffff" letter-spacing="-0.3">Aler</text>
-          <text x="62" y="22" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="14" fill="#00c8ff" letter-spacing="-0.3">o</text>
-          <text x="70" y="22" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="14" fill="#ffffff" letter-spacing="-0.3">Sec</text>
-          <text class="logo-subtext" x="36" y="36" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-weight="600" font-size="5.8" fill="#7a8fa6" letter-spacing="0.35">CYBERSECURITY · NETWORK INFRASTRUCTURE · AI · CUSTOM APPLICATIONS</text>
+        <svg class="logo-svg" viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M10 6 L28 14 L28 28 C28 37 20 43 19 44 C18 43 10 37 10 28 Z" fill="none" stroke="#00c8ff" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M10 6 L28 14 L28 28 C28 37 20 43 19 44 C18 43 10 37 10 28 Z" fill="rgba(0,200,255,0.07)"/>
+          <circle cx="19" cy="24" r="2.5" fill="#00c8ff"/>
+          <line x1="19" y1="21" x2="13" y2="16" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="19" y1="21" x2="25" y2="16" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="19" y1="26.5" x2="19" y2="33" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
+          <text x="36" y="20" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="13" fill="#ffffff" letter-spacing="-0.3">Aler</text>
+          <text x="60.5" y="20" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="13" fill="#00c8ff" letter-spacing="-0.3">o</text>
+          <text x="68.5" y="20" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="13" fill="#ffffff" letter-spacing="-0.3">Sec</text>
+          <text x="36" y="33" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-weight="600" font-size="6.5" fill="#7a8fa6" letter-spacing="0.5">CYBER GOVERNANCE &amp; SECURITY</text>
         </svg>
       </a>
       <button class="hamburger" aria-label="Toggle navigation" onclick="document.querySelector('header').classList.toggle('nav-open')">
@@ -813,13 +798,13 @@
   <section class="hero" aria-label="Hero">
     <div class="hero-inner">
       <div>
-        <div class="hero-eyebrow">Cybersecurity · Network Infrastructure · AI · Custom Applications</div>
+        <div class="hero-eyebrow">Cybersecurity Specialists · 10+ Years</div>
         <h1>Security Programs<br>Built to <span class="accent">Protect</span><br>&amp; Govern.</h1>
-        <p class="hero-desc">Over a decade of hands-on expertise across cybersecurity, enterprise networking, AI integration, and bespoke application development — designing security programs, policies, and governance frameworks aligned to NIST CSF and GDPR. Delivered by CISSP and ITIL certified professionals.</p>
+        <p class="hero-desc">Over a decade of dedicated expertise in cybersecurity and collaboration — designing, developing, and operationalising security programs, policies, and governance frameworks aligned to NIST CSF and GDPR. Delivered by CISSP and ITIL certified professionals.</p>
         <div class="hero-certs">
-          <span class="cert-badge">CISSP Certified</span>
-          <span class="cert-badge">ITIL Certified</span>
-          <span class="cert-badge">10+ Years Experience</span>
+          <span class="cert-badge"><span class="badge-icon">🏅</span> CISSP Certified</span>
+          <span class="cert-badge"><span class="badge-icon">🏅</span> ITIL Certified</span>
+          <span class="cert-badge"><span class="badge-icon">🔟</span> 10+ Years Experience</span>
         </div>
         <div class="hero-actions">
           <a href="#services" class="btn btn-primary">Explore Services</a>
@@ -861,9 +846,6 @@
         <span class="trust-item">GDPR</span>
         <span class="trust-item">Data Protection by Design</span>
         <span class="trust-item">72-Hour Breach Notification</span>
-        <span class="trust-item">Network Infrastructure</span>
-        <span class="trust-item">AI Security &amp; Governance</span>
-        <span class="trust-item">Custom Applications</span>
         <span class="trust-item">Risk Assessment &amp; Governance</span>
       </div>
     </div>
@@ -875,12 +857,12 @@
       <div class="experience-decade">
         <div class="decade-number">10+</div>
         <div class="decade-label">Years of Expertise</div>
-        <div class="decade-sub">Cybersecurity · Networks · AI · Applications</div>
+        <div class="decade-sub">Cybersecurity &amp; Collaboration</div>
       </div>
       <div class="experience-content">
-        <h2>A <span>Decade of Mastery</span> Across Security &amp; Technology</h2>
-        <p>Since our founding, AlerоSec has built a track record of excellence at the intersection of cybersecurity governance, network infrastructure, and modern technology delivery. Our practitioners have worked across financial services, healthcare, government, and technology sectors — embedding resilient security cultures and governance frameworks into organisations of every scale.</p>
-        <p>Our depth of experience spans secure network design, AI-enabled solutions, and custom application development — ensuring your infrastructure stays connected, compliant, and protected without sacrificing operational agility.</p>
+        <h2>A <span>Decade of Mastery</span> in Cybersecurity &amp; Collaboration</h2>
+        <p>Since our founding, AlerоSec has built a track record of excellence at the intersection of cybersecurity governance and enterprise collaboration. Our practitioners have worked across financial services, healthcare, government, and technology sectors — embedding resilient security cultures and governance frameworks into organisations of every scale.</p>
+        <p>Our depth of experience in both cybersecurity and collaboration technologies means we understand how secure infrastructure and productive teamwork go hand in hand. We bridge the gap between security rigour and operational agility, ensuring your teams stay connected, compliant, and protected.</p>
         <div class="experience-pillars">
           <div class="pillar">
             <div class="pillar-icon">🛡️</div>
@@ -888,19 +870,14 @@
             <div class="pillar-desc">GRC, vCISO, policy &amp; program development</div>
           </div>
           <div class="pillar">
-            <div class="pillar-icon">🌐</div>
-            <div class="pillar-name">Network Infrastructure</div>
-            <div class="pillar-desc">Secure architecture, connectivity &amp; resilience</div>
+            <div class="pillar-icon">🤝</div>
+            <div class="pillar-name">Collaboration</div>
+            <div class="pillar-desc">Secure enterprise communication &amp; tooling</div>
           </div>
           <div class="pillar">
-            <div class="pillar-icon">🤖</div>
-            <div class="pillar-name">AI Solutions</div>
-            <div class="pillar-desc">AI governance, integration &amp; security</div>
-          </div>
-          <div class="pillar">
-            <div class="pillar-icon">⚡</div>
-            <div class="pillar-name">Custom Applications</div>
-            <div class="pillar-desc">Bespoke tools built for your workflows</div>
+            <div class="pillar-icon">📐</div>
+            <div class="pillar-name">Governance</div>
+            <div class="pillar-desc">NIST CSF, GDPR &amp; board-level reporting</div>
           </div>
         </div>
       </div>
@@ -912,45 +889,36 @@
     <div class="section-inner">
       <span class="section-tag">Our Credentials</span>
       <h2 class="section-title">Certified. Experienced. Trusted.</h2>
-      <p class="section-sub">Industry-leading credentials that validate deep expertise — earned and maintained through more than a decade of active practice.</p>
+      <p class="section-sub">Our team holds industry-leading certifications that validate deep expertise across cybersecurity leadership, governance, and IT service management — earned and maintained over more than a decade of active practice.</p>
       <div class="certs-grid">
-        <article class="cert-card">
-          <div class="cert-card-header">
-            <img src="isc2-logo.png" alt="ISC² CISSP Certified" class="cert-badge-img" width="72" height="72" loading="lazy">
-            <div class="cert-card-title">
-              <h3>CISSP</h3>
-              <div class="cert-full-name">Certified Information Systems Security Professional</div>
-            </div>
-          </div>
-          <p class="cert-summary">The world's premier cybersecurity certification from ISC² — validating enterprise-grade security program design across all eight security domains.</p>
-          <div class="cert-domains">
-            <span>Risk Management</span>
-            <span>Asset Security</span>
-            <span>IAM</span>
-            <span>Security Architecture</span>
-            <span>Security Operations</span>
-            <span>Software Development Security</span>
-          </div>
-          <div class="cert-issuer">Issued by <span>ISC²</span></div>
-        </article>
-        <article class="cert-card">
-          <div class="cert-card-header">
-            <img src="itil-logo.webp" alt="ITIL Certified" class="cert-badge-img cert-badge-img--wide" width="110" height="48" loading="lazy">
-            <div class="cert-card-title">
-              <h3>ITIL</h3>
-              <div class="cert-full-name">Information Technology Infrastructure Library</div>
-            </div>
-          </div>
-          <p class="cert-summary">IT service management best practices that align security programs with IT operations — integrating governance into service delivery and change management.</p>
-          <div class="cert-domains">
-            <span>ITSM Best Practices</span>
-            <span>Change Management</span>
-            <span>Incident Response</span>
-            <span>Service Lifecycle</span>
-            <span>Continual Improvement</span>
-          </div>
-          <div class="cert-issuer">Issued by <span>AXELOS</span></div>
-        </article>
+        <div class="cert-card">
+          <div class="cert-logo">🛡️</div>
+          <h3>CISSP</h3>
+          <div class="cert-full-name">Certified Information Systems Security Professional</div>
+          <p>The CISSP is the world's premier cybersecurity certification, issued by ISC². It validates our ability to design, implement, and manage enterprise-grade security programs across all eight security domains — from risk management to software development security.</p>
+          <ul class="cert-points">
+            <li>Security &amp; Risk Management</li>
+            <li>Asset Security &amp; Architecture</li>
+            <li>Identity &amp; Access Management</li>
+            <li>Security Assessment &amp; Testing</li>
+            <li>Security Operations &amp; Software Development Security</li>
+          </ul>
+          <div class="cert-issuer">Issued by <span>ISC² — International Information System Security Certification Consortium</span></div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-logo">⚙️</div>
+          <h3>ITIL</h3>
+          <div class="cert-full-name">Information Technology Infrastructure Library</div>
+          <p>ITIL certification demonstrates our expertise in IT service management best practices. This enables us to align security programs with broader IT operations, ensuring governance frameworks integrate seamlessly with your service delivery and change management processes.</p>
+          <ul class="cert-points">
+            <li>IT Service Management (ITSM) best practices</li>
+            <li>Change &amp; incident management alignment</li>
+            <li>Security integrated into service lifecycle</li>
+            <li>Continual service improvement frameworks</li>
+            <li>Risk-aware service design &amp; transition</li>
+          </ul>
+          <div class="cert-issuer">Issued by <span>AXELOS — Global Best Practice</span></div>
+        </div>
       </div>
     </div>
   </section>
@@ -1224,20 +1192,19 @@
       <div class="footer-top">
         <div>
           <div class="footer-logo">
-            <svg viewBox="0 0 268 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="AlerоSec logo">
-              <path d="M10 8 L28 16 L28 30 C28 39 20 45 19 46 C18 45 10 39 10 30 Z" fill="none" stroke="#00c8ff" stroke-width="2.2" stroke-linejoin="round"/>
-              <path d="M10 8 L28 16 L28 30 C28 39 20 45 19 46 C18 45 10 39 10 30 Z" fill="rgba(0,200,255,0.07)"/>
-              <circle cx="19" cy="26" r="2.5" fill="#00c8ff"/>
-              <line x1="19" y1="23" x2="13" y2="18" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
-              <line x1="19" y1="23" x2="25" y2="18" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
-              <line x1="19" y1="28.5" x2="19" y2="35" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
-              <text x="36" y="22" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="14" fill="#ffffff" letter-spacing="-0.3">Aler</text>
-              <text x="62" y="22" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="14" fill="#00c8ff" letter-spacing="-0.3">o</text>
-              <text x="70" y="22" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="14" fill="#ffffff" letter-spacing="-0.3">Sec</text>
-              <text x="36" y="36" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-weight="600" font-size="5.8" fill="#7a8fa6" letter-spacing="0.35">CYBERSECURITY · NETWORK INFRASTRUCTURE · AI · CUSTOM APPLICATIONS</text>
+            <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="AlerоSec logo">
+              <path d="M10 6 L28 14 L28 28 C28 37 20 43 19 44 C18 43 10 37 10 28 Z" fill="none" stroke="#00c8ff" stroke-width="2.2" stroke-linejoin="round"/>
+              <path d="M10 6 L28 14 L28 28 C28 37 20 43 19 44 C18 43 10 37 10 28 Z" fill="rgba(0,200,255,0.07)"/>
+              <circle cx="19" cy="24" r="2.5" fill="#00c8ff"/>
+              <line x1="19" y1="21" x2="13" y2="16" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="19" y1="21" x2="25" y2="16" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="19" y1="26.5" x2="19" y2="33" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
+              <text x="36" y="20" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="13" fill="#ffffff" letter-spacing="-0.3">Aler</text>
+              <text x="60.5" y="20" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="13" fill="#00c8ff" letter-spacing="-0.3">o</text>
+              <text x="68.5" y="20" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="13" fill="#ffffff" letter-spacing="-0.3">Sec</text>
             </svg>
           </div>
-          <p class="footer-tagline">Independent specialists in cybersecurity, network infrastructure, AI, and custom applications — with over a decade of expertise in security program development and governance. CISSP &amp; ITIL certified.</p>
+          <p class="footer-tagline">Independent cybersecurity specialists with over a decade of expertise in security program development, governance, and enterprise collaboration. CISSP &amp; ITIL certified.</p>
         </div>
         <div class="footer-col">
           <h4>Services</h4>
