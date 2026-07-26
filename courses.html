@@ -16,9 +16,11 @@
   <meta name="twitter:description" content="Expert-led courses in AI, Networking, and Cybersecurity — 10+ years of real-world expertise.">
   <meta name="twitter:image" content="https://placehold.co/1200x630/060f1e/00c8ff?text=AleroSec+Courses">
 
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a1628'/%3E%3Cpath d='M50 10 L78 22 V49 C78 66 67 81 50 90 C33 81 22 66 22 49 V22 Z' fill='none' stroke='%2300c8ff' stroke-width='5' stroke-linejoin='round'/%3E%3Cpath d='M50 24 L39 57 H45 L50 42 L55 57 H61 L50 24 Z' fill='%23ffffff'/%3E%3Cpath d='M50 24 L56 39 L60.5 57 H66 L55 24 Z' fill='%2300c8ff' opacity='.92'/%3E%3C/svg%3E">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -40,15 +42,15 @@
       --bg-card: rgba(255,255,255,.028);
       --bg-card-hover: rgba(255,255,255,.045);
       --border: rgba(0,200,255,.10);
-      --border-strong: rgba(0,200,255,.26);
+      --border-strong: rgba(0,200,255,.22);
       --text-primary: #f7fbff;
       --text-secondary: #c9d5e2;
       --text-muted: #7f91a6;
       --text-faint: #304256;
       --cyan: #00c8ff;
-      --cyan-dim: rgba(0,200,255,.10);
+      --cyan-dim: rgba(0,200,255,.08);
       --header-bg: rgba(7,17,29,.88);
-      --header-border: rgba(0,200,255,.14);
+      --header-border: rgba(0,200,255,.12);
       --hero-bg: #0b1726;
       --cta-bg: linear-gradient(135deg, #0d1928 0%, #122235 100%);
       --footer-bg: #0a1624;
@@ -61,7 +63,7 @@
       --bg-card: rgba(255,255,255,.88);
       --bg-card-hover: rgba(255,255,255,.98);
       --border: rgba(0,111,168,.12);
-      --border-strong: rgba(0,111,168,.22);
+      --border-strong: rgba(0,111,168,.18);
       --text-primary: #102030;
       --text-secondary: #27405d;
       --text-muted: #617790;
@@ -69,7 +71,7 @@
       --cyan: #006fa8;
       --cyan-dim: rgba(0,122,168,.08);
       --header-bg: rgba(243,246,248,.92);
-      --header-border: rgba(0,111,168,.14);
+      --header-border: rgba(0,111,168,.12);
       --hero-bg: #fbfcfd;
       --cta-bg: linear-gradient(135deg, #e8eef3 0%, #eef3f7 100%);
       --footer-bg: #102030;
@@ -89,7 +91,7 @@
       width: 38px; height: 38px;
       background: var(--cyan-dim);
       border: 1px solid var(--border-strong);
-      border-radius: 8px;
+      border-radius: 10px;
       cursor: pointer;
       font-size: 1.1rem;
       flex-shrink: 0;
@@ -107,7 +109,7 @@
       padding: 0 2rem;
       display: flex; align-items: center;
       justify-content: space-between;
-      height: 76px; gap: 1rem;
+      height: 78px; gap: 1rem;
     }
 
     .logo {
@@ -119,7 +121,7 @@
     }
 
     .logo-svg {
-      height: 52px;
+      height: 46px;
       width: auto;
       display: block;
       overflow: visible;
@@ -132,7 +134,7 @@
       font-size: .85rem;
       font-weight: 600;
       padding: .45rem .9rem;
-      border-radius: 6px;
+      border-radius: 8px;
     }
     nav a:hover, nav a.active { color: var(--cyan); background: var(--cyan-dim); }
     .nav-cta {
@@ -140,7 +142,7 @@
       color: #fff !important;
       font-weight: 800;
       margin-left: .5rem;
-      border-radius: 6px;
+      border-radius: 8px;
     }
     [data-theme="dark"] .nav-cta { color: #07111d !important; }
 
@@ -171,14 +173,14 @@
       color: var(--cyan);
       font-size: .75rem; font-weight: 700;
       letter-spacing: .12em; text-transform: uppercase;
-      padding: .35rem .9rem; border-radius: 20px;
+      padding: .35rem .9rem; border-radius: 999px;
       margin-bottom: 1.25rem;
     }
     .page-hero h1 {
       font-family: var(--font-display);
       font-size: clamp(2.2rem, 5vw, 3.4rem);
       font-weight: 700;
-      letter-spacing: -.03em;
+      letter-spacing: -.04em;
       line-height: 1.1;
       margin-bottom: 1rem;
     }
@@ -194,7 +196,7 @@
     .track-pills { display: flex; gap: .75rem; flex-wrap: wrap; }
     .track-pill {
       display: inline-flex; align-items: center; gap: .5rem;
-      border-radius: 20px; padding: .4rem 1rem;
+      border-radius: 999px; padding: .4rem 1rem;
       font-size: .8rem; font-weight: 700;
       border: 1px solid transparent;
       text-decoration: none;
@@ -223,7 +225,7 @@
     .sidebar-nav li a {
       display: flex; align-items: center; gap: .6rem;
       padding: .55rem .75rem;
-      border-radius: 6px;
+      border-radius: 8px;
       color: var(--text-muted);
       text-decoration: none;
       font-size: .85rem;
@@ -234,7 +236,7 @@
       display: flex; align-items: center; gap: .5rem;
       color: var(--text-muted); text-decoration: none;
       font-size: .8rem; font-weight: 600;
-      padding: .5rem .75rem; border-radius: 6px;
+      padding: .5rem .75rem; border-radius: 8px;
       margin-top: 1rem;
     }
 
@@ -242,7 +244,7 @@
     .track-header {
       margin-bottom: 2.5rem;
       padding: 2.5rem;
-      border-radius: 16px;
+      border-radius: 18px;
       border: 1px solid var(--border);
       background: var(--bg-card);
     }
@@ -252,7 +254,7 @@
       font-family: var(--font-display);
       font-size: 1.8rem;
       font-weight: 700;
-      letter-spacing: -.02em;
+      letter-spacing: -.03em;
       margin-bottom: .35rem;
     }
     .track-title-block h2.ai { color: var(--ai-color); }
@@ -289,7 +291,7 @@
     .video-embed-card, .blog-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 14px;
+      border-radius: 16px;
       overflow: hidden;
     }
     .yt-wrap {
@@ -361,7 +363,7 @@
     footer {
       background: var(--footer-bg);
       color: #b8c7d6;
-      border-top: 1px solid rgba(0,200,255,.12);
+      border-top: 1px solid rgba(0,200,255,.10);
       padding: 3.5rem 2rem 2rem;
       margin-top: 4rem;
     }
@@ -371,21 +373,21 @@
       gap: 3rem; padding-bottom: 2.5rem;
       border-bottom: 1px solid rgba(255,255,255,.06);
     }
-    .footer-brand { display: flex; flex-direction: column; gap: .85rem; }
+    .footer-brand { display: flex; flex-direction: column; gap: .9rem; }
     .footer-wordmark {
       display: inline-flex;
       align-items: center;
-      gap: .75rem;
+      gap: .8rem;
       color: #ffffff;
       text-decoration: none;
       width: fit-content;
     }
-    .footer-mark { width: 28px; height: 28px; flex-shrink: 0; }
+    .footer-mark { width: 30px; height: 30px; flex-shrink: 0; }
     .footer-wordmark-text {
       font-family: var(--font-display);
-      font-size: 1.18rem;
+      font-size: 1.08rem;
       font-weight: 700;
-      letter-spacing: -.02em;
+      letter-spacing: -.03em;
       color: #ffffff;
       line-height: 1;
     }
@@ -408,7 +410,7 @@
       .footer-top { grid-template-columns: 1fr; }
       .track-header-inner { flex-direction: column; align-items: flex-start; }
       .blog-card { grid-template-columns: 1fr; }
-      .logo-svg { height: 44px; max-width: min(260px, calc(100vw - 130px)); }
+      .logo-svg { height: 40px; max-width: min(250px, calc(100vw - 130px)); }
     }
   </style>
 </head>
@@ -416,16 +418,23 @@
   <header>
     <div class="header-inner">
       <a href="index.html" class="logo" aria-label="AleroSec home">
-        <svg class="logo-svg" viewBox="0 0 230 54" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M10 8 L30 17 L30 31 C30 40 23 45 20 46 C17 45 10 40 10 31 Z" fill="none" stroke="var(--cyan)" stroke-width="2.4" stroke-linejoin="round"/>
-          <path d="M10 8 L30 17 L30 31 C30 40 23 45 20 46 C17 45 10 40 10 31 Z" fill="rgba(0,200,255,0.06)"/>
-          <circle cx="20" cy="25" r="2.6" fill="var(--cyan)"/>
-          <line x1="20" y1="22.2" x2="13.8" y2="17.3" stroke="var(--cyan)" stroke-width="1.6" stroke-linecap="round"/>
-          <line x1="20" y1="22.2" x2="26.2" y2="17.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-          <line x1="20" y1="27.8" x2="20" y2="34.2" stroke="var(--cyan)" stroke-width="1.6" stroke-linecap="round"/>
-          <text x="42" y="32" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="23" fill="currentColor" letter-spacing="-0.45">Aler</text>
-          <text x="82" y="32" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="23" fill="var(--cyan)" letter-spacing="-0.45">o</text>
-          <text x="95" y="32" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="23" fill="currentColor" letter-spacing="-0.45">Sec</text>
+        <svg class="logo-svg" viewBox="0 0 262 54" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <g transform="translate(2 3)">
+            <path d="M24 2 L42 10 V27.5 C42 37.5 35.2 45.2 24 49 C12.8 45.2 6 37.5 6 27.5 V10 Z" fill="none" stroke="var(--cyan)" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M24 2 L42 10 V27.5 C42 37.5 35.2 45.2 24 49 C12.8 45.2 6 37.5 6 27.5 V10 Z" fill="url(#shieldFillCourses)"/>
+            <path d="M24 14 L15.6 37.5 H20.1 L24 26.4 L27.9 37.5 H32.4 L24 14 Z" fill="currentColor"/>
+            <path d="M24 14 L28.8 25.9 L32.3 37.5 H36.4 L28 14 Z" fill="var(--cyan)"/>
+            <path d="M24 14 V40.4" stroke="rgba(255,255,255,.12)" stroke-width="1"/>
+          </g>
+          <defs>
+            <linearGradient id="shieldFillCourses" x1="6" y1="2" x2="42" y2="49" gradientUnits="userSpaceOnUse">
+              <stop stop-color="rgba(0,200,255,0.10)"/>
+              <stop offset="1" stop-color="rgba(0,200,255,0.02)"/>
+            </linearGradient>
+          </defs>
+          <text x="60" y="33" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="24" fill="currentColor" letter-spacing="-0.8">Aler</text>
+          <text x="103" y="33" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="24" fill="var(--cyan)" letter-spacing="-0.8">o</text>
+          <text x="117" y="33" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-weight="700" font-size="24" fill="currentColor" letter-spacing="-0.8">Sec</text>
         </svg>
       </a>
 
@@ -620,13 +629,10 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a href="index.html" class="footer-wordmark" aria-label="AleroSec home">
-            <svg class="footer-mark" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M10 6 L28 14 L28 26 C28 33 22 37 19 38 C16 37 10 33 10 26 Z" fill="none" stroke="#00c8ff" stroke-width="2.2" stroke-linejoin="round"/>
-              <path d="M10 6 L28 14 L28 26 C28 33 22 37 19 38 C16 37 10 33 10 26 Z" fill="rgba(0,200,255,0.06)"/>
-              <circle cx="19" cy="22" r="2.4" fill="#00c8ff"/>
-              <line x1="19" y1="19.5" x2="13" y2="15" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
-              <line x1="19" y1="19.5" x2="25" y2="15" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
-              <line x1="19" y1="24.5" x2="19" y2="30.5" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
+            <svg class="footer-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M24 3 L41 10.5 V27.2 C41 36.5 34.5 43.2 24 46.8 C13.5 43.2 7 36.5 7 27.2 V10.5 Z" fill="none" stroke="#00c8ff" stroke-width="2.1" stroke-linejoin="round"/>
+              <path d="M24 12.5 L16.2 34.2 H20.3 L24 24 L27.7 34.2 H31.8 L24 12.5 Z" fill="#ffffff"/>
+              <path d="M24 12.5 L28.4 24.3 L31.7 34.2 H35.6 L27.9 12.5 Z" fill="#00c8ff"/>
             </svg>
             <span class="footer-wordmark-text">Aler<span>o</span>Sec</span>
           </a>
