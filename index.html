@@ -179,29 +179,19 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 70% 60% at 80% 50%, rgba(0,200,255,.08) 0%, transparent 65%),
-        radial-gradient(ellipse 40% 40% at 10% 80%, rgba(0,100,200,.1) 0%, transparent 60%);
+        radial-gradient(ellipse 62% 52% at 80% 50%, rgba(0,200,255,.04) 0%, transparent 66%),
+        radial-gradient(ellipse 35% 30% at 12% 82%, rgba(0,100,200,.04) 0%, transparent 60%);
       pointer-events: none;
-    }
-    [data-theme="light"] .hero::before {
-      background:
-        radial-gradient(ellipse 70% 60% at 80% 50%, rgba(0,111,168,.06) 0%, transparent 65%),
-        radial-gradient(ellipse 40% 40% at 10% 80%, rgba(0,100,180,.05) 0%, transparent 60%);
     }
     .hero::after {
       content: '';
       position: absolute;
       inset: 0;
       background-image:
-        linear-gradient(rgba(0,200,255,.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,200,255,.04) 1px, transparent 1px);
-      background-size: 60px 60px;
+        linear-gradient(rgba(0,200,255,.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,200,255,.018) 1px, transparent 1px);
+      background-size: 72px 72px;
       pointer-events: none;
-    }
-    [data-theme="light"] .hero::after {
-      background-image:
-        linear-gradient(rgba(0,120,180,.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,120,180,.04) 1px, transparent 1px);
     }
 
     .hero-inner {
@@ -219,44 +209,35 @@
       align-items: center;
       gap: .5rem;
       background: var(--cyan-dim);
-      border: 1px solid rgba(0,200,255,.3);
+      border: 1px solid var(--border-strong);
       color: var(--cyan);
       font-size: .68rem;
       font-weight: 700;
       letter-spacing: .1em;
       text-transform: uppercase;
       padding: .4rem 1rem;
-      border-radius: 20px;
+      border-radius: 999px;
       margin-bottom: 1.5rem;
-      max-width: 520px;
+      max-width: 760px;
       line-height: 1.5;
     }
-    .hero-eyebrow::before { content: '•'; font-size: .5rem; animation: pulse 2s infinite; }
-    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
-
     .hero h1 {
       font-family: var(--font-display);
       font-size: clamp(2.4rem, 5vw, 3.8rem);
       font-weight: 700;
       line-height: 1.05;
-      letter-spacing: -.03em;
+      letter-spacing: -.04em;
       margin-bottom: 1.5rem;
       color: var(--text-primary);
     }
-    .hero h1 .accent {
-      background: linear-gradient(135deg, var(--cyan), #0080ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
+    .hero h1 .accent { color: var(--cyan); }
     .hero-desc {
       font-size: 1.05rem;
       color: var(--text-secondary);
       line-height: 1.75;
       margin-bottom: 2rem;
-      max-width: 500px;
+      max-width: 620px;
     }
-
     .hero-certs {
       display: flex;
       gap: .75rem;
@@ -268,46 +249,28 @@
       align-items: center;
       gap: .5rem;
       background: var(--cyan-dim);
-      border: 1px solid rgba(0,200,255,.25);
-      border-radius: 6px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
       padding: .45rem 1rem;
       font-size: .8rem;
       font-weight: 700;
       color: var(--cyan);
       letter-spacing: .04em;
     }
-
     .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
     .btn {
       display: inline-block;
       text-decoration: none;
       font-weight: 800;
       font-size: .95rem;
-      padding: .85rem 2rem;
-      border-radius: 8px;
-      border: 2px solid transparent;
+      padding: .9rem 2rem;
+      border-radius: 10px;
+      border: 1px solid transparent;
       cursor: pointer;
-      transition: all .2s;
     }
-    .btn-primary {
-      background: linear-gradient(135deg, var(--cyan), #0080ff);
-      color: #fff;
-    }
-    .btn-primary:hover {
-      opacity: .85;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0,200,255,.35);
-    }
-    .btn-ghost {
-      background: transparent;
-      color: var(--text-primary);
-      border-color: var(--text-faint);
-    }
-    .btn-ghost:hover {
-      border-color: var(--cyan);
-      color: var(--cyan);
-      transform: translateY(-2px);
-    }
+    .btn-primary { background: var(--cyan); color: #fff; }
+    [data-theme="dark"] .btn-primary { color: #07111d; }
+    .btn-ghost { background: transparent; color: var(--text-primary); border-color: var(--border); }
 
     .hero-stats {
       display: grid;
@@ -317,28 +280,20 @@
     .stat-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 10px;
+      border-radius: 14px;
       padding: 1.75rem 1.5rem;
       display: flex;
       flex-direction: column;
       gap: .4rem;
-      transition: border-color .2s, transform .2s, box-shadow .2s;
-    }
-    .stat-card:hover {
-      border-color: var(--cyan);
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-card);
+      backdrop-filter: blur(4px);
     }
     .stat-num {
       font-family: var(--font-display);
       font-size: 2.4rem;
       font-weight: 700;
-      background: linear-gradient(135deg, var(--cyan), #0080ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--cyan);
       line-height: 1;
-      letter-spacing: -.03em;
+      letter-spacing: -.04em;
     }
     .stat-label {
       font-size: .8rem;
@@ -358,7 +313,6 @@
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
       padding: 1rem 2rem;
-      transition: background .3s;
     }
     .trust-inner {
       max-width: 1160px;
@@ -387,13 +341,11 @@
       align-items: center;
       gap: .4rem;
     }
-    .trust-item::before { content: '•'; font-size: .5rem; color: var(--cyan); }
 
     .experience-band {
       background: var(--experience-bg);
       border-bottom: 1px solid var(--border);
       padding: 4rem 2rem;
-      transition: background .3s;
     }
     .experience-inner {
       max-width: 1160px;
@@ -409,11 +361,8 @@
       font-size: 7rem;
       font-weight: 700;
       line-height: 1;
-      background: linear-gradient(135deg, var(--cyan), #0080ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      letter-spacing: -.05em;
+      color: var(--cyan);
+      letter-spacing: -.06em;
     }
     .decade-label {
       font-family: var(--font-display);
@@ -424,26 +373,17 @@
       color: var(--text-primary);
       margin-top: .5rem;
     }
-    .decade-sub {
-      font-size: .8rem;
-      color: var(--text-muted);
-      margin-top: .25rem;
-    }
+    .decade-sub { font-size: .8rem; color: var(--text-muted); margin-top: .25rem; }
     .experience-content h2 {
       font-family: var(--font-display);
       font-size: clamp(1.6rem, 3vw, 2.2rem);
       font-weight: 700;
-      letter-spacing: -.025em;
+      letter-spacing: -.03em;
       margin-bottom: 1rem;
       line-height: 1.2;
       color: var(--text-primary);
     }
-    .experience-content h2 span {
-      background: linear-gradient(135deg, var(--cyan), #0080ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
+    .experience-content h2 span { color: var(--cyan); }
     .experience-content p {
       font-size: .95rem;
       color: var(--text-secondary);
@@ -452,18 +392,17 @@
     }
     .experience-pillars {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       gap: 1rem;
       margin-top: 1.5rem;
     }
     .pillar {
       background: var(--cyan-dim);
-      border: 1px solid rgba(0,200,255,.2);
-      border-radius: 8px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
       padding: 1.25rem 1rem;
       text-align: center;
     }
-    .pillar-icon { font-size: 1.5rem; margin-bottom: .5rem; }
     .pillar-name {
       font-family: var(--font-display);
       font-size: .8rem;
@@ -479,7 +418,7 @@
       line-height: 1.4;
     }
 
-    section { padding: 5rem 2rem; transition: background .3s; }
+    section { padding: 5rem 2rem; }
     .section-inner { max-width: 1160px; margin: 0 auto; }
     .section-tag {
       display: inline-block;
@@ -489,16 +428,16 @@
       text-transform: uppercase;
       color: var(--cyan);
       background: var(--cyan-dim);
-      border: 1px solid rgba(0,200,255,.25);
+      border: 1px solid var(--border);
       padding: .3rem .85rem;
-      border-radius: 20px;
+      border-radius: 999px;
       margin-bottom: 1.25rem;
     }
     .section-title {
       font-family: var(--font-display);
       font-size: clamp(1.8rem, 3.5vw, 2.6rem);
       font-weight: 700;
-      letter-spacing: -.025em;
+      letter-spacing: -.03em;
       line-height: 1.1;
       margin-bottom: .75rem;
       color: var(--text-primary);
@@ -506,53 +445,39 @@
     .section-sub {
       font-size: 1rem;
       color: var(--text-muted);
-      max-width: 580px;
+      max-width: 720px;
       margin-bottom: 2rem;
       line-height: 1.7;
     }
 
     .certs-section { background: var(--bg-2); }
-    .certs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
     .cert-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 16px;
       padding: 1.5rem 1.75rem;
       position: relative;
       overflow: hidden;
-      transition: border-color .2s, transform .2s, box-shadow .2s;
       display: flex;
       flex-direction: column;
       gap: .85rem;
     }
-    .cert-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, var(--cyan), #0080ff);
-    }
-    .cert-card:hover {
-      border-color: var(--border-strong);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-card);
-    }
-    .cert-card-header { display: flex; align-items: center; gap: 1.1rem; }
-    .cert-badge-img { width: 72px; height: 72px; flex-shrink: 0; object-fit: contain; }
+    .cert-card-header { display: flex; align-items: center; gap: 1.1rem; margin-bottom: 1rem; }
+    .cert-badge-img { width: 72px; height: 72px; object-fit: contain; flex-shrink: 0; }
     .cert-badge-img--wide { width: auto; max-width: 110px; height: 48px; }
-    .cert-card-title { min-width: 0; }
     .cert-card h3 {
       font-family: var(--font-display);
       font-size: 1.15rem;
       font-weight: 700;
       color: var(--text-primary);
       margin-bottom: .15rem;
-      letter-spacing: -.01em;
-      line-height: 1.2;
     }
-    .cert-card .cert-full-name {
+    .cert-full-name {
       font-size: .68rem;
       color: var(--cyan);
       font-weight: 700;
@@ -560,33 +485,26 @@
       letter-spacing: .06em;
       line-height: 1.35;
     }
-    .cert-card .cert-summary {
+    .cert-summary {
       font-size: .84rem;
       color: var(--text-muted);
       line-height: 1.6;
-      margin: 0;
     }
-    .cert-domains { display: flex; flex-wrap: wrap; gap: .4rem; }
+    .cert-domains {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .4rem;
+      margin-top: .9rem;
+    }
     .cert-domains span {
       font-size: .68rem;
       font-weight: 600;
       color: var(--text-secondary);
       background: var(--cyan-dim);
-      border: 1px solid rgba(0,200,255,.15);
+      border: 1px solid var(--border);
       padding: .22rem .55rem;
-      border-radius: 4px;
-      letter-spacing: .02em;
+      border-radius: 999px;
     }
-    .cert-issuer {
-      font-size: .68rem;
-      font-weight: 700;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: .06em;
-      margin-top: auto;
-      padding-top: .25rem;
-    }
-    .cert-issuer span { color: var(--cyan); }
 
     .services-section { background: var(--bg); }
     .cards-grid {
@@ -596,36 +514,16 @@
     }
     .card {
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 16px;
       padding: 2rem;
       background: var(--bg-card);
       text-decoration: none;
       color: inherit;
       display: flex;
       flex-direction: column;
-      transition: border-color .2s, box-shadow .2s, transform .2s;
       position: relative;
       overflow: hidden;
     }
-    .card::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, var(--cyan), #0080ff);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform .3s;
-    }
-    .card:hover {
-      border-color: var(--border-strong);
-      box-shadow: var(--shadow-card);
-      transform: translateY(-4px);
-    }
-    .card:hover::after { transform: scaleX(1); }
-
     .card-icon-wrap {
       width: 56px;
       height: 56px;
@@ -642,33 +540,20 @@
         0 10px 24px rgba(0,0,0,.08);
       transition: transform .22s ease, background .22s ease, border-color .22s ease, box-shadow .22s ease, color .22s ease;
     }
-    .card:hover .card-icon-wrap {
-      transform: translateY(-1px);
-      background: linear-gradient(180deg, rgba(0,200,255,.20), rgba(0,200,255,.10));
-      border-color: rgba(0,200,255,.30);
-      box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.20),
-        0 14px 30px rgba(0,0,0,.12);
-    }
     .card-icon-svg {
       width: 28px;
       height: 28px;
       display: block;
       transition: transform .22s ease;
     }
-    .card:hover .card-icon-svg { transform: scale(1.04); }
-
-    .card h3, .gov-card h3, .phase h3, .feature h3 {
-      font-family: var(--font-display);
-      color: var(--text-primary);
-      margin-bottom: .7rem;
-    }
     .card h3 {
+      font-family: var(--font-display);
       font-size: 1rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: .05em;
       margin-bottom: .6rem;
+      color: var(--text-primary);
     }
     .card p {
       font-size: .875rem;
@@ -698,25 +583,10 @@
     .gov-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 16px;
       padding: 2.25rem 2rem;
-      transition: border-color .2s, transform .2s, box-shadow .2s;
       position: relative;
       overflow: hidden;
-    }
-    .gov-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--cyan), #0080ff);
-    }
-    .gov-card:hover {
-      border-color: var(--border-strong);
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-card);
     }
     .gov-num {
       font-size: .65rem;
@@ -728,6 +598,7 @@
       display: block;
     }
     .gov-card h3 {
+      font-family: var(--font-display);
       font-size: 1.1rem;
       font-weight: 600;
       text-transform: uppercase;
@@ -773,18 +644,16 @@
     .phase {
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 16px;
       padding: 2.5rem 2rem;
       position: relative;
       overflow: hidden;
-      transition: border-color .2s, transform .2s;
     }
-    .phase:hover { border-color: var(--border-strong); transform: translateY(-3px); }
     .phase-num {
       font-family: var(--font-display);
       font-size: 3rem;
       font-weight: 700;
-      color: var(--border);
+      color: var(--border-strong);
       line-height: 1;
       margin-bottom: .75rem;
       letter-spacing: -.04em;
@@ -792,17 +661,18 @@
     .phase-tag {
       display: inline-block;
       background: var(--cyan-dim);
-      border: 1px solid rgba(0,200,255,.25);
+      border: 1px solid var(--border);
       color: var(--cyan);
       font-size: .65rem;
       font-weight: 800;
       letter-spacing: .15em;
       text-transform: uppercase;
       padding: .2rem .7rem;
-      border-radius: 20px;
+      border-radius: 999px;
       margin-bottom: 1rem;
     }
     .phase h3 {
+      font-family: var(--font-display);
       font-size: 1rem;
       font-weight: 600;
       text-transform: uppercase;
@@ -816,7 +686,7 @@
       line-height: 1.6;
     }
     .phase-active {
-      background: linear-gradient(135deg, var(--cyan-dim), rgba(0,128,255,.08));
+      background: color-mix(in srgb, var(--cyan-dim) 55%, transparent);
       border-color: var(--border-strong);
     }
 
@@ -829,11 +699,9 @@
     .feature {
       padding: 2rem;
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 16px;
       background: var(--bg-card);
       position: relative;
-      overflow: hidden;
-      transition: border-color .2s, transform .2s;
     }
     .feature::before {
       content: '';
@@ -844,8 +712,8 @@
       height: 100%;
       background: linear-gradient(180deg, var(--cyan), #0080ff);
     }
-    .feature:hover { border-color: var(--border-strong); transform: translateY(-3px); }
     .feature h3 {
+      font-family: var(--font-display);
       font-size: .95rem;
       font-weight: 600;
       text-transform: uppercase;
@@ -875,17 +743,12 @@
       font-family: var(--font-display);
       font-size: clamp(1.8rem, 3.5vw, 2.6rem);
       font-weight: 700;
-      letter-spacing: -.025em;
+      letter-spacing: -.03em;
       line-height: 1.1;
       margin-bottom: 1rem;
       color: var(--text-primary);
     }
-    .courses-promo-content h2 span {
-      background: linear-gradient(135deg, var(--cyan), #0080ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
+    .courses-promo-content h2 span { color: var(--cyan); }
     .courses-promo-content p {
       font-size: .95rem;
       color: var(--text-secondary);
@@ -903,15 +766,11 @@
       gap: 1rem;
       background: var(--cyan-dim);
       border: 1px solid var(--border);
-      border-radius: 8px;
+      border-radius: 12px;
       padding: 1rem 1.25rem;
       text-decoration: none;
       color: inherit;
-      transition: border-color .2s, transform .2s;
     }
-    .course-track:hover { border-color: var(--cyan); transform: translateX(4px); }
-    .track-icon { font-size: 1.5rem; flex-shrink: 0; }
-    .track-info { flex: 1; }
     .track-name {
       font-family: var(--font-display);
       font-size: .9rem;
@@ -923,7 +782,6 @@
       color: var(--text-muted);
       margin-top: .2rem;
     }
-    .track-arrow { color: var(--cyan); font-size: 1.2rem; }
 
     .courses-promo-visual {
       background: var(--bg-card);
@@ -934,26 +792,13 @@
       position: relative;
       overflow: hidden;
     }
-    .courses-promo-visual::before {
-      content: '';
-      position: absolute;
-      top: -30px;
-      right: -20px;
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(circle, var(--cyan-dim), transparent 70%);
-      pointer-events: none;
-    }
     .course-stat-big {
       font-family: var(--font-display);
       font-size: 4.5rem;
       font-weight: 700;
       line-height: 1;
-      background: linear-gradient(135deg, var(--cyan), #0080ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      letter-spacing: -.04em;
+      color: var(--cyan);
+      letter-spacing: -.05em;
     }
     .course-stat-label {
       font-size: .85rem;
@@ -963,24 +808,6 @@
       color: var(--text-muted);
       margin-top: .5rem;
     }
-    .course-stats-row {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .mini-stat { text-align: center; }
-    .mini-stat-num {
-      font-size: 1.6rem;
-      font-weight: 900;
-      color: var(--cyan);
-    }
-    .mini-stat-label {
-      font-size: .7rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: .08em;
-    }
 
     .cta-band {
       background: var(--cta-bg);
@@ -988,52 +815,30 @@
       border-bottom: 1px solid var(--border);
       padding: 5rem 2rem;
       text-align: center;
-      position: relative;
-      overflow: hidden;
-      transition: background .3s;
-    }
-    .cta-band::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 60% 80% at 50% 50%, var(--cyan-dim) 0%, transparent 70%);
-      pointer-events: none;
     }
     .cta-band h2 {
       font-family: var(--font-display);
       font-size: clamp(1.8rem, 4vw, 2.8rem);
       font-weight: 700;
-      letter-spacing: -.03em;
+      letter-spacing: -.04em;
       color: var(--text-primary);
       margin-bottom: .75rem;
-      position: relative;
     }
-    .cta-band h2 span {
-      background: linear-gradient(135deg, var(--cyan), #0080ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
+    .cta-band h2 span { color: var(--cyan); }
     .cta-band p {
       font-size: 1rem;
       color: var(--text-muted);
       margin-bottom: 2.5rem;
-      max-width: 500px;
+      max-width: 600px;
       margin-left: auto;
       margin-right: auto;
-      position: relative;
     }
     .btn-cyan {
-      background: linear-gradient(135deg, var(--cyan), #0080ff);
+      background: var(--cyan);
       color: #fff;
       font-weight: 900;
-      box-shadow: 0 8px 24px rgba(0,200,255,.35);
     }
-    .btn-cyan:hover {
-      opacity: .85;
-      transform: translateY(-3px);
-      box-shadow: 0 12px 32px rgba(0,200,255,.35);
-    }
+    [data-theme="dark"] .btn-cyan { color: #07111d; }
 
     .contact-section {
       background: var(--bg-2);
@@ -1044,8 +849,20 @@
       margin: 0 auto;
       text-align: center;
     }
-    .contact-inner .section-title { margin-bottom: .5rem; }
-    .contact-inner .section-sub { margin: 0 auto 2.5rem; }
+    .contact-email {
+      display: inline-flex;
+      align-items: center;
+      gap: .55rem;
+      margin: 0 auto 2rem;
+      padding: .7rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--bg-card);
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: .92rem;
+      font-weight: 600;
+    }
     .contact-form {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -1075,19 +892,13 @@
     .form-group textarea {
       background: var(--bg);
       border: 1px solid var(--border);
-      border-radius: 8px;
+      border-radius: 10px;
       padding: .75rem 1rem;
       font-family: var(--font-body);
       font-size: .9rem;
       color: var(--text-primary);
-      transition: border-color .2s, box-shadow .2s;
       outline: none;
       width: 100%;
-    }
-    .form-group input:focus,
-    .form-group textarea:focus {
-      border-color: var(--cyan);
-      box-shadow: 0 0 0 3px var(--cyan-dim);
     }
     .form-group textarea {
       resize: vertical;
@@ -1098,29 +909,22 @@
       text-align: center;
     }
     .btn-form {
-      background: linear-gradient(135deg, var(--cyan), #0080ff);
+      background: var(--cyan);
       color: #fff;
       font-weight: 800;
       font-size: 1rem;
       padding: .95rem 2.5rem;
-      border-radius: 8px;
+      border-radius: 10px;
       border: none;
       cursor: pointer;
-      transition: opacity .2s, transform .2s, box-shadow .2s;
       font-family: var(--font-body);
-      display: inline-block;
-      text-decoration: none;
     }
-    .btn-form:hover {
-      opacity: .85;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0,200,255,.35);
-    }
+    [data-theme="dark"] .btn-form { color: #07111d; }
 
     footer {
-      background: #060f1e;
-      color: #7a8fa6;
-      border-top: 1px solid rgba(0,200,255,.15);
+      background: var(--footer-bg);
+      color: #b8c7d6;
+      border-top: 1px solid rgba(0,200,255,.10);
       padding: 3.5rem 2rem 2rem;
     }
     .footer-inner { max-width: 1160px; margin: 0 auto; }
@@ -1131,22 +935,30 @@
       padding-bottom: 2.5rem;
       border-bottom: 1px solid rgba(255,255,255,.06);
     }
-    .footer-logo {
-      display: flex;
+    .footer-brand { display: flex; flex-direction: column; gap: .9rem; }
+    .footer-wordmark {
+      display: inline-flex;
       align-items: center;
-      gap: .75rem;
-      margin-bottom: .75rem;
+      gap: .8rem;
+      color: #fff;
+      text-decoration: none;
+      width: fit-content;
     }
-    .footer-logo svg {
-      height: 36px;
-      width: auto;
-      filter: drop-shadow(0 0 6px rgba(0,200,255,.4));
+    .footer-mark { width: 30px; height: 30px; flex-shrink: 0; }
+    .footer-wordmark-text {
+      font-family: var(--font-display);
+      font-size: 1.08rem;
+      font-weight: 700;
+      letter-spacing: -.03em;
+      color: #fff;
+      line-height: 1;
     }
+    .footer-wordmark-text span { color: #00c8ff; }
     .footer-tagline {
       font-size: .85rem;
-      color: #7a8fa6;
+      color: #b8c7d6;
       line-height: 1.6;
-      max-width: 280px;
+      max-width: 340px;
     }
     .footer-col h4 {
       font-family: var(--font-display);
@@ -1159,11 +971,10 @@
     }
     .footer-col a {
       display: block;
-      color: #7a8fa6;
+      color: #b8c7d6;
       text-decoration: none;
       font-size: .85rem;
       padding: .3rem 0;
-      transition: color .15s;
     }
     .footer-col a:hover { color: #fff; }
     .footer-bottom {
@@ -1177,33 +988,30 @@
     }
     .footer-badges { display: flex; gap: .75rem; flex-wrap: wrap; }
     .badge {
-      border: 1px solid rgba(0,200,255,.2);
+      border: 1px solid rgba(0,200,255,.18);
       color: #00c8ff;
       font-size: .65rem;
       font-weight: 700;
       letter-spacing: .08em;
       text-transform: uppercase;
       padding: .25rem .7rem;
-      border-radius: 4px;
-      background: rgba(0,200,255,.08);
+      border-radius: 999px;
+      background: rgba(0,200,255,.06);
     }
 
     @media (max-width: 1024px) {
-      .cards-grid { grid-template-columns: repeat(2, 1fr); }
-      .features-grid { grid-template-columns: repeat(2, 1fr); }
+      .cards-grid, .gov-grid, .features-grid { grid-template-columns: repeat(2, 1fr); }
       .footer-top { grid-template-columns: 1fr 1fr; }
-      .experience-pillars { grid-template-columns: repeat(2, 1fr); }
+      .experience-pillars { grid-template-columns: repeat(3, 1fr); }
       .certs-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 860px) {
-      .hero-inner { grid-template-columns: 1fr; }
+      .hero-inner, .experience-inner, .courses-promo-inner { grid-template-columns: 1fr; }
       .hero-stats { display: none; }
       .gov-grid { grid-template-columns: 1fr; }
       .phases { grid-template-columns: repeat(2, 1fr); }
-      .experience-inner { grid-template-columns: 1fr; }
       .experience-pillars { grid-template-columns: repeat(2, 1fr); }
-      .courses-promo-inner { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 600px) {
@@ -1214,39 +1022,39 @@
         top: 70px;
         left: 0;
         right: 0;
-        background: rgba(6,15,30,.98);
+        background: var(--header-bg);
         flex-direction: column;
         padding: 1rem;
-        border-bottom: 1px solid rgba(0,200,255,.2);
+        border-bottom: 1px solid var(--header-border);
       }
-      [data-theme="light"] nav { background: rgba(240,244,248,.98); }
       .nav-open nav { display: flex; }
-      nav a { padding: .75rem 1rem; border-radius: 6px; }
-      .cards-grid { grid-template-columns: 1fr; }
-      .features-grid { grid-template-columns: 1fr; }
-      .phases { grid-template-columns: 1fr; }
-      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
-      .experience-pillars { grid-template-columns: 1fr; }
+      .cards-grid, .features-grid, .phases, .experience-pillars, .footer-top, .form-row { grid-template-columns: 1fr; }
+      .logo-svg { height: 40px; max-width: min(250px, calc(100vw - 130px)); }
       .course-stats-row { flex-direction: column; gap: 1rem; }
-      .form-row { grid-template-columns: 1fr; }
-      .logo-svg { height: 38px; max-width: min(220px, calc(100vw - 130px)); }
     }
   </style>
 </head>
 <body>
   <header>
     <div class="header-inner">
-      <a href="index.html" class="logo" aria-label="AlerSec home">
-        <svg class="logo-svg" viewBox="0 0 268 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M10 8 L28 16 L28 30 C28 39 20 45 19 46 C18 45 10 39 10 30 V16 Z" fill="rgba(0,200,255,0.07)" stroke="#00c8ff" stroke-width="2.2" stroke-linejoin="round"/>
-          <circle cx="19" cy="26" r="2.5" fill="#00c8ff"/>
-          <line x1="19" y1="23" x2="13" y2="18" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
-          <line x1="19" y1="23" x2="25" y2="18" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
-          <line x1="19" y1="28.5" x2="19" y2="35" stroke="#00c8ff" stroke-width="1.5" stroke-linecap="round"/>
-          <text x="36" y="22" font-family="Space Grotesk,Segoe UI,system-ui,sans-serif" font-weight="700" font-size="14" fill="#ffffff" letter-spacing="-0.3">Aler</text>
-          <text x="62" y="22" font-family="Space Grotesk,Segoe UI,system-ui,sans-serif" font-weight="700" font-size="14" fill="#00c8ff" letter-spacing="-0.3">o</text>
-          <text x="70" y="22" font-family="Space Grotesk,Segoe UI,system-ui,sans-serif" font-weight="700" font-size="14" fill="#ffffff" letter-spacing="-0.3">Sec</text>
-          <text class="logo-subtext" x="36" y="36" font-family="Inter,Segoe UI,system-ui,sans-serif" font-weight="600" font-size="5.8" fill="#7a8fa6" letter-spacing=".35">CYBERSECURITY · NETWORK INFRASTRUCTURE · AI · CUSTOM APPLICATIONS</text>
+      <a href="index.html" class="logo" aria-label="AleroSec home">
+        <svg class="logo-svg" viewBox="0 0 262 54" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <g transform="translate(2 3)">
+            <path d="M24 2 L42 10 V27.5 C42 37.5 35.2 45.2 24 49 C12.8 45.2 6 37.5 6 27.5 V10 Z" fill="none" stroke="var(--cyan)" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M24 2 L42 10 V27.5 C42 37.5 35.2 45.2 24 49 C12.8 45.2 6 37.5 6 27.5 V10 Z" fill="url(#shieldFill)"/>
+            <path d="M24 14 L15.6 37.5 H20.1 L24 26.4 L27.9 37.5 H32.4 L24 14 Z" fill="currentColor"/>
+            <path d="M24 14 L28.8 25.9 L32.3 37.5 H36.4 L28 14 Z" fill="var(--cyan)"/>
+            <path d="M24 14 V40.4" stroke="rgba(255,255,255,.12)" stroke-width="1"/>
+            <defs>
+              <linearGradient id="shieldFill" x1="6" y1="12" x2="42" y2="49" gradientUnits="userSpaceOnUse">
+                <stop stop-color="rgba(0,200,255,0.10)"/>
+                <stop offset="1" stop-color="rgba(0,200,255,0.02)"/>
+              </linearGradient>
+            </defs>
+            <text x="60" y="33" font-family="Space Grotesk,Segoe UI,system-ui,sans-serif" font-weight="700" font-size="24" fill="currentColor" letter-spacing="-0.8">Aler</text>
+            <text x="103" y="33" font-family="Space Grotesk,Segoe UI,system-ui,sans-serif" font-weight="700" font-size="24" fill="var(--cyan)" letter-spacing="-0.8">o</text>
+            <text x="117" y="33" font-family="Space Grotesk,Segoe UI,system-ui,sans-serif" font-weight="700" font-size="24" fill="currentColor" letter-spacing="-0.8">Sec</text>
+          </g>
         </svg>
       </a>
 
@@ -1270,11 +1078,12 @@
     <div class="hero-inner">
       <div>
         <div class="hero-eyebrow">Cybersecurity · Enterprise Networking · Collaboration · AI · IT Enablement</div>
-        <h1>Security Programs<br>Built to <span class="accent">Protect</span><br>&amp; Govern.</h1>
-        <p class="hero-desc">Over a decade of hands-on expertise across cybersecurity, enterprise networking, AI integration, and bespoke application development designing security programs, policies, and governance frameworks aligned to NIST CSF and GDPR. Delivered by CISSP and ITIL certified professionals.</p>
+        <h1>Technology, Security &amp;<br><span class="accent">Collaboration</span><br>Built for Modern Business.</h1>
+        <p class="hero-desc">Over a decade of hands-on expertise across cybersecurity, enterprise networking, collaboration technology, voice &amp; video, AI integration, and IT enablement helping organisations strengthen operations, modernise infrastructure, improve collaboration, and build resilient governance aligned to business goals. Delivered by CISSP, ITIL, and CCIE certified professionals.</p>
         <div class="hero-certs">
           <span class="cert-badge">CISSP Certified</span>
           <span class="cert-badge">ITIL Certified</span>
+          <span class="cert-badge">CCIE Certified</span>
           <span class="cert-badge">10 Years Experience</span>
         </div>
         <div class="hero-actions">
@@ -1285,24 +1094,24 @@
 
       <div class="hero-stats" aria-hidden="true">
         <div class="stat-card">
-          <span class="stat-num">10+</span>
+          <span class="stat-num">10</span>
           <span class="stat-label">Years Experience</span>
-          <span class="stat-desc">Deep expertise in cybersecurity &amp; collaboration spanning over a decade.</span>
+          <span class="stat-desc">Deep expertise spanning security, collaboration, and enterprise technology.</span>
         </div>
         <div class="stat-card">
           <span class="stat-num">CISSP</span>
-          <span class="stat-label">Certified Expert</span>
-          <span class="stat-desc">All eight ISC security domains covered.</span>
+          <span class="stat-label">Security &amp; Governance</span>
+          <span class="stat-desc">Enterprise-grade security and governance depth across critical domains.</span>
         </div>
         <div class="stat-card">
-          <span class="stat-num">NIST</span>
-          <span class="stat-label">CSF Specialist</span>
-          <span class="stat-desc">CSF 1.1 &amp; 2.0 framework expertise.</span>
+          <span class="stat-num">CCIE</span>
+          <span class="stat-label">Network &amp; Collaboration</span>
+          <span class="stat-desc">Advanced enterprise networking plus voice and video collaboration expertise.</span>
         </div>
         <div class="stat-card">
-          <span class="stat-num">GDPR</span>
-          <span class="stat-label">Compliance Expert</span>
-          <span class="stat-desc">Data protection by design &amp; breach notifications.</span>
+          <span class="stat-num">AI</span>
+          <span class="stat-label">Modern Enablement</span>
+          <span class="stat-desc">Practical AI integration and IT enablement aligned to operational needs.</span>
         </div>
       </div>
     </div>
@@ -1310,17 +1119,14 @@
 
   <div class="trust-bar" aria-label="Framework expertise">
     <div class="trust-inner">
-      <span class="trust-label">Frameworks</span>
+      <span class="trust-label">Capabilities</span>
       <div class="trust-items">
-        <span class="trust-item">NIST CSF 1.1</span>
-        <span class="trust-item">NIST CSF 2.0</span>
-        <span class="trust-item">GDPR</span>
-        <span class="trust-item">Data Protection by Design</span>
-        <span class="trust-item">72-Hour Breach Notification</span>
-        <span class="trust-item">Network Infrastructure</span>
-        <span class="trust-item">AI Security &amp; Governance</span>
-        <span class="trust-item">Custom Applications</span>
-        <span class="trust-item">Risk Assessment &amp; Governance</span>
+        <span class="trust-item">Cybersecurity &amp; Governance</span>
+        <span class="trust-item">Enterprise Networking</span>
+        <span class="trust-item">Collaboration Platforms</span>
+        <span class="trust-item">Voice &amp; Video Technology</span>
+        <span class="trust-item">AI Integration</span>
+        <span class="trust-item">IT Enablement</span>
       </div>
     </div>
   </div>
@@ -1330,17 +1136,18 @@
       <div class="experience-decade">
         <div class="decade-number">10</div>
         <div class="decade-label">Years of Expertise</div>
-        <div class="decade-sub">Cybersecurity · Networks · AI · Applications</div>
+        <div class="decade-sub">Security · Networking · Collaboration · AI · Enablement</div>
       </div>
       <div class="experience-content">
-        <h2>A <span>Decade of Mastery</span> Across Security &amp; Technology</h2>
-        <p>Since our founding, AlerSec has built a track record of excellence at the intersection of cybersecurity governance, network infrastructure, and modern technology delivery. Our practitioners have worked across financial services, healthcare, government, and technology sectors embedding resilient security cultures and governance frameworks into organisations of every scale.</p>
-        <p>Our depth of experience spans secure network design, AI-enabled solutions, and custom application development ensuring your infrastructure stays connected, compliant, and protected without sacrificing operational agility.</p>
+        <h2>A <span>Decade of Delivery</span> Across Modern Technology</h2>
+        <p>Since our founding, AleroSec has built a track record of excellence across cybersecurity, enterprise networking, collaboration technology, and modern IT delivery. Our practitioners have supported organisations in strengthening resilience, modernising infrastructure, and enabling more secure and effective ways of working.</p>
+        <p>Our depth of experience spans governance, infrastructure design, voice and video environments, AI-enabled solutions, and professional IT enablement helping organisations remain connected, capable, and ready to adapt.</p>
         <div class="experience-pillars">
-          <div class="pillar"><div class="pillar-icon">🛡️</div><div class="pillar-name">Cybersecurity</div><div class="pillar-desc">GRC, vCISO, policy &amp; program development</div></div>
-          <div class="pillar"><div class="pillar-icon">🌐</div><div class="pillar-name">Network Infrastructure</div><div class="pillar-desc">Secure architecture, connectivity &amp; resilience</div></div>
-          <div class="pillar"><div class="pillar-icon">🤖</div><div class="pillar-name">AI Solutions</div><div class="pillar-desc">AI governance, integration &amp; security</div></div>
-          <div class="pillar"><div class="pillar-icon">🧩</div><div class="pillar-name">Custom Applications</div><div class="pillar-desc">Bespoke tools built for your workflows</div></div>
+          <div class="pillar"><div class="pillar-name">Cybersecurity</div><div class="pillar-desc">Governance, assurance, policy and risk support</div></div>
+          <div class="pillar"><div class="pillar-name">Networking</div><div class="pillar-desc">Architecture, resilience and connectivity design</div></div>
+          <div class="pillar"><div class="pillar-name">Collaboration</div><div class="pillar-desc">Voice, video and unified communications strategy</div></div>
+          <div class="pillar"><div class="pillar-name">AI</div><div class="pillar-desc">AI integration, governance and operational use</div></div>
+          <div class="pillar"><div class="pillar-name">Enablement</div><div class="pillar-desc">Technology adoption, training and modernisation</div></div>
         </div>
       </div>
     </div>
@@ -1350,7 +1157,7 @@
     <div class="section-inner">
       <span class="section-tag">Our Credentials</span>
       <h2 class="section-title">Certified. Experienced. Trusted.</h2>
-      <p class="section-sub">Industry-leading credentials that validate deep expertise earned and maintained through more than a decade of active practice.</p>
+      <p class="section-sub">Industry-leading credentials that validate deep expertise across security, service management, enterprise networking, and collaboration technology earned and maintained through more than a decade of active practice.</p>
       <div class="certs-grid">
         <article class="cert-card">
           <div class="cert-card-header">
@@ -1360,11 +1167,10 @@
               <div class="cert-full-name">Certified Information Systems Security Professional</div>
             </div>
           </div>
-          <p class="cert-summary">The world's premier cybersecurity certification from ISC2 validating enterprise-grade security program design across all eight security domains.</p>
+          <p class="cert-summary">The world's premier cybersecurity certification from ISC2 validating enterprise-grade security leadership, architecture, risk management, and governance capability.</p>
           <div class="cert-domains">
-            <span>Risk Management</span><span>Asset Security</span><span>IAM</span><span>Security Architecture</span><span>Security Operations</span><span>Software Development Security</span>
+            <span>Risk Management</span><span>Security Architecture</span><span>IAM</span><span>Operations</span><span>Governance</span>
           </div>
-          <div class="cert-issuer">Issued by <span>ISC2</span></div>
         </article>
 
         <article class="cert-card">
@@ -1375,11 +1181,10 @@
               <div class="cert-full-name">Information Technology Infrastructure Library</div>
             </div>
           </div>
-          <p class="cert-summary">IT service management best practices that align security programs with IT operations integrating governance into service delivery and change management.</p>
+          <p class="cert-summary">Service management best practices that align technology delivery, governance, operational efficiency, and continual improvement across IT environments.</p>
           <div class="cert-domains">
             <span>ITSM Best Practices</span><span>Change Management</span><span>Incident Response</span><span>Service Lifecycles</span><span>Continual Improvement</span>
           </div>
-          <div class="cert-issuer">Issued by <span>AXELOS</span></div>
         </article>
 
         <article class="cert-card">
@@ -1394,7 +1199,6 @@
           <div class="cert-domains">
             <span>Enterprise Networking</span><span>Collaboration</span><span>Voice &amp; Video</span><span>Unified Communications</span><span>Architecture</span>
           </div>
-          <div class="cert-issuer">Issued by <span>Cisco</span></div>
         </article>
       </div>
     </div>
@@ -1402,25 +1206,24 @@
 
   <section id="services" class="services-section" aria-label="Services">
     <div class="section-inner">
-      <span class="section-tag">Our Services</span>
-      <h2 class="section-title">What We Do</h2>
-      <p class="section-sub">End-to-end security program development from policy drafting to board-level governance support, delivered by certified professionals with over a decade of hands-on experience.</p>
-
+      <span class="section-tag">What We Deliver</span>
+      <h2 class="section-title">Advisory, delivery and enablement across modern technology.</h2>
+      <p class="section-sub">AleroSec supports organisations across cybersecurity, enterprise networking, collaboration, AI adoption, and operational IT capability with practical, business-aligned expertise.</p>
       <div class="cards-grid">
         <a href="#governance" class="card">
-          <div class="card-icon-wrap card-icon-wrap--shield" aria-hidden="true">
+          <div class="card-icon-wrap" aria-hidden="true">
             <svg viewBox="0 0 24 24" class="card-icon-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 2L19 5V11C19 15.55 16.06 19.74 12 22C7.94 19.74 5 15.55 5 11V5L12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
               <path d="M9.2 12.1L11.2 14.1L14.9 9.9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
-          <h3>Governance Support</h3>
-          <p>Board-ready governance frameworks, committee charters, and executive reporting structures aligned to your risk appetite.</p>
+          <h3>Cybersecurity Governance</h3>
+          <p>Security strategy, governance structures, policy architecture, assurance, and ongoing leadership support aligned to organisational priorities.</p>
           <span class="card-link">Learn more</span>
         </a>
 
-        <a href="#framework" class="card">
-          <div class="card-icon-wrap card-icon-wrap--network" aria-hidden="true">
+        <a href="#capabilities" class="card">
+          <div class="card-icon-wrap" aria-hidden="true">
             <svg viewBox="0 0 24 24" class="card-icon-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 5V8.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
               <path d="M8.5 12H5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
@@ -1433,13 +1236,13 @@
               <circle cx="12" cy="19" r="1.3" fill="currentColor"/>
             </svg>
           </div>
-          <h3>Policy Development</h3>
-          <p>Comprehensive security policy suites from acceptable use to incident response tailored to NIST CSF and GDPR requirements.</p>
+          <h3>Enterprise Networking</h3>
+          <p>Network architecture, resilience, modern connectivity, and secure design for organisations that depend on high availability and operational continuity.</p>
           <span class="card-link">Learn more</span>
         </a>
 
-        <a href="#framework" class="card">
-          <div class="card-icon-wrap card-icon-wrap--collab" aria-hidden="true">
+        <a href="#capabilities" class="card">
+          <div class="card-icon-wrap" aria-hidden="true">
             <svg viewBox="0 0 24 24" class="card-icon-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M7.5 10.2C7.5 8.06 9.26 6.3 11.4 6.3C13.54 6.3 15.3 8.06 15.3 10.2C15.3 12.34 13.54 14.1 11.4 14.1C9.26 14.1 7.5 12.34 7.5 10.2Z" stroke="currentColor" stroke-width="1.8"/>
               <path d="M4.4 19C5.2 16.7 7.35 15.2 10 15.2H12.8C15.45 15.2 17.6 16.7 18.4 19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
@@ -1447,13 +1250,13 @@
               <path d="M16.8 15.8C18.65 16.15 20 17.32 20.5 19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
             </svg>
           </div>
-          <h3>Security Programs</h3>
-          <p>Full-lifecycle security program design, implementation, and maturity uplift aligned to NIST CSF and GDPR.</p>
+          <h3>Collaboration &amp; Voice</h3>
+          <p>Collaboration platforms, voice and video strategy, unified communications, and experience design for connected teams and distributed work.</p>
           <span class="card-link">Learn more</span>
         </a>
 
         <a href="#capabilities" class="card">
-          <div class="card-icon-wrap card-icon-wrap--ai" aria-hidden="true">
+          <div class="card-icon-wrap" aria-hidden="true">
             <svg viewBox="0 0 24 24" class="card-icon-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M9 5.5C9 4.12 10.12 3 11.5 3C12.88 3 14 4.12 14 5.5C14 6.88 12.88 8 11.5 8C10.12 8 9 6.88 9 5.5Z" stroke="currentColor" stroke-width="1.8"/>
               <path d="M6 20V17.8C6 15.14 8.16 13 10.8 13H12.2C14.84 13 17 15.14 17 17.8V20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
@@ -1463,25 +1266,25 @@
               <path d="M16.2 13.2H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
             </svg>
           </div>
-          <h3>Risk &amp; Compliance</h3>
-          <p>Risk assessments, treatment plans, and compliance gap analyses against NIST CSF and GDPR regulatory obligations.</p>
+          <h3>AI Integration</h3>
+          <p>Practical AI integration, governance, and adoption support that helps organisations use AI safely, productively, and in line with business needs.</p>
           <span class="card-link">Learn more</span>
         </a>
 
         <a href="#capabilities" class="card">
-          <div class="card-icon-wrap card-icon-wrap--shield" aria-hidden="true">
+          <div class="card-icon-wrap" aria-hidden="true">
             <svg viewBox="0 0 24 24" class="card-icon-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 2L19 5V11C19 15.55 16.06 19.74 12 22C7.94 19.74 5 15.55 5 11V5L12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
               <path d="M9.2 12.1L11.2 14.1L14.9 9.9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
-          <h3>Security Assurance</h3>
-          <p>Independent reviews, audits, and maturity assessments to validate your security posture and identify improvement opportunities.</p>
+          <h3>IT Enablement</h3>
+          <p>Operational uplift, service improvement, modernisation support, and technology enablement to strengthen execution across teams and platforms.</p>
           <span class="card-link">Learn more</span>
         </a>
 
-        <a href="#contact" class="card">
-          <div class="card-icon-wrap card-icon-wrap--courses" aria-hidden="true">
+        <a href="courses.html" class="card">
+          <div class="card-icon-wrap" aria-hidden="true">
             <svg viewBox="0 0 24 24" class="card-icon-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M4 6.5C4 5.67 4.67 5 5.5 5H19V19H5.5C4.67 19 4 18.33 4 17.5V6.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
               <path d="M8 8H16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
@@ -1489,124 +1292,121 @@
               <path d="M8 14H13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
             </svg>
           </div>
-          <h3>vCISO Services</h3>
-          <p>Fractional Chief Information Security Officer support CISSP-certified strategic leadership without the full-time overhead.</p>
-          <span class="card-link">Learn more</span>
+          <h3>Professional Courses</h3>
+          <p>Structured learning tracks in security, networking, collaboration, voice and video, AI, and governance built by experienced practitioners.</p>
+          <span class="card-link">View courses</span>
         </a>
       </div>
     </div>
   </section>
 
-  <section id="governance" class="governance" aria-label="Governance services">
+  <section id="governance" class="governance" aria-label="Governance">
     <div class="section-inner">
-      <span class="section-tag">Governance Services</span>
-      <h2 class="section-title">Security Governance</h2>
-      <p class="section-sub">Structured governance support that gives your leadership team the visibility, accountability, and control they need to manage cyber risk effectively.</p>
+      <span class="section-tag">Security Governance</span>
+      <h2 class="section-title">Governance that gives leadership clarity, structure and confidence.</h2>
+      <p class="section-sub">We help organisations define accountability, shape policy, and build decision-making structures that support stronger cyber resilience and more consistent operational control.</p>
       <div class="gov-grid">
-        <div class="gov-card">
-          <span class="gov-num">01 Framework Design</span>
-          <h3>Governance Framework</h3>
-          <p>We design and implement security governance frameworks that define roles, responsibilities, and decision-making structures across your organisation.</p>
+        <article class="gov-card">
+          <span class="gov-num">01</span>
+          <h3>Governance Frameworks</h3>
+          <p>Board-ready governance models that clarify responsibility, reporting lines, oversight, and decision authority across the organisation.</p>
           <ul class="gov-list">
-            <li>Security governance structure design</li>
-            <li>RACI matrix development</li>
-            <li>Committee &amp; steering group charters</li>
-            <li>Board reporting templates</li>
-            <li>NIST CSF &amp; GDPR alignment</li>
+            <li>Committee structures</li>
+            <li>Security charters</li>
+            <li>Role definition</li>
+            <li>Leadership reporting</li>
           </ul>
-        </div>
-        <div class="gov-card">
-          <span class="gov-num">02 Policy &amp; Standards</span>
+        </article>
+        <article class="gov-card">
+          <span class="gov-num">02</span>
           <h3>Policy Architecture</h3>
-          <p>A complete, layered policy architecture from top-level security policy through to operational standards and procedures built for your context.</p>
+          <p>A complete, layered policy and standards structure that translates strategic intent into operational practice without creating unnecessary overhead.</p>
           <ul class="gov-list">
-            <li>Information security policy suite</li>
-            <li>Standards &amp; baseline development</li>
-            <li>Acceptable use &amp; HR policies</li>
-            <li>Policy lifecycle management</li>
-            <li>GDPR &amp; NIST CSF regulatory mapping</li>
+            <li>Core policy suite</li>
+            <li>Standards and procedures</li>
+            <li>Review cycles</li>
+            <li>Control alignment</li>
           </ul>
-        </div>
-        <div class="gov-card">
-          <span class="gov-num">03 Executive Support</span>
-          <h3>Leadership Enablement</h3>
-          <p>Equipping executives and boards with the tools, metrics, and reporting they need to make informed decisions about cyber risk and investment.</p>
+        </article>
+        <article class="gov-card">
+          <span class="gov-num">03</span>
+          <h3>Executive Enablement</h3>
+          <p>Metrics, reporting, and decision support that help leadership teams understand exposure, prioritise action, and manage cyber risk with confidence.</p>
           <ul class="gov-list">
-            <li>Executive risk dashboards</li>
-            <li>Board-level cyber briefings</li>
-            <li>KPI &amp; KRI development</li>
-            <li>Security investment roadmaps</li>
-            <li>Cyber risk appetite statements</li>
+            <li>Executive dashboards</li>
+            <li>Risk reporting</li>
+            <li>Maturity assessments</li>
+            <li>Advisory support</li>
           </ul>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section id="framework" class="framework" aria-label="Our methodology">
+  <section aria-label="Approach">
     <div class="section-inner">
-      <span class="section-tag">Our Approach</span>
-      <h2 class="section-title">The AlerSec Methodology</h2>
-      <p class="section-sub">A structured, repeatable four-phase approach to building security programs that are measurable, sustainable, and aligned to your business.</p>
+      <span class="section-tag">How We Work</span>
+      <h2 class="section-title">A structured approach for sustainable capability.</h2>
+      <p class="section-sub">We take a phased, practical approach to technology, governance, and enablement focused on measurable improvement, clear ownership, and lasting adoption.</p>
       <div class="phases">
-        <div class="phase">
+        <article class="phase">
           <div class="phase-num">01</div>
-          <span class="phase-tag">Assess</span>
-          <h3>Understand Your Posture</h3>
-          <p>We evaluate your current security state against NIST CSF and GDPR, identify gaps, and populate a risk register aligned to your risk appetite.</p>
-        </div>
-        <div class="phase phase-active">
+          <div class="phase-tag">Assess</div>
+          <h3>Understand the current state</h3>
+          <p>We assess your current technology, governance, and operational maturity to identify opportunities, gaps, and priority risks.</p>
+        </article>
+        <article class="phase phase-active">
           <div class="phase-num">02</div>
-          <span class="phase-tag">Design</span>
-          <h3>Build the Blueprint</h3>
-          <p>We design your governance framework, draft your policy suite, and build a prioritised roadmap for implementation based on risk and business impact.</p>
-        </div>
-        <div class="phase">
+          <div class="phase-tag">Design</div>
+          <h3>Shape the right model</h3>
+          <p>We design fit-for-purpose frameworks, architectures, roadmaps, and capability models aligned to your strategic goals.</p>
+        </article>
+        <article class="phase">
           <div class="phase-num">03</div>
-          <span class="phase-tag">Implement</span>
-          <h3>Deploy &amp; Embed</h3>
-          <p>We deploy governance structures, embed policies into operations, train your people, and integrate controls into your existing tools and processes.</p>
-        </div>
-        <div class="phase">
+          <div class="phase-tag">Implement</div>
+          <h3>Embed into operations</h3>
+          <p>We help put structures, controls, technology, and processes into practice so change becomes real and usable.</p>
+        </article>
+        <article class="phase">
           <div class="phase-num">04</div>
-          <span class="phase-tag">Sustain</span>
-          <h3>Monitor &amp; Improve</h3>
-          <p>We establish ongoing monitoring, review cycles, and executive reporting to ensure your security program remains effective and continuously improves.</p>
-        </div>
+          <div class="phase-tag">Improve</div>
+          <h3>Sustain and evolve</h3>
+          <p>We support ongoing review, optimisation, leadership insight, and continuous uplift to keep capability effective over time.</p>
+        </article>
       </div>
     </div>
   </section>
 
   <section id="capabilities" class="capabilities" aria-label="Capabilities">
     <div class="section-inner">
-      <span class="section-tag">Why AlerSec</span>
-      <h2 class="section-title">Our Capabilities</h2>
-      <p class="section-sub">Practical expertise across the full spectrum of security program and governance disciplines backed by CISSP and ITIL certification and over a decade of real-world delivery.</p>
+      <span class="section-tag">Core Capability Areas</span>
+      <h2 class="section-title">Deep expertise across security, infrastructure and collaboration.</h2>
+      <p class="section-sub">Our work spans the technical, strategic, and operational layers that modern organisations rely on every day.</p>
       <div class="features-grid">
-        <div class="feature">
-          <h3>CISSP-Backed Expertise</h3>
-          <p>Our CISSP certification spans all eight security domains giving you confidence that your security program is designed to the highest professional standard.</p>
-        </div>
-        <div class="feature">
-          <h3>ITIL-Aligned Delivery</h3>
-          <p>ITIL certification ensures our security programs integrate cleanly with your IT service management processes no silos, no friction.</p>
-        </div>
-        <div class="feature">
-          <h3>NIST CSF Specialists</h3>
-          <p>Deep knowledge of NIST CSF 1.1 and 2.0 we build programs that satisfy framework requirements and speak the language of your auditors.</p>
-        </div>
-        <div class="feature">
-          <h3>GDPR Compliance</h3>
-          <p>Mapping your security program to GDPR obligations data protection by design, breach notification readiness, and DPA alignment.</p>
-        </div>
-        <div class="feature">
-          <h3>Decade of Field Experience</h3>
-          <p>Over ten years of active engagement in cybersecurity and collaboration across industries, scales, and regulatory environments. No theoretical advice, just proven practice.</p>
-        </div>
-        <div class="feature">
-          <h3>Vendor-Neutral Advice</h3>
-          <p>No product quotas. No vendor kickbacks. Pure, independent advice focused entirely on your security outcomes and risk reduction.</p>
-        </div>
+        <article class="feature">
+          <h3>Cybersecurity</h3>
+          <p>Governance, policy, risk, assurance, security leadership support, and practical alignment with recognised control and governance models.</p>
+        </article>
+        <article class="feature">
+          <h3>Networking</h3>
+          <p>Enterprise networking strategy, resilient architecture, routing and switching depth, and secure infrastructure foundations.</p>
+        </article>
+        <article class="feature">
+          <h3>Collaboration</h3>
+          <p>Unified communications, team collaboration tooling, digital workplace enablement, and platform adoption support.</p>
+        </article>
+        <article class="feature">
+          <h3>Voice &amp; Video</h3>
+          <p>Voice systems, video environments, communications architecture, and user experience support across collaboration estates.</p>
+        </article>
+        <article class="feature">
+          <h3>AI &amp; Modernisation</h3>
+          <p>AI integration, governance, and practical implementation support that balances innovation with oversight and operational value.</p>
+        </article>
+        <article class="feature">
+          <h3>IT Enablement</h3>
+          <p>Service improvement, operating model support, adoption, knowledge transfer, and modern IT execution capability.</p>
+        </article>
       </div>
     </div>
   </section>
@@ -1751,7 +1551,7 @@
       </div>
 
       <div class="footer-bottom">
-        <div>&copy; 2026 AlerSec. All rights reserved.</div>
+        <div>&copy; 2026 AleroSec. All rights reserved.</div>
         <div class="footer-badges">
           <span class="badge">CISSP</span>
           <span class="badge">ITIL</span>
