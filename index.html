@@ -358,7 +358,7 @@
 
     .certs-section { background: var(--bg-2); }
     .cert-card { padding: 1.5rem 1.75rem; }
-    .cert-card-header { display: flex; align-items: center; gap: 1.1rem; }
+    .cert-card-header { display: flex; align-items: center; gap: 1.1rem; margin-bottom: 1rem; }
     .cert-badge-img { width: 72px; height: 72px; object-fit: contain; flex-shrink: 0; }
     .cert-badge-img--wide { width: auto; max-width: 110px; height: 48px; }
     .cert-card h3 {
@@ -385,6 +385,12 @@
       text-decoration: none; color: inherit;
       display: flex; flex-direction: column;
     }
+    .card:hover, .feature:hover, .gov-card:hover, .phase:hover, .cert-card:hover, .courses-promo-visual:hover, .contact-form:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-strong);
+      transform: translateY(-2px);
+      transition: .22s ease;
+    }
     .card-icon-wrap {
       width: 48px; height: 48px;
       background: var(--cyan-dim);
@@ -396,6 +402,7 @@
     .card h3, .gov-card h3, .phase h3, .feature h3 {
       font-family: var(--font-display);
       color: var(--text-primary);
+      margin-bottom: .7rem;
     }
     .card p, .gov-card p, .phase p, .feature p { color: var(--text-muted); }
     .card-link { margin-top: 1rem; color: var(--cyan); font-size: .8rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
@@ -462,7 +469,7 @@
     }
     .track-name { font-family: var(--font-display); font-size: .9rem; font-weight: 600; color: var(--text-primary); }
     .track-desc { font-size: .78rem; color: var(--text-muted); margin-top: .2rem; }
-    .track-arrow { color: var(--cyan); font-size: 1.2rem; }
+    .track-arrow { color: var(--cyan); font-size: 1.2rem; margin-left: auto; }
 
     .courses-promo-visual {
       padding: 2.5rem;
@@ -580,6 +587,7 @@
       font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .15em; color: #00c8ff; margin-bottom: 1rem;
     }
     .footer-col a { display: block; color: #b8c7d6; text-decoration: none; font-size: .85rem; padding: .3rem 0; }
+    .footer-col a:hover { color: #ffffff; }
     .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding-top: 1.5rem; font-size: .75rem; }
     .footer-badges { display: flex; gap: .75rem; flex-wrap: wrap; }
     .badge { border: 1px solid rgba(0,200,255,.18); color: #00c8ff; font-size: .65rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: .25rem .7rem; border-radius: 999px; background: rgba(0,200,255,.06); }
@@ -789,211 +797,331 @@
     </div>
   </section>
 
-  <section id="services" class="services-section" aria-label="Services">
+  <section id="services" aria-label="Services">
     <div class="section-inner">
-      <span class="section-tag">Our Services</span>
-      <h2 class="section-title">What We Do</h2>
-      <p class="section-sub">AleroSec delivers multidisciplinary advisory and technology services across governance, infrastructure, collaboration, and enablement — helping organisations improve resilience, performance, and operational maturity.</p>
+      <span class="section-tag">What We Deliver</span>
+      <h2 class="section-title">Advisory, delivery and enablement across modern technology.</h2>
+      <p class="section-sub">AleroSec supports organisations across cybersecurity, enterprise networking, collaboration, AI adoption, and operational IT capability — with practical, business-aligned expertise.</p>
       <div class="cards-grid">
-        <a href="#governance" class="card"><div class="card-icon-wrap">🏛️</div><h3>Governance &amp; Advisory</h3><p>Executive support, governance structures, strategic guidance, and decision frameworks aligned to organisational priorities.</p><span class="card-link">Learn more →</span></a>
-        <a href="#framework" class="card"><div class="card-icon-wrap">📋</div><h3>Policy &amp; Operating Models</h3><p>Practical policy development, standards, and operating structures that support control, consistency, and accountability.</p><span class="card-link">Learn more →</span></a>
-        <a href="#framework" class="card"><div class="card-icon-wrap">🛡️</div><h3>Security &amp; Resilience</h3><p>Security strategy, risk management, and resilience improvement across modern enterprise environments.</p><span class="card-link">Learn more →</span></a>
-        <a href="#capabilities" class="card"><div class="card-icon-wrap">🌐</div><h3>Enterprise Networking</h3><p>Secure and reliable infrastructure design, segmentation, connectivity, and performance optimisation.</p><span class="card-link">Learn more →</span></a>
-        <a href="#capabilities" class="card"><div class="card-icon-wrap">🎥</div><h3>Collaboration, Voice &amp; Video</h3><p>Modern collaboration ecosystems spanning voice, video, conferencing, and unified communications enablement.</p><span class="card-link">Learn more →</span></a>
-        <a href="#contact" class="card"><div class="card-icon-wrap">🚀</div><h3>Technology Enablement</h3><p>Support for adoption, operational improvement, AI integration, and modern ways of working across teams and platforms.</p><span class="card-link">Learn more →</span></a>
+        <a href="#governance" class="card">
+          <div class="card-icon-wrap">🛡️</div>
+          <h3>Cybersecurity Governance</h3>
+          <p>Security strategy, governance structures, policy architecture, assurance, and ongoing leadership support aligned to organisational priorities.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+        <a href="#capabilities" class="card">
+          <div class="card-icon-wrap">🌐</div>
+          <h3>Enterprise Networking</h3>
+          <p>Network architecture, resilience, modern connectivity, and secure design for organisations that depend on high availability and operational continuity.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+        <a href="#capabilities" class="card">
+          <div class="card-icon-wrap">🎥</div>
+          <h3>Collaboration &amp; Voice</h3>
+          <p>Collaboration platforms, voice and video strategy, unified communications, and experience design for connected teams and distributed work.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+        <a href="#capabilities" class="card">
+          <div class="card-icon-wrap">🤖</div>
+          <h3>AI Integration</h3>
+          <p>Practical AI integration, governance, and adoption support that helps organisations use AI safely, productively, and in line with business needs.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+        <a href="#capabilities" class="card">
+          <div class="card-icon-wrap">⚙️</div>
+          <h3>IT Enablement</h3>
+          <p>Operational uplift, service improvement, modernisation support, and technology enablement to strengthen execution across teams and platforms.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+        <a href="courses.html" class="card">
+          <div class="card-icon-wrap">🎓</div>
+          <h3>Professional Courses</h3>
+          <p>Structured learning tracks in security, networking, collaboration, voice and video, AI, and governance — built by experienced practitioners.</p>
+          <span class="card-link">View courses →</span>
+        </a>
       </div>
     </div>
   </section>
 
-  <section id="governance" class="governance" aria-label="Governance services">
+  <section id="governance" class="governance" aria-label="Governance">
     <div class="section-inner">
-      <span class="section-tag">Advisory Services</span>
-      <h2 class="section-title">Governance &amp; Strategic Support</h2>
-      <p class="section-sub">Structured advisory support that gives leadership teams the clarity, accountability, and confidence they need to govern technology, risk, operations, and change effectively.</p>
+      <span class="section-tag">Security Governance</span>
+      <h2 class="section-title">Governance that gives leadership clarity, structure and confidence.</h2>
+      <p class="section-sub">We help organisations define accountability, shape policy, and build decision-making structures that support stronger cyber resilience and more consistent operational control.</p>
       <div class="gov-grid">
-        <div class="gov-card">
-          <span class="gov-num">01 — Framework Design</span>
-          <h3>Governance Framework</h3>
-          <p>We design and implement governance frameworks that define roles, responsibilities, priorities, and decision-making structures across your organisation.</p>
+        <article class="gov-card">
+          <span class="gov-num">01</span>
+          <h3>Governance Frameworks</h3>
+          <p>Board-ready governance models that clarify responsibility, reporting lines, oversight, and decision authority across the organisation.</p>
           <ul class="gov-list">
-            <li>Governance structure design</li>
-            <li>RACI matrix development</li>
-            <li>Committee &amp; steering group charters</li>
-            <li>Executive reporting templates</li>
-            <li>Business and compliance alignment</li>
+            <li>Committee structures</li>
+            <li>Security charters</li>
+            <li>Role definition</li>
+            <li>Leadership reporting</li>
           </ul>
-        </div>
-        <div class="gov-card">
-          <span class="gov-num">02 — Policy &amp; Standards</span>
+        </article>
+        <article class="gov-card">
+          <span class="gov-num">02</span>
           <h3>Policy Architecture</h3>
-          <p>A complete, layered policy architecture — from high-level governance policy through to operational standards and procedures — built for your context.</p>
+          <p>A complete, layered policy and standards structure that translates strategic intent into operational practice without creating unnecessary overhead.</p>
           <ul class="gov-list">
-            <li>Policy suite development</li>
-            <li>Standards &amp; baseline definition</li>
-            <li>Operational procedure design</li>
-            <li>Lifecycle management</li>
-            <li>Technology and risk mapping</li>
+            <li>Core policy suite</li>
+            <li>Standards and procedures</li>
+            <li>Review cycles</li>
+            <li>Control alignment</li>
           </ul>
-        </div>
-        <div class="gov-card">
-          <span class="gov-num">03 — Executive Support</span>
-          <h3>Leadership Enablement</h3>
-          <p>Equipping executives with the tools, metrics, and insight they need to make informed decisions about investment, operational resilience, and technology direction.</p>
+        </article>
+        <article class="gov-card">
+          <span class="gov-num">03</span>
+          <h3>Executive Enablement</h3>
+          <p>Metrics, reporting, and decision support that help leadership teams understand exposure, prioritise action, and manage cyber risk with confidence.</p>
           <ul class="gov-list">
             <li>Executive dashboards</li>
-            <li>Board and leadership briefings</li>
-            <li>KPI &amp; KRI development</li>
-            <li>Investment roadmaps</li>
-            <li>Strategic planning support</li>
+            <li>Risk reporting</li>
+            <li>Maturity assessments</li>
+            <li>Advisory support</li>
           </ul>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section id="framework" class="framework" aria-label="Our methodology" style="padding:5rem 2rem;">
+  <section aria-label="Approach">
     <div class="section-inner">
-      <span class="section-tag">Our Approach</span>
-      <h2 class="section-title">The AleroSec Methodology</h2>
-      <p class="section-sub">A structured, repeatable four-phase approach to helping organisations assess, modernise, implement, and continuously improve their technology, operations, and governance.</p>
+      <span class="section-tag">How We Work</span>
+      <h2 class="section-title">A structured approach for sustainable capability.</h2>
+      <p class="section-sub">We take a phased, practical approach to technology, governance, and enablement — focused on measurable improvement, clear ownership, and lasting adoption.</p>
       <div class="phases">
-        <div class="phase"><div class="phase-num">01</div><span class="phase-tag">Assess</span><h3>Understand Your Environment</h3><p>We evaluate your current posture, operating model, technology landscape, and priority gaps to build a clear baseline for action.</p></div>
-        <div class="phase phase-active"><div class="phase-num">02</div><span class="phase-tag">Design</span><h3>Build the Blueprint</h3><p>We design governance structures, policy architecture, infrastructure direction, and delivery priorities aligned to your business goals.</p></div>
-        <div class="phase"><div class="phase-num">03</div><span class="phase-tag">Implement</span><h3>Deploy &amp; Enable</h3><p>We support rollout across operations, networks, collaboration platforms, governance processes, and organisational adoption.</p></div>
-        <div class="phase"><div class="phase-num">04</div><span class="phase-tag">Improve</span><h3>Monitor &amp; Evolve</h3><p>We establish review cycles, executive visibility, and improvement plans to keep your organisation effective, resilient, and ready to adapt.</p></div>
+        <article class="phase">
+          <div class="phase-num">01</div>
+          <div class="phase-tag">Assess</div>
+          <h3>Understand the current state</h3>
+          <p>We assess your current technology, governance, and operational maturity to identify opportunities, gaps, and priority risks.</p>
+        </article>
+        <article class="phase phase-active">
+          <div class="phase-num">02</div>
+          <div class="phase-tag">Design</div>
+          <h3>Shape the right model</h3>
+          <p>We design fit-for-purpose frameworks, architectures, roadmaps, and capability models aligned to your strategic goals.</p>
+        </article>
+        <article class="phase">
+          <div class="phase-num">03</div>
+          <div class="phase-tag">Implement</div>
+          <h3>Embed into operations</h3>
+          <p>We help put structures, controls, technology, and processes into practice so change becomes real and usable.</p>
+        </article>
+        <article class="phase">
+          <div class="phase-num">04</div>
+          <div class="phase-tag">Improve</div>
+          <h3>Sustain and evolve</h3>
+          <p>We support ongoing review, optimisation, leadership insight, and continuous uplift to keep capability effective over time.</p>
+        </article>
       </div>
     </div>
   </section>
 
   <section id="capabilities" class="capabilities" aria-label="Capabilities">
     <div class="section-inner">
-      <span class="section-tag">Why AleroSec</span>
-      <h2 class="section-title">Our Capabilities</h2>
-      <p class="section-sub">Practical expertise across technology strategy, governance, networking, collaboration, security, and enablement — backed by CISSP, ITIL, and CCIE certification and over a decade of real-world delivery.</p>
+      <span class="section-tag">Core Capability Areas</span>
+      <h2 class="section-title">Deep expertise across security, infrastructure and collaboration.</h2>
+      <p class="section-sub">Our work spans the technical, strategic, and operational layers that modern organisations rely on every day.</p>
       <div class="features-grid">
-        <div class="feature"><h3>Governance-Led Thinking</h3><p>We connect strategy, accountability, and execution so organisations can make better technology and operational decisions.</p></div>
-        <div class="feature"><h3>ITIL-Aligned Delivery</h3><p>ITIL-backed discipline helps ensure that solutions integrate cleanly with service management, operations, and continual improvement.</p></div>
-        <div class="feature"><h3>CCIE Technical Depth</h3><p>CCIE-level expertise strengthens enterprise networking, collaboration infrastructure, and voice and video technology strategy.</p></div>
-        <div class="feature"><h3>Security &amp; Resilience</h3><p>CISSP-backed expertise supports stronger governance, risk awareness, resilience planning, and control maturity.</p></div>
-        <div class="feature"><h3>Modern Collaboration Expertise</h3><p>Advice grounded in real collaboration environments, helping teams improve communication, reliability, and secure service delivery.</p></div>
-        <div class="feature"><h3>Operational Enablement</h3><p>From AI integration to technology adoption, we help organisations translate capability into measurable business improvement.</p></div>
+        <article class="feature">
+          <h3>Cybersecurity</h3>
+          <p>Governance, policy, risk, assurance, security leadership support, and practical alignment with recognised control and governance models.</p>
+        </article>
+        <article class="feature">
+          <h3>Networking</h3>
+          <p>Enterprise networking strategy, resilient architecture, routing and switching depth, and secure infrastructure foundations.</p>
+        </article>
+        <article class="feature">
+          <h3>Collaboration</h3>
+          <p>Unified communications, team collaboration tooling, digital workplace enablement, and platform adoption support.</p>
+        </article>
+        <article class="feature">
+          <h3>Voice &amp; Video</h3>
+          <p>Voice systems, video environments, communications architecture, and user experience support across collaboration estates.</p>
+        </article>
+        <article class="feature">
+          <h3>AI &amp; Modernisation</h3>
+          <p>AI integration, governance, and practical implementation support that balances innovation with oversight and operational value.</p>
+        </article>
+        <article class="feature">
+          <h3>IT Enablement</h3>
+          <p>Service improvement, operating model support, adoption, knowledge transfer, and modern IT execution capability.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="courses-promo" aria-label="Courses preview">
+  <section class="courses-promo" aria-label="Courses">
     <div class="courses-promo-inner">
       <div class="courses-promo-content">
-        <span class="section-tag">Education &amp; Training</span>
-        <h2>Learn from <span>Industry Experts</span> with Real-World Experience</h2>
-        <p>Our courses are built by practitioners, not theorists. Drawing on over a decade of experience across cybersecurity, enterprise networking, collaboration technology, voice and video, AI, and IT enablement, we offer structured learning tracks across the disciplines that matter most to modern organisations.</p>
+        <span class="section-tag">Learning &amp; Capability</span>
+        <h2>Build stronger teams through <span>practical training</span>.</h2>
+        <p>Our courses are built by practitioners with hands-on experience across cybersecurity, networking, collaboration, voice and video, AI, and IT operations. They are designed to help individuals and teams build real capability — not just theoretical awareness.</p>
         <div class="course-tracks">
-          <a href="courses.html#ai" class="course-track"><div><div class="track-name">AI &amp; Security</div><div class="track-desc">Navigating AI risks, governance frameworks, and emerging operational challenges.</div></div><span class="track-arrow">→</span></a>
-          <a href="courses.html#networking" class="course-track"><div><div class="track-name">Networking &amp; Collaboration</div><div class="track-desc">Infrastructure, connectivity, collaboration platforms, and service delivery foundations.</div></div><span class="track-arrow">→</span></a>
-          <a href="courses.html#security" class="course-track"><div><div class="track-name">Cybersecurity &amp; Governance</div><div class="track-desc">Risk, resilience, policy, leadership, and operational security foundations.</div></div><span class="track-arrow">→</span></a>
+          <a href="courses.html#ai" class="course-track">
+            <div>
+              <div class="track-name">AI &amp; Security</div>
+              <div class="track-desc">Modern AI risk, governance, and practical security use cases.</div>
+            </div>
+            <div class="track-arrow">→</div>
+          </a>
+          <a href="courses.html#networking" class="course-track">
+            <div>
+              <div class="track-name">Networking &amp; Collaboration</div>
+              <div class="track-desc">Enterprise networking, unified communications, and collaboration foundations.</div>
+            </div>
+            <div class="track-arrow">→</div>
+          </a>
+          <a href="courses.html#security" class="course-track">
+            <div>
+              <div class="track-name">Security &amp; Governance</div>
+              <div class="track-desc">Governance, policy, risk, control design, and practical cyber management.</div>
+            </div>
+            <div class="track-arrow">→</div>
+          </a>
         </div>
-        <div style="margin-top:2rem;"><a href="courses.html" class="btn btn-primary">Browse All Courses</a></div>
       </div>
+
       <div class="courses-promo-visual">
         <div class="course-stat-big">3</div>
-        <div class="course-stat-label">Learning Tracks</div>
+        <div class="course-stat-label">Core Learning Tracks</div>
         <div class="course-stats-row">
-          <div class="mini-stat"><div class="mini-stat-num">🎥</div><div class="mini-stat-label">Video Lessons</div></div>
-          <div class="mini-stat"><div class="mini-stat-num">📝</div><div class="mini-stat-label">Articles</div></div>
-          <div class="mini-stat"><div class="mini-stat-num">🏅</div><div class="mini-stat-label">CISSP · ITIL · CCIE</div></div>
+          <div class="mini-stat">
+            <div class="mini-stat-num">10+</div>
+            <div class="mini-stat-label">Years Practice</div>
+          </div>
+          <div class="mini-stat">
+            <div class="mini-stat-num">CCIE</div>
+            <div class="mini-stat-label">Networking Depth</div>
+          </div>
+          <div class="mini-stat">
+            <div class="mini-stat-num">CISSP</div>
+            <div class="mini-stat-label">Security Depth</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <section class="cta-band" aria-label="Call to action">
-    <h2>Ready to <span>Modernise</span> Your Technology Environment?</h2>
-    <p>Let's talk about your governance needs, infrastructure priorities, collaboration environment, or broader technology goals. No obligation — just a conversation with a certified expert.</p>
+    <h2>Ready to strengthen your <span>technology capability</span>?</h2>
+    <p>Whether you need governance support, technical delivery, collaboration expertise, or practical learning tracks, AleroSec brings certified experience and a business-focused approach.</p>
     <a href="#contact" class="btn btn-cyan">Start the Conversation</a>
   </section>
 
   <section id="contact" class="contact-section" aria-label="Contact">
     <div class="contact-inner">
       <span class="section-tag">Get in Touch</span>
-      <h2 class="section-title">Let’s Talk</h2>
-      <p class="section-sub">Have a question, want a consultation, or ready to kick off a project? Send us a message and we'll get back to you promptly.</p>
+      <h2 class="section-title">Let’s talk about your priorities.</h2>
+      <p class="section-sub">Have a question, want to discuss a project, or explore training options? Send a message and we’ll get back to you promptly.</p>
+
       <a class="contact-email" href="mailto:info@alerosec.com">✉️ info@alerosec.com</a>
-      <div class="contact-form">
-        <form action="mailto:info@alerosec.com" method="post" enctype="text/plain">
-          <div class="form-row">
-            <div class="form-group"><label for="contact-name">Your Name</label><input type="text" id="contact-name" name="Name" placeholder="Jane Smith" required></div>
-            <div class="form-group"><label for="contact-email-field">Email Address</label><input type="email" id="contact-email-field" name="Email" placeholder="jane@company.com" required></div>
+
+      <form class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name">
           </div>
-          <div class="form-group" style="margin-bottom:1.25rem;"><label for="contact-subject">Subject</label><input type="text" id="contact-subject" name="Subject" placeholder="Governance, networking, collaboration, or technology advisory…"></div>
-          <div class="form-group"><label for="contact-message">Message</label><textarea id="contact-message" name="Message" placeholder="Tell us about your goals, challenges, or environment…" required></textarea></div>
-          <div class="form-submit"><button type="submit" class="btn-form">Send Message →</button></div>
-        </form>
-      </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@company.com">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input id="company" name="company" type="text" placeholder="Organisation name">
+          </div>
+          <div class="form-group">
+            <label for="topic">Topic</label>
+            <input id="topic" name="topic" type="text" placeholder="Security, networking, courses, AI...">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us a little about what you need."></textarea>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn-form">Send Message</button>
+        </div>
+      </form>
     </div>
   </section>
 
-  <footer aria-label="Footer">
+  <footer>
     <div class="footer-inner">
       <div class="footer-top">
         <div class="footer-brand">
           <a href="index.html" class="footer-wordmark" aria-label="AleroSec home">
             <svg class="footer-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M24 3 L41 10.5 V27.2 C41 36.5 34.5 43.2 24 46.8 C13.5 43.2 7 36.5 7 27.2 V10.5 Z" fill="none" stroke="#00c8ff" stroke-width="2.1" stroke-linejoin="round"/>
-              <path d="M24 12.5 L16.2 34.2 H20.3 L24 24 L27.7 34.2 H31.8 L24 12.5 Z" fill="#ffffff"/>
-              <path d="M24 12.5 L28.4 24.3 L31.7 34.2 H35.6 L27.9 12.5 Z" fill="#00c8ff"/>
+              <path d="M24 2 L42 10 V27.5 C42 37.5 35.2 45.2 24 49 C12.8 45.2 6 37.5 6 27.5 V10 Z" fill="none" stroke="#00c8ff" stroke-width="2.2" stroke-linejoin="round"/>
+              <path d="M24 14 L15.6 37.5 H20.1 L24 26.4 L27.9 37.5 H32.4 L24 14 Z" fill="#ffffff"/>
+              <path d="M24 14 L28.8 25.9 L32.3 37.5 H36.4 L28 14 Z" fill="#00c8ff"/>
             </svg>
             <span class="footer-wordmark-text">Aler<span>o</span>Sec</span>
           </a>
-          <p class="footer-tagline">Independent specialists across cybersecurity, enterprise networking, collaboration technology, voice and video, AI integration, and IT enablement — backed by over a decade of hands-on experience and CISSP, ITIL, and CCIE expertise.</p>
+          <p class="footer-tagline">Technology, security, networking, collaboration, voice and video, AI, and IT enablement — delivered with certified expertise and practical focus.</p>
         </div>
+
         <div class="footer-col">
-          <h4>Services</h4>
-          <a href="#services">Governance &amp; Advisory</a>
-          <a href="#services">Security &amp; Resilience</a>
-          <a href="#services">Enterprise Networking</a>
-          <a href="#services">Voice &amp; Video</a>
-          <a href="#services">Technology Enablement</a>
+          <h4>Company</h4>
+          <a href="#services">Services</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#governance">Governance</a>
+          <a href="#contact">Contact</a>
         </div>
+
         <div class="footer-col">
-          <h4>Resources</h4>
-          <a href="courses.html">Courses</a>
+          <h4>Courses</h4>
           <a href="courses.html#ai">AI &amp; Security</a>
           <a href="courses.html#networking">Networking &amp; Collaboration</a>
-          <a href="#framework">Our Methodology</a>
-          <a href="#certifications">Certifications</a>
+          <a href="courses.html#security">Security &amp; Governance</a>
         </div>
+
         <div class="footer-col">
-          <h4>Contact</h4>
-          <a href="mailto:info@alerosec.com">info@alerosec.com</a>
-          <a href="#contact">Get in Touch</a>
-          <a href="#contact">Request a Consultation</a>
+          <h4>Focus Areas</h4>
+          <a href="#capabilities">Cybersecurity</a>
+          <a href="#capabilities">Networking</a>
+          <a href="#capabilities">Collaboration</a>
+          <a href="#capabilities">AI Integration</a>
         </div>
       </div>
+
       <div class="footer-bottom">
-        <span>© 2026 AleroSec. All rights reserved.</span>
+        <div>© 2026 AleroSec. All rights reserved.</div>
         <div class="footer-badges">
           <span class="badge">CISSP</span>
           <span class="badge">ITIL</span>
           <span class="badge">CCIE</span>
-          <span class="badge">Technology</span>
-          <span class="badge">Collaboration</span>
-          <span class="badge">10+ Years</span>
         </div>
       </div>
     </div>
   </footer>
 
   <script>
-    const toggle = document.getElementById('themeToggle');
-    const html = document.documentElement;
-    let currentTheme = html.getAttribute('data-theme') || 'dark';
-    toggle.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+    (function () {
+      const root = document.documentElement;
+      const toggle = document.getElementById('themeToggle');
+      let theme = root.getAttribute('data-theme') || 'dark';
 
-    toggle.addEventListener('click', () => {
-      currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', currentTheme);
-      toggle.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
-    });
+      function updateToggle() {
+        if (toggle) toggle.textContent = theme === 'dark' ? '🌙' : '☀️';
+      }
+
+      updateToggle();
+
+      if (toggle) {
+        toggle.addEventListener('click', function () {
+          theme = theme === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', theme);
+          updateToggle();
+        });
+      }
+    })();
   </script>
 </body>
 </html>
