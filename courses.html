@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Courses | Technology, Networking, Collaboration &amp; Security | AleroSec</title>
+  <title>Courses | Technology, Networking, Collaboration & Security | AleroSec</title>
   <meta name="description" content="Expert-led courses in AI, enterprise networking, collaboration, voice & video, governance, and cybersecurity from AleroSec — built by CISSP, ITIL, and CCIE certified practitioners with over a decade of real-world experience.">
   <meta name="keywords" content="cybersecurity courses, AI training, networking courses, collaboration training, voice and video courses, governance training, CCIE, CISSP, ITIL, AleroSec">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Courses | Technology, Networking, Collaboration &amp; Security | AleroSec">
+  <meta property="og:title" content="Courses | Technology, Networking, Collaboration & Security | AleroSec">
   <meta property="og:description" content="Expert-led courses in AI, networking, collaboration, voice & video, governance, and cybersecurity built by CISSP, ITIL & CCIE certified practitioners.">
   <meta property="og:image" content="https://placehold.co/1200x630/060f1e/00c8ff?text=AleroSec+Courses">
   <meta property="og:url" content="https://alerosec.com/courses.html">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Courses | Technology, Networking, Collaboration &amp; Security | AleroSec">
+  <meta name="twitter:title" content="Courses | Technology, Networking, Collaboration & Security | AleroSec">
   <meta name="twitter:description" content="Courses shaped by real-world experience across security, networking, collaboration, voice & video, AI, and governance.">
   <meta name="twitter:image" content="https://placehold.co/1200x630/060f1e/00c8ff?text=AleroSec+Courses">
 
@@ -28,47 +28,43 @@
     :root {
       --font-body: 'Inter', system-ui, -apple-system, sans-serif;
       --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
-      --ai-color: #8a63d2;
-      --ai-dim: rgba(138,99,210,.10);
-      --net-color: #22b8cf;
-      --net-dim: rgba(34,184,207,.10);
-      --sec-color: #00c8ff;
-      --sec-dim: rgba(0,200,255,.10);
     }
 
     [data-theme="dark"] {
       --bg: #07111d;
       --bg-2: #0b1726;
+      --bg-3: #102033;
+      --bg-4: #14263c;
       --bg-card: rgba(255,255,255,.028);
+      --bg-card-hover: rgba(255,255,255,.045);
       --border: rgba(0,200,255,.10);
       --border-strong: rgba(0,200,255,.22);
       --text-primary: #f7fbff;
       --text-secondary: #c9d5e2;
       --text-muted: #7f91a6;
-      --text-faint: #304256;
       --cyan: #00c8ff;
       --cyan-dim: rgba(0,200,255,.08);
       --header-bg: rgba(7,17,29,.88);
       --header-border: rgba(0,200,255,.12);
-      --hero-bg: #0b1726;
       --footer-bg: #0a1624;
     }
 
     [data-theme="light"] {
       --bg: #f3f6f8;
       --bg-2: #fbfcfd;
-      --bg-card: rgba(255,255,255,.88);
+      --bg-3: #e8eef3;
+      --bg-4: #dde7ee;
+      --bg-card: rgba(255,255,255,.82);
+      --bg-card-hover: rgba(255,255,255,.96);
       --border: rgba(0,111,168,.12);
       --border-strong: rgba(0,111,168,.18);
       --text-primary: #102030;
       --text-secondary: #27405d;
       --text-muted: #617790;
-      --text-faint: #b8c5d2;
       --cyan: #006fa8;
       --cyan-dim: rgba(0,122,168,.08);
       --header-bg: rgba(243,246,248,.92);
       --header-border: rgba(0,111,168,.12);
-      --hero-bg: #fbfcfd;
       --footer-bg: #102030;
     }
 
@@ -78,6 +74,8 @@
       background: var(--bg);
       color: var(--text-primary);
       line-height: 1.6;
+      overflow-x: hidden;
+      transition: background .3s, color .3s;
     }
 
     .theme-toggle {
@@ -123,243 +121,278 @@
 
     nav { display: flex; align-items: center; gap: .1rem; }
     nav a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: .85rem;
-      font-weight: 600;
-      padding: .45rem .9rem;
-      border-radius: 8px;
+      color: var(--text-muted); text-decoration: none;
+      font-size: .85rem; font-weight: 600;
+      padding: .45rem .9rem; border-radius: 8px;
+      white-space: nowrap;
     }
     nav a:hover, nav a.active { color: var(--cyan); background: var(--cyan-dim); }
     .nav-cta {
-      background: var(--cyan);
+      background: var(--cyan) !important;
       color: #fff !important;
-      font-weight: 800;
-      margin-left: .5rem;
-      border-radius: 8px;
+      font-weight: 800 !important; margin-left: .5rem;
+      border-radius: 8px !important;
     }
     [data-theme="dark"] .nav-cta { color: #07111d !important; }
 
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: .5rem; background: none; border: none; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--text-primary); border-radius: 2px; }
+
     .page-hero {
-      background: var(--hero-bg);
-      padding: 5rem 2rem 4rem;
+      background: var(--bg-2);
+      padding: 6rem 2rem 5rem;
       position: relative;
       overflow: hidden;
-      border-bottom: 1px solid var(--border);
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 58% 48% at 78% 28%, rgba(0,200,255,.05) 0%, transparent 64%),
+        radial-gradient(ellipse 44% 34% at 18% 76%, rgba(0,100,200,.04) 0%, transparent 60%);
+      pointer-events: none;
     }
     .page-hero-inner {
-      max-width: 1160px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
+      max-width: 1160px; margin: 0 auto;
+      position: relative; z-index: 1;
     }
     .breadcrumb {
-      display: flex; align-items: center; gap: .5rem;
-      margin-bottom: 1.5rem;
-      font-size: .8rem;
+      display: flex; align-items: center; gap: .55rem;
+      margin-bottom: 1.25rem;
+      font-size: .8rem; color: var(--text-muted);
     }
     .breadcrumb a { color: var(--text-muted); text-decoration: none; }
-    .breadcrumb span { color: var(--text-faint); }
+    .breadcrumb a:hover { color: var(--cyan); }
     .page-eyebrow {
-      display: inline-flex; align-items: center; gap: .5rem;
+      display: inline-flex; align-items: center;
       background: var(--cyan-dim);
       border: 1px solid var(--border-strong);
       color: var(--cyan);
-      font-size: .75rem; font-weight: 700;
-      letter-spacing: .12em; text-transform: uppercase;
-      padding: .35rem .9rem; border-radius: 999px;
-      margin-bottom: 1.25rem;
+      font-size: .68rem; font-weight: 700;
+      letter-spacing: .1em; text-transform: uppercase;
+      padding: .4rem 1rem; border-radius: 999px;
+      margin-bottom: 1.5rem;
     }
     .page-hero h1 {
       font-family: var(--font-display);
-      font-size: clamp(2.2rem, 5vw, 3.4rem);
-      font-weight: 700;
-      letter-spacing: -.04em;
-      line-height: 1.1;
-      margin-bottom: 1rem;
+      font-size: clamp(2.3rem, 5vw, 3.8rem);
+      font-weight: 700; line-height: 1.05;
+      letter-spacing: -.04em; margin-bottom: 1.25rem;
+      color: var(--text-primary);
+      max-width: 820px;
     }
     .page-hero h1 span { color: var(--cyan); }
     .page-hero-desc {
-      font-size: 1.05rem;
-      color: var(--text-secondary);
-      line-height: 1.75;
-      max-width: 740px;
+      font-size: 1.03rem; color: var(--text-secondary);
+      line-height: 1.75; max-width: 780px;
       margin-bottom: 2rem;
     }
-
-    .track-pills { display: flex; gap: .75rem; flex-wrap: wrap; }
+    .track-pills { display: flex; flex-wrap: wrap; gap: .75rem; }
     .track-pill {
-      display: inline-flex; align-items: center; gap: .5rem;
-      border-radius: 999px; padding: .4rem 1rem;
-      font-size: .8rem; font-weight: 700;
-      border: 1px solid transparent;
+      display: inline-flex; align-items: center;
       text-decoration: none;
-    }
-    .track-pill.ai { color: var(--ai-color); border-color: rgba(138,99,210,.24); background: var(--ai-dim); }
-    .track-pill.net { color: var(--net-color); border-color: rgba(34,184,207,.22); background: var(--net-dim); }
-    .track-pill.sec { color: var(--sec-color); border-color: rgba(0,200,255,.24); background: var(--sec-dim); }
-
-    .page-body {
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 3rem 2rem;
-      display: grid;
-      grid-template-columns: 240px 1fr;
-      gap: 3rem;
-      align-items: start;
-    }
-    .sidebar { position: sticky; top: 92px; }
-    .sidebar-label {
-      font-family: var(--font-display);
-      font-size: .65rem; font-weight: 700;
-      text-transform: uppercase; letter-spacing: .2em;
-      color: var(--cyan); margin-bottom: .75rem;
-    }
-    .sidebar-nav { list-style: none; }
-    .sidebar-nav li a {
-      display: flex; align-items: center; gap: .6rem;
-      padding: .55rem .75rem;
-      border-radius: 8px;
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: .85rem;
-      font-weight: 500;
-    }
-    .sidebar-nav li a:hover, .sidebar-nav li a.active { color: var(--cyan); background: var(--cyan-dim); }
-    .sidebar-back {
-      display: flex; align-items: center; gap: .5rem;
-      color: var(--text-muted); text-decoration: none;
-      font-size: .8rem; font-weight: 600;
-      padding: .5rem .75rem; border-radius: 8px;
-      margin-top: 1rem;
-    }
-
-    .track-section { margin-bottom: 5rem; }
-    .track-header {
-      margin-bottom: 2.5rem;
-      padding: 2.5rem;
-      border-radius: 18px;
+      background: var(--cyan-dim);
       border: 1px solid var(--border);
-      background: var(--bg-card);
+      border-radius: 999px;
+      color: var(--text-primary);
+      padding: .55rem 1rem;
+      font-size: .82rem; font-weight: 700;
     }
-    .track-header-inner { display: flex; align-items: center; gap: 1.5rem; }
-    .track-big-icon { font-size: 3rem; flex-shrink: 0; }
-    .track-title-block h2 {
-      font-family: var(--font-display);
-      font-size: 1.8rem;
-      font-weight: 700;
-      letter-spacing: -.03em;
-      margin-bottom: .35rem;
-    }
-    .track-title-block h2.ai { color: var(--ai-color); }
-    .track-title-block h2.net { color: var(--net-color); }
-    .track-title-block h2.sec { color: var(--sec-color); }
-    .track-title-block p { font-size: .9rem; color: var(--text-muted); max-width: 640px; }
-    .track-meta { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
-    .track-meta-item {
-      font-size: .75rem; font-weight: 700;
-      text-transform: uppercase; letter-spacing: .08em;
-      color: var(--text-muted);
-    }
+    .track-pill:hover { border-color: var(--border-strong); color: var(--cyan); }
 
-    .subsection-label {
+    section { padding: 5rem 2rem; }
+    .section-inner { max-width: 1160px; margin: 0 auto; }
+    .section-tag {
+      display: inline-block;
       font-size: .7rem; font-weight: 800;
-      letter-spacing: .2em; text-transform: uppercase;
-      color: var(--text-muted);
+      letter-spacing: .18em; text-transform: uppercase;
+      color: var(--cyan);
+      background: var(--cyan-dim);
+      border: 1px solid var(--border);
+      padding: .3rem .85rem; border-radius: 999px;
       margin-bottom: 1.25rem;
-      display: flex; align-items: center; gap: .6rem;
     }
-    .subsection-label::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--border);
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 700; letter-spacing: -.03em;
+      line-height: 1.1; margin-bottom: .75rem;
+      color: var(--text-primary);
+    }
+    .section-sub {
+      font-size: 1rem; color: var(--text-muted);
+      max-width: 760px; margin-bottom: 2rem; line-height: 1.7;
     }
 
-    .videos-grid {
+    .intro-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-      margin-bottom: 3rem;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 2rem;
+      align-items: stretch;
     }
-    .video-embed-card, .blog-card {
+    .intro-card, .stat-panel, .course-card, .course-side, .audience-card, .outcome-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 16px;
-      overflow: hidden;
+      backdrop-filter: blur(4px);
     }
-    .yt-wrap {
-      position: relative;
-      width: 100%;
-      padding-top: 56.25%;
-      background: #000;
-    }
-    .yt-placeholder {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: .75rem;
-      background: linear-gradient(135deg, rgba(20,30,50,.9), rgba(10,20,40,.95));
-      cursor: pointer;
-    }
-    .play-circle {
-      width: 56px; height: 56px;
-      border-radius: 50%;
-      background: rgba(255,255,255,.15);
-      border: 2px solid rgba(255,255,255,.4);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.4rem;
-      color: #fff;
-    }
-    .yt-label {
-      font-size: .75rem;
-      color: rgba(255,255,255,.78);
-      font-weight: 600;
-      text-align: center;
-      padding: 0 1rem;
-    }
-    .video-info { padding: 1.25rem; }
-    .video-title {
-      font-family: var(--font-display);
-      font-size: .95rem;
-      font-weight: 600;
-      color: var(--text-primary);
-      margin-bottom: .4rem;
-      line-height: 1.3;
-    }
-    .video-desc {
-      font-size: .8rem;
-      color: var(--text-muted);
-      line-height: 1.55;
+    .intro-card, .stat-panel, .course-card, .course-side, .audience-card, .outcome-card {
+      padding: 2rem;
     }
 
-    .blog-list { display: flex; flex-direction: column; gap: 1.25rem; }
-    .blog-card {
-      padding: 1.75rem 2rem;
+    .intro-card p { color: var(--text-secondary); margin-bottom: 1rem; }
+    .stat-panel {
       display: grid;
-      grid-template-columns: 1fr auto;
       gap: 1rem;
-      align-items: start;
-      text-decoration: none;
-      color: inherit;
+      align-content: start;
     }
-    .blog-card h3 {
+    .stat-line {
+      padding: 1rem 1.1rem;
+      border-radius: 12px;
+      background: var(--cyan-dim);
+      border: 1px solid var(--border);
+    }
+    .stat-line strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      color: var(--cyan);
+      margin-bottom: .2rem;
+    }
+    .stat-line span {
+      font-size: .82rem;
+      color: var(--text-muted);
+    }
+
+    .course-section { background: var(--bg-2); }
+    .course-layout {
+      display: grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+    .course-card {
+      padding: 2rem 2rem 1.75rem;
+    }
+    .course-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      margin-bottom: .85rem;
+      color: var(--text-primary);
+    }
+    .course-card p {
+      color: var(--text-secondary);
+      margin-bottom: 1.25rem;
+    }
+    .course-modules {
+      display: grid;
+      gap: .75rem;
+      margin-bottom: 1.3rem;
+    }
+    .module {
+      background: var(--cyan-dim);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: .9rem 1rem;
+    }
+    .module strong {
+      display: block;
+      color: var(--text-primary);
+      font-size: .9rem;
+      margin-bottom: .2rem;
+    }
+    .module span {
+      font-size: .82rem;
+      color: var(--text-muted);
+    }
+    .course-meta {
+      display: flex;
+      gap: .6rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    .course-meta span {
+      font-size: .72rem;
+      font-weight: 700;
+      color: var(--cyan);
+      background: var(--cyan-dim);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: .32rem .7rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .course-side h4, .audience-card h4, .outcome-card h4 {
       font-family: var(--font-display);
       font-size: 1rem;
+      margin-bottom: .85rem;
       color: var(--text-primary);
-      margin-bottom: .35rem;
     }
-    .blog-card p { color: var(--text-muted); font-size: .86rem; }
+    .course-side p { color: var(--text-muted); font-size: .9rem; }
+    .side-stack { display: grid; gap: 1rem; }
+    .side-item {
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+    }
+    .side-item:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+    .side-item strong {
+      display: block;
+      color: var(--cyan);
+      font-size: .82rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: .25rem;
+    }
+    .side-item span {
+      color: var(--text-muted);
+      font-size: .86rem;
+    }
+
+    .audience-grid, .outcomes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+    .audience-card p, .outcome-card p { color: var(--text-muted); }
+
+    .cta-band {
+      background: linear-gradient(135deg, var(--bg-2), var(--bg-3));
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 5rem 2rem; text-align: center;
+    }
+    .cta-band h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700; letter-spacing: -.04em;
+      color: var(--text-primary); margin-bottom: .75rem;
+    }
+    .cta-band h2 span { color: var(--cyan); }
+    .cta-band p {
+      font-size: 1rem; color: var(--text-muted);
+      margin-bottom: 2rem; max-width: 680px;
+      margin-left: auto; margin-right: auto;
+    }
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 800; font-size: .95rem;
+      padding: .9rem 2rem; border-radius: 10px;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+    .btn-primary { background: var(--cyan); color: #fff; }
+    [data-theme="dark"] .btn-primary { color: #07111d; }
 
     footer {
       background: var(--footer-bg);
       color: #b8c7d6;
       border-top: 1px solid rgba(0,200,255,.10);
       padding: 3.5rem 2rem 2rem;
-      margin-top: 4rem;
     }
     .footer-inner { max-width: 1160px; margin: 0 auto; }
     .footer-top {
@@ -392,18 +425,30 @@
       font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .15em; color: #00c8ff; margin-bottom: 1rem;
     }
     .footer-col a { display: block; color: #b8c7d6; text-decoration: none; font-size: .85rem; padding: .3rem 0; }
+    .footer-col a:hover { color: #ffffff; }
+    .footer-bottom {
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1rem; padding-top: 1.5rem; font-size: .75rem;
+    }
+    .footer-badges { display: flex; gap: .75rem; flex-wrap: wrap; }
+    .badge {
+      border: 1px solid rgba(0,200,255,.18);
+      color: #00c8ff;
+      font-size: .65rem; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; padding: .25rem .7rem;
+      border-radius: 999px; background: rgba(0,200,255,.06);
+    }
 
-    @media (max-width: 960px) {
-      .page-body { grid-template-columns: 1fr; }
-      .sidebar { position: static; }
-      .videos-grid { grid-template-columns: 1fr; }
+    @media (max-width: 1024px) {
+      .intro-grid, .course-layout { grid-template-columns: 1fr; }
+      .audience-grid, .outcomes-grid { grid-template-columns: 1fr 1fr; }
       .footer-top { grid-template-columns: 1fr 1fr; }
     }
-    @media (max-width: 640px) {
-      nav { display: none; }
-      .footer-top { grid-template-columns: 1fr; }
-      .track-header-inner { flex-direction: column; align-items: flex-start; }
-      .blog-card { grid-template-columns: 1fr; }
+    @media (max-width: 600px) {
+      .hamburger { display: flex; }
+      nav { display: none; position: absolute; top: 78px; left: 0; right: 0; background: var(--header-bg); flex-direction: column; padding: 1rem; border-bottom: 1px solid var(--header-border); }
+      header.nav-open nav { display: flex; }
+      .audience-grid, .outcomes-grid, .footer-top { grid-template-columns: 1fr; }
       .logo-svg { height: 40px; max-width: min(250px, calc(100vw - 130px)); }
     }
   </style>
@@ -432,6 +477,10 @@
         </svg>
       </a>
 
+      <button class="hamburger" aria-label="Toggle navigation" onclick="document.querySelector('header').classList.toggle('nav-open')">
+        <span></span><span></span><span></span>
+      </button>
+
       <nav aria-label="Primary navigation">
         <a href="index.html">Home</a>
         <a href="index.html#services">Services</a>
@@ -450,173 +499,253 @@
       <h1>Courses in <span>Technology</span>, Collaboration &amp; Security</h1>
       <p class="page-hero-desc">Practical learning built by professionals with real-world experience across cybersecurity, enterprise networking, collaboration technology, voice and video, AI integration, and IT enablement. Explore focused tracks that help teams build stronger technical, operational, and governance capability.</p>
       <div class="track-pills">
-        <a href="#ai" class="track-pill ai">AI &amp; Security</a>
-        <a href="#networking" class="track-pill net">Networking &amp; Collaboration</a>
-        <a href="#security" class="track-pill sec">Security &amp; Governance</a>
+        <a href="#ai" class="track-pill">AI &amp; Security</a>
+        <a href="#networking" class="track-pill">Networking &amp; Collaboration</a>
+        <a href="#security" class="track-pill">Security &amp; Governance</a>
       </div>
     </div>
   </section>
 
-  <main class="page-body">
-    <aside class="sidebar">
-      <div class="sidebar-label">Tracks</div>
-      <ul class="sidebar-nav">
-        <li><a href="#ai" class="active">AI &amp; Security</a></li>
-        <li><a href="#networking">Networking &amp; Collaboration</a></li>
-        <li><a href="#security">Security &amp; Governance</a></li>
-      </ul>
-      <a href="index.html" class="sidebar-back">← Back to homepage</a>
-    </aside>
-
-    <div>
-      <section id="ai" class="track-section">
-        <div class="track-header">
-          <div class="track-header-inner">
-            <div class="track-big-icon">🤖</div>
-            <div class="track-title-block">
-              <h2 class="ai">AI &amp; Security</h2>
-              <p>Understand AI risks, governance requirements, security controls, and practical adoption patterns for modern teams.</p>
-              <div class="track-meta">
-                <div class="track-meta-item">Track focus: AI, governance, operational risk</div>
-              </div>
-            </div>
+  <section aria-label="Courses overview">
+    <div class="section-inner">
+      <span class="section-tag">Learning Philosophy</span>
+      <h2 class="section-title">Training built by practitioners, for real-world delivery.</h2>
+      <p class="section-sub">Our courses are designed for organisations and professionals who need practical, current knowledge across security, infrastructure, collaboration, and modern technology operations.</p>
+      <div class="intro-grid">
+        <div class="intro-card">
+          <p>Each learning track is shaped by direct experience across cybersecurity governance, enterprise networking, collaboration technology, voice and video environments, AI integration, and technology enablement.</p>
+          <p>Rather than purely academic content, our courses focus on decision-making, applied understanding, implementation context, and the realities teams face in operational environments.</p>
+          <p>That means clearer relevance for practitioners, stronger alignment for managers, and more useful outcomes for organisations building internal capability.</p>
+        </div>
+        <div class="stat-panel">
+          <div class="stat-line">
+            <strong>3 Core Tracks</strong>
+            <span>Focused learning paths across AI, networking, collaboration, governance, and cybersecurity.</span>
+          </div>
+          <div class="stat-line">
+            <strong>10+ Years</strong>
+            <span>Hands-on experience informing the course content and delivery approach.</span>
+          </div>
+          <div class="stat-line">
+            <strong>CISSP · ITIL · CCIE</strong>
+            <span>Credentials that reflect depth across security, operations, and networking.</span>
           </div>
         </div>
-
-        <div class="subsection-label">Video lessons</div>
-        <div class="videos-grid">
-          <article class="video-embed-card">
-            <div class="yt-wrap">
-              <div class="yt-placeholder"><div class="play-circle">▶</div><div class="yt-label">Insert AI course video embed</div></div>
-            </div>
-            <div class="video-info">
-              <div class="video-title">AI Governance Fundamentals</div>
-              <div class="video-desc">An introduction to policy models, ownership, and safe adoption patterns for enterprise AI.</div>
-            </div>
-          </article>
-          <article class="video-embed-card">
-            <div class="yt-wrap">
-              <div class="yt-placeholder"><div class="play-circle">▶</div><div class="yt-label">Insert AI course video embed</div></div>
-            </div>
-            <div class="video-info">
-              <div class="video-title">Securing AI Workflows</div>
-              <div class="video-desc">Covers data exposure, prompt leakage, model misuse, and governance controls around AI tooling.</div>
-            </div>
-          </article>
-        </div>
-
-        <div class="subsection-label">Articles</div>
-        <div class="blog-list">
-          <a href="#" class="blog-card">
-            <div><h3>How to Build an AI Use Policy</h3><p>A practical guide to defining guardrails, accountabilities, and acceptable use for generative AI inside organisations.</p></div>
-            <span>→</span>
-          </a>
-          <a href="#" class="blog-card">
-            <div><h3>AI Risk Mapping for Technology Teams</h3><p>Map AI-enabled processes to confidentiality, integrity, compliance, and operational risk concerns.</p></div>
-            <span>→</span>
-          </a>
-        </div>
-      </section>
-
-      <section id="networking" class="track-section">
-        <div class="track-header">
-          <div class="track-header-inner">
-            <div class="track-big-icon">🌐</div>
-            <div class="track-title-block">
-              <h2 class="net">Networking &amp; Collaboration</h2>
-              <p>Learn how infrastructure, unified communications, collaboration platforms, and voice and video services affect reliability, performance, and user experience.</p>
-              <div class="track-meta">
-                <div class="track-meta-item">Track focus: architecture, connectivity, voice &amp; video</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="subsection-label">Video lessons</div>
-        <div class="videos-grid">
-          <article class="video-embed-card">
-            <div class="yt-wrap">
-              <div class="yt-placeholder"><div class="play-circle">▶</div><div class="yt-label">Insert networking course video embed</div></div>
-            </div>
-            <div class="video-info">
-              <div class="video-title">Networking Fundamentals</div>
-              <div class="video-desc">Core concepts including IP addressing, routing, switching, and how enterprise networks fit together.</div>
-            </div>
-          </article>
-          <article class="video-embed-card">
-            <div class="yt-wrap">
-              <div class="yt-placeholder"><div class="play-circle">▶</div><div class="yt-label">Insert collaboration course video embed</div></div>
-            </div>
-            <div class="video-info">
-              <div class="video-title">Voice &amp; Video Collaboration Foundations</div>
-              <div class="video-desc">A practical look at collaboration platforms, conferencing, calling, media flows, and service reliability.</div>
-            </div>
-          </article>
-        </div>
-
-        <div class="subsection-label">Articles</div>
-        <div class="blog-list">
-          <a href="#" class="blog-card">
-            <div><h3>Understanding Network Segmentation</h3><p>Why segmentation matters, where teams usually get it wrong, and how to apply it without breaking workflows.</p></div>
-            <span>→</span>
-          </a>
-          <a href="#" class="blog-card">
-            <div><h3>Designing Better Collaboration Environments</h3><p>How voice, video, conferencing, and unified communications shape the effectiveness of modern organisations.</p></div>
-            <span>→</span>
-          </a>
-        </div>
-      </section>
-
-      <section id="security" class="track-section">
-        <div class="track-header">
-          <div class="track-header-inner">
-            <div class="track-big-icon">🛡️</div>
-            <div class="track-title-block">
-              <h2 class="sec">Security &amp; Governance</h2>
-              <p>Build strong foundations in governance, risk, resilience, security operations, and policy-led technology management.</p>
-              <div class="track-meta">
-                <div class="track-meta-item">Track focus: governance, resilience, leadership</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="subsection-label">Video lessons</div>
-        <div class="videos-grid">
-          <article class="video-embed-card">
-            <div class="yt-wrap">
-              <div class="yt-placeholder"><div class="play-circle">▶</div><div class="yt-label">Insert governance course video embed</div></div>
-            </div>
-            <div class="video-info">
-              <div class="video-title">Governance Essentials</div>
-              <div class="video-desc">A practical overview of governance structures, policy design, control ownership, and leadership visibility.</div>
-            </div>
-          </article>
-          <article class="video-embed-card">
-            <div class="yt-wrap">
-              <div class="yt-placeholder"><div class="play-circle">▶</div><div class="yt-label">Insert security course video embed</div></div>
-            </div>
-            <div class="video-info">
-              <div class="video-title">Operational Resilience &amp; Response</div>
-              <div class="video-desc">Prepare for disruptions with clear escalation paths, response plans, and resilient operating practices.</div>
-            </div>
-          </article>
-        </div>
-
-        <div class="subsection-label">Articles</div>
-        <div class="blog-list">
-          <a href="#" class="blog-card">
-            <div><h3>What Good Governance Looks Like</h3><p>A straightforward breakdown of ownership, reporting, metrics, and decision rights in a mature technology environment.</p></div>
-            <span>→</span>
-          </a>
-          <a href="#" class="blog-card">
-            <div><h3>Using NIST CSF as a Practical Operating Model</h3><p>Use the framework as an organising structure for capability building, prioritisation, and executive communication.</p></div>
-            <span>→</span>
-          </a>
-        </div>
-      </section>
+      </div>
     </div>
-  </main>
+  </section>
+
+  <section id="ai" class="course-section" aria-label="AI and Security">
+    <div class="section-inner">
+      <span class="section-tag">Track One</span>
+      <h2 class="section-title">AI &amp; Security</h2>
+      <p class="section-sub">Navigate the intersection of artificial intelligence and cybersecurity — from practical use cases to governance and risk awareness for modern organisations.</p>
+      <div class="course-layout">
+        <article class="course-card">
+          <h3>AI in modern security operations</h3>
+          <p>This track explores how AI is shaping cybersecurity practice, operational workflows, risk management, and the broader technology landscape.</p>
+          <div class="course-modules">
+            <div class="module">
+              <strong>AI fundamentals for security professionals</strong>
+              <span>Core concepts, terminology, adoption patterns, and where AI fits within current operating environments.</span>
+            </div>
+            <div class="module">
+              <strong>Threat detection and operational use</strong>
+              <span>How AI can support analysis, automation, prioritisation, and security decision-making.</span>
+            </div>
+            <div class="module">
+              <strong>AI governance and risk</strong>
+              <span>Bias, oversight, data exposure, policy needs, and governance considerations for responsible adoption.</span>
+            </div>
+            <div class="module">
+              <strong>Practical implementation considerations</strong>
+              <span>Readiness, controls, stakeholder alignment, and integrating AI into existing processes responsibly.</span>
+            </div>
+          </div>
+          <div class="course-meta">
+            <span>AI Awareness</span>
+            <span>Security Context</span>
+            <span>Governance</span>
+          </div>
+        </article>
+        <aside class="course-side">
+          <h4>Best suited for</h4>
+          <div class="side-stack">
+            <div class="side-item">
+              <strong>Security teams</strong>
+              <span>Professionals who need to understand AI capability, limitations, and control implications.</span>
+            </div>
+            <div class="side-item">
+              <strong>Technology leaders</strong>
+              <span>Managers shaping AI adoption strategies and governance expectations.</span>
+            </div>
+            <div class="side-item">
+              <strong>Risk &amp; governance roles</strong>
+              <span>Stakeholders responsible for oversight, assurance, and policy direction.</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="networking" aria-label="Networking and Collaboration">
+    <div class="section-inner">
+      <span class="section-tag">Track Two</span>
+      <h2 class="section-title">Networking &amp; Collaboration</h2>
+      <p class="section-sub">Build stronger foundational and applied understanding across enterprise networking, secure connectivity, collaboration platforms, and communication environments.</p>
+      <div class="course-layout">
+        <article class="course-card">
+          <h3>Connected infrastructure for modern teams</h3>
+          <p>This track covers the principles and realities of modern networking and collaboration environments, with practical relevance for both technical and cross-functional audiences.</p>
+          <div class="course-modules">
+            <div class="module">
+              <strong>Networking fundamentals</strong>
+              <span>Core networking concepts, architecture, traffic flow, segmentation, resilience, and secure design thinking.</span>
+            </div>
+            <div class="module">
+              <strong>Enterprise networking context</strong>
+              <span>Infrastructure patterns, operational dependencies, performance considerations, and modern enterprise expectations.</span>
+            </div>
+            <div class="module">
+              <strong>Collaboration platforms</strong>
+              <span>Digital workplace tools, platform strategy, experience design, and adoption considerations for modern teams.</span>
+            </div>
+            <div class="module">
+              <strong>Voice and video environments</strong>
+              <span>Unified communications, communication quality, user experience, and the operational role of voice and video systems.</span>
+            </div>
+          </div>
+          <div class="course-meta">
+            <span>Networking</span>
+            <span>Collaboration</span>
+            <span>Voice &amp; Video</span>
+          </div>
+        </article>
+        <aside class="course-side">
+          <h4>Best suited for</h4>
+          <div class="side-stack">
+            <div class="side-item">
+              <strong>Technical practitioners</strong>
+              <span>Teams building or supporting enterprise networking and collaboration estates.</span>
+            </div>
+            <div class="side-item">
+              <strong>Security professionals</strong>
+              <span>People who need stronger infrastructure understanding to improve security judgement.</span>
+            </div>
+            <div class="side-item">
+              <strong>Operations and workplace teams</strong>
+              <span>Stakeholders involved in communications capability, user experience, and service delivery.</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="security" class="course-section" aria-label="Security and Governance">
+    <div class="section-inner">
+      <span class="section-tag">Track Three</span>
+      <h2 class="section-title">Security &amp; Governance</h2>
+      <p class="section-sub">Develop stronger understanding of governance, policy, risk, and the practical foundations required to manage cybersecurity in a structured and business-aligned way.</p>
+      <div class="course-layout">
+        <article class="course-card">
+          <h3>Foundations for resilient security programs</h3>
+          <p>This track focuses on the governance and management disciplines that underpin effective security programs — useful for both dedicated security roles and broader organisational leaders.</p>
+          <div class="course-modules">
+            <div class="module">
+              <strong>Governance and accountability</strong>
+              <span>Roles, decision structures, oversight models, and leadership engagement in cybersecurity.</span>
+            </div>
+            <div class="module">
+              <strong>Risk and control thinking</strong>
+              <span>Risk assessment, prioritisation, treatment planning, and practical security management approaches.</span>
+            </div>
+            <div class="module">
+              <strong>Policy and operating structure</strong>
+              <span>How policy, standards, procedures, and training work together in a mature environment.</span>
+            </div>
+            <div class="module">
+              <strong>NIST CSF and GDPR context</strong>
+              <span>Understanding how recognised frameworks and obligations shape governance and operational security expectations.</span>
+            </div>
+          </div>
+          <div class="course-meta">
+            <span>Governance</span>
+            <span>Risk</span>
+            <span>Policy</span>
+          </div>
+        </article>
+        <aside class="course-side">
+          <h4>Best suited for</h4>
+          <div class="side-stack">
+            <div class="side-item">
+              <strong>Security managers</strong>
+              <span>Leaders responsible for shaping capability, accountability, and programme direction.</span>
+            </div>
+            <div class="side-item">
+              <strong>Governance &amp; compliance teams</strong>
+              <span>Professionals who need stronger practical grounding in security structure and control thinking.</span>
+            </div>
+            <div class="side-item">
+              <strong>Executives and operational leads</strong>
+              <span>Decision-makers who need clearer visibility into cyber risk, responsibility, and governance practice.</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Who courses are for">
+    <div class="section-inner">
+      <span class="section-tag">Audience</span>
+      <h2 class="section-title">Built for mixed technical and leadership audiences.</h2>
+      <p class="section-sub">The learning tracks can support individual practitioners, cross-functional teams, and leadership groups that need stronger understanding across today’s technology and cyber landscape.</p>
+      <div class="audience-grid">
+        <article class="audience-card">
+          <h4>Technical teams</h4>
+          <p>Practitioners who want deeper understanding across infrastructure, security, collaboration, AI, and modern operational practice.</p>
+        </article>
+        <article class="audience-card">
+          <h4>Operational leaders</h4>
+          <p>Managers who need to make better-informed decisions about risk, technology, enablement, and capability development.</p>
+        </article>
+        <article class="audience-card">
+          <h4>Governance stakeholders</h4>
+          <p>Professionals who need practical insight into governance, policy, risk, and oversight responsibilities in modern environments.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="course-section" aria-label="Learning outcomes">
+    <div class="section-inner">
+      <span class="section-tag">Outcomes</span>
+      <h2 class="section-title">Practical understanding that translates into better decisions.</h2>
+      <p class="section-sub">Our goal is not just knowledge transfer — it is stronger judgement, greater confidence, and more capable teams.</p>
+      <div class="outcomes-grid">
+        <article class="outcome-card">
+          <h4>Clearer technical confidence</h4>
+          <p>Help learners make more informed decisions about infrastructure, collaboration, communications, and security topics.</p>
+        </article>
+        <article class="outcome-card">
+          <h4>Stronger governance awareness</h4>
+          <p>Improve understanding of accountability, policy, control thinking, and the leadership side of cybersecurity.</p>
+        </article>
+        <article class="outcome-card">
+          <h4>Better organisational readiness</h4>
+          <p>Support capability uplift across teams so technology, security, and operational improvement can move forward more effectively.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" aria-label="Courses CTA">
+    <h2>Want to discuss a <span>course programme</span> for your team?</h2>
+    <p>AleroSec can help you shape practical learning pathways around AI, networking, collaboration, voice and video, governance, and cybersecurity — aligned to your real operational needs.</p>
+    <a href="index.html#contact" class="btn btn-primary">Contact AleroSec</a>
+  </section>
 
   <footer>
     <div class="footer-inner">
@@ -624,26 +753,30 @@
         <div class="footer-brand">
           <a href="index.html" class="footer-wordmark" aria-label="AleroSec home">
             <svg class="footer-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M24 3 L41 10.5 V27.2 C41 36.5 34.5 43.2 24 46.8 C13.5 43.2 7 36.5 7 27.2 V10.5 Z" fill="none" stroke="#00c8ff" stroke-width="2.1" stroke-linejoin="round"/>
-              <path d="M24 12.5 L16.2 34.2 H20.3 L24 24 L27.7 34.2 H31.8 L24 12.5 Z" fill="#ffffff"/>
-              <path d="M24 12.5 L28.4 24.3 L31.7 34.2 H35.6 L27.9 12.5 Z" fill="#00c8ff"/>
+              <path d="M24 2 L42 10 V27.5 C42 37.5 35.2 45.2 24 49 C12.8 45.2 6 37.5 6 27.5 V10 Z" fill="none" stroke="#00c8ff" stroke-width="2.2" stroke-linejoin="round"/>
+              <path d="M24 14 L15.6 37.5 H20.1 L24 26.4 L27.9 37.5 H32.4 L24 14 Z" fill="#ffffff"/>
+              <path d="M24 14 L28.8 25.9 L32.3 37.5 H36.4 L28 14 Z" fill="#00c8ff"/>
             </svg>
             <span class="footer-wordmark-text">Aler<span>o</span>Sec</span>
           </a>
-          <p class="footer-tagline">Practical learning shaped by real-world experience across security, networking, collaboration, AI, governance, and IT enablement.</p>
+          <p class="footer-tagline">Practical learning across technology, security, networking, collaboration, voice and video, AI, and operational capability.</p>
         </div>
+
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="index.html#services">Services</a>
+          <a href="index.html#governance">Governance</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+
         <div class="footer-col">
           <h4>Tracks</h4>
           <a href="#ai">AI &amp; Security</a>
           <a href="#networking">Networking &amp; Collaboration</a>
           <a href="#security">Security &amp; Governance</a>
         </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <a href="index.html#services">Services</a>
-          <a href="index.html#governance">Governance</a>
-          <a href="index.html#contact">Contact</a>
-        </div>
+
         <div class="footer-col">
           <h4>Credentials</h4>
           <a href="index.html#certifications">CISSP</a>
@@ -651,21 +784,38 @@
           <a href="index.html#certifications">CCIE</a>
         </div>
       </div>
-      <div style="padding-top:1.5rem; font-size:.75rem;">© 2026 AleroSec. All rights reserved.</div>
+
+      <div class="footer-bottom">
+        <div>© 2026 AleroSec. All rights reserved.</div>
+        <div class="footer-badges">
+          <span class="badge">CISSP</span>
+          <span class="badge">ITIL</span>
+          <span class="badge">CCIE</span>
+        </div>
+      </div>
     </div>
   </footer>
 
   <script>
-    const toggle = document.getElementById('themeToggle');
-    const html = document.documentElement;
-    let currentTheme = html.getAttribute('data-theme') || 'dark';
-    toggle.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+    (function () {
+      const root = document.documentElement;
+      const toggle = document.getElementById('themeToggle');
+      let theme = root.getAttribute('data-theme') || 'dark';
 
-    toggle.addEventListener('click', () => {
-      currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', currentTheme);
-      toggle.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
-    });
+      function updateToggle() {
+        if (toggle) toggle.textContent = theme === 'dark' ? '🌙' : '☀️';
+      }
+
+      updateToggle();
+
+      if (toggle) {
+        toggle.addEventListener('click', function () {
+          theme = theme === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', theme);
+          updateToggle();
+        });
+      }
+    })();
   </script>
 </body>
 </html>
