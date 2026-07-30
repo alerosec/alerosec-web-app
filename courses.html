@@ -39,7 +39,7 @@
     .logo-copy { display: flex; flex-direction: column; gap: .24rem; padding-top: .08rem; }
     .logo-wordmark { font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; letter-spacing: -.06em; line-height: 1; }
     .logo-wordmark span { color: var(--cyan); }
-    .logo-tagline { color: var(--text-muted); font-size: .48rem; font-weight: 800; letter-spacing: .12em; line-height: 1; text-transform: uppercase; white-space: nowrap; }
+    .logo-tagline { color: var(--text-muted); font-size: .52rem; font-weight: 700; letter-spacing: .035em; line-height: 1; white-space: nowrap; }
     nav { display: flex; align-items: center; gap: .1rem; }
     nav a { color: var(--text-muted); text-decoration: none; font-size: .85rem; font-weight: 600; padding: .45rem .9rem; border-radius: 8px; white-space: nowrap; }
     nav a:hover, nav a.active { color: var(--cyan); background: var(--cyan-dim); }
@@ -131,7 +131,7 @@
     .footer-wordmark-copy { display: flex; flex-direction: column; gap: .25rem; }
     .footer-wordmark-text { font-family: var(--font-display); font-size: 1.08rem; font-weight: 700; letter-spacing: -.03em; color: #ffffff; line-height: 1; }
     .footer-wordmark-text span { color: #00c8ff; }
-    .footer-wordmark-tagline { color: rgba(184,199,214,.76); font-size: .46rem; font-weight: 800; letter-spacing: .12em; line-height: 1; text-transform: uppercase; white-space: nowrap; }
+    .footer-wordmark-tagline { color: rgba(184,199,214,.76); font-size: .5rem; font-weight: 700; letter-spacing: .025em; line-height: 1; white-space: nowrap; }
     .footer-tagline { font-size: .85rem; color: #b8c7d6; line-height: 1.6; max-width: 340px; }
     .footer-col h4 { font-family: var(--font-display); font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .15em; color: #00c8ff; margin-bottom: 1rem; }
     .footer-col a { display: block; color: #b8c7d6; text-decoration: none; font-size: .85rem; padding: .3rem 0; }
@@ -140,7 +140,7 @@
     .footer-badges { display: flex; gap: .75rem; flex-wrap: wrap; }
     .badge { border: 1px solid rgba(0,200,255,0.18); color: #00c8ff; font-size: .65rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: .25rem .7rem; border-radius: 999px; background: rgba(0,200,255,0.06); }
     @media (max-width: 1024px) { .intro-grid, .course-layout, .youtube-showcase { grid-template-columns: 1fr; } .audience-grid, .outcomes-grid { grid-template-columns: 1fr 1fr; } .footer-top { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 600px) { .hamburger { display: flex; } nav { display: none; position: absolute; top: 78px; left: 0; right: 0; background: var(--header-bg); flex-direction: column; padding: 1rem; border-bottom: 1px solid var(--header-border); } .nav-open nav { display: flex; } .audience-grid, .outcomes-grid, .footer-top, .youtube-metrics { grid-template-columns: 1fr; } .logo-svg { width: 40px; height: 40px; } .logo-wordmark { font-size: 1.2rem; } .logo-tagline { font-size: .44rem; letter-spacing: .05em; } }
+    @media (max-width: 600px) { .hamburger { display: flex; } nav { display: none; position: absolute; top: 78px; left: 0; right: 0; background: var(--header-bg); flex-direction: column; padding: 1rem; border-bottom: 1px solid var(--header-border); } .nav-open nav { display: flex; } .audience-grid, .outcomes-grid, .footer-top, .youtube-metrics { grid-template-columns: 1fr; } .logo-svg { width: 40px; height: 40px; } .logo-wordmark { font-size: 1.2rem; } .logo-tagline { font-size: .45rem; letter-spacing: .02em; } }
     @media (max-width: 390px) { .logo-tagline { display: none; } }
   </style>
 </head>
@@ -151,13 +151,14 @@
         <img class="logo-svg" src="alerosec-mark-v2.png" alt="" />
         <span class="logo-copy">
           <span class="logo-wordmark">Alero<span>Sec</span></span>
-          <span class="logo-tagline">Cybersecurity &amp; IT Consultancy</span>
+          <span class="logo-tagline">Cybersecurity Advisory &amp; Digital Resilience Consultancy</span>
         </span>
       </a>
       <button class="hamburger" aria-label="Toggle navigation" onclick="document.querySelector('header').classList.toggle('nav-open')"><span></span><span></span><span></span></button>
       <nav aria-label="Primary navigation">
         <a href="index.html">Home</a>
         <a href="index.html#services">Services</a>
+        <a href="about.html">About Us</a>
         <a href="courses.html" class="active">Courses</a>
         <a href="index.html#contact" class="nav-cta">Get in Touch</a>
       </nav>
@@ -363,7 +364,7 @@
             <img class="footer-mark" src="alerosec-mark-v2.png" alt="" />
             <span class="footer-wordmark-copy">
               <span class="footer-wordmark-text">Alero<span>Sec</span></span>
-              <span class="footer-wordmark-tagline">Cybersecurity &amp; IT Consultancy</span>
+              <span class="footer-wordmark-tagline">Cybersecurity Advisory &amp; Digital Resilience Consultancy</span>
             </span>
           </a>
           <p class="footer-tagline">Practical learning across technology, security, networking, collaboration, voice and video, AI, and operational capability.</p>
@@ -371,6 +372,7 @@
         <div class="footer-col">
           <h4>Navigate</h4>
           <a href="index.html#services">Home</a>
+          <a href="about.html">About Us</a>
           <a href="index.html#certifications">Services</a>
           <a href="index.html#governance">Governance</a>
           <a href="index.html#contact">Contact</a>
