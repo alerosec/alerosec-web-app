@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
@@ -16,7 +17,7 @@
   <meta name="twitter:description" content="Technology, security, collaboration, and infrastructure expertise delivered by CISSP, ITIL, and CCIE certified professionals.">
   <meta name="twitter:image" content="https://placehold.co/1200x630/060f1e/00c8ff?text=AleroSec">
 
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a1628'/%3E%3Cpath d='M50 10 L78 22 V49 C78 66 67 81 50 90 C33 81 22 66 22 49 V22 Z' fill='none' stroke='%2300c8ff' stroke-width='5' stroke-linejoin='round'/%3E%3Cpath d='M50 24 L39 57 H45 L50 42 L55 57 H61 L50 24 Z' fill='%23ffffff'/%3E%3Cpath d='M50 24 L56 39 L60.5 57 H66 L55 24 Z' fill='%2300c8ff' opacity='.92'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/png" href="alerosec-mark-v2.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -142,11 +143,17 @@
     .logo {
       display: inline-flex;
       align-items: center;
+      gap: .65rem;
       text-decoration: none;
       flex-shrink: 0;
       color: var(--text-primary);
     }
-    .logo-svg { height: 46px; width: auto; display: block; overflow: visible; }
+    .logo-svg { width: 46px; height: 46px; display: block; object-fit: contain; filter: drop-shadow(0 3px 8px rgba(0,200,255,.18)); transition: transform .2s ease, filter .2s ease; }
+    .logo:hover .logo-svg { transform: translateY(-1px) scale(1.03); filter: drop-shadow(0 5px 12px rgba(0,200,255,.28)); }
+    .logo-copy { display: flex; flex-direction: column; gap: .24rem; padding-top: .08rem; }
+    .logo-wordmark { font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; letter-spacing: -.06em; line-height: 1; }
+    .logo-wordmark span { color: var(--cyan); }
+    .logo-tagline { color: var(--text-muted); font-size: .48rem; font-weight: 800; letter-spacing: .12em; line-height: 1; text-transform: uppercase; white-space: nowrap; }
     nav { display: flex; align-items: center; gap: .1rem; }
     nav a {
       color: var(--text-muted);
@@ -218,7 +225,8 @@
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 4rem;
+      column-gap: 4rem;
+      row-gap: 0;
       align-items: center;
       position: relative;
       z-index: 1;
@@ -237,9 +245,14 @@
       padding: .4rem 1rem;
       border-radius: 999px;
       margin-bottom: 1.5rem;
-      max-width: 760px;
+      grid-column: 1 / -1;
+      max-width: 100%;
       line-height: 1.5;
+      white-space: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none;
     }
+    .hero-eyebrow::-webkit-scrollbar { display: none; }
     .hero h1 {
       font-family: var(--font-display);
       font-size: clamp(2.4rem, 5vw, 3.8rem);
@@ -902,6 +915,7 @@
       width: fit-content;
     }
     .footer-mark { width: 30px; height: 30px; flex-shrink: 0; }
+    .footer-wordmark-copy { display: flex; flex-direction: column; gap: .25rem; }
     .footer-wordmark-text {
       font-family: var(--font-display);
       font-size: 1.08rem;
@@ -911,6 +925,7 @@
       line-height: 1;
     }
     .footer-wordmark-text span { color: #00c8ff; }
+    .footer-wordmark-tagline { color: rgba(184,199,214,.76); font-size: .46rem; font-weight: 800; letter-spacing: .12em; line-height: 1; text-transform: uppercase; white-space: nowrap; }
     .footer-tagline {
       font-size: .85rem;
       color: #b8c7d6;
@@ -987,33 +1002,23 @@
       }
       .nav-open nav { display: flex; }
       .cards-grid, .features-grid, .phases, .experience-pillars, .footer-top, .form-row { grid-template-columns: 1fr; }
-      .logo-svg { height: 40px; max-width: min(250px, calc(100vw - 130px)); }
+      .logo-svg { width: 40px; height: 40px; }
+      .logo-wordmark { font-size: 1.2rem; }
+      .logo-tagline { font-size: .44rem; letter-spacing: .05em; }
       .course-stats-row { flex-direction: column; gap: 1rem; }
     }
+    @media (max-width: 390px) { .logo-tagline { display: none; } }
   </style>
 </head>
 <body>
   <header>
     <div class="header-inner">
       <a href="index.html" class="logo" aria-label="AleroSec home">
-        <svg class="logo-svg" viewBox="0 0 262 54" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <g transform="translate(2 3)">
-            <path d="M24 2 L42 10 V27.5 C42 37.5 35.2 45.2 24 49 C12.8 45.2 6 37.5 6 27.5 V10 Z" fill="none" stroke="var(--cyan)" stroke-width="2.2" stroke-linejoin="round"/>
-            <path d="M24 2 L42 10 V27.5 C42 37.5 35.2 45.2 24 49 C12.8 45.2 6 37.5 6 27.5 V10 Z" fill="url(#shieldFill)"/>
-            <path d="M24 14 L15.6 37.5 H20.1 L24 26.4 L27.9 37.5 H32.4 L24 14 Z" fill="currentColor"/>
-            <path d="M24 14 L28.8 25.9 L32.3 37.5 H36.4 L28 14 Z" fill="var(--cyan)"/>
-            <path d="M24 14 V40.4" stroke="rgba(255,255,255,.12)" stroke-width="1"/>
-          </g>
-          <defs>
-            <linearGradient id="shieldFill" x1="6" y1="2" x2="42" y2="49" gradientUnits="userSpaceOnUse">
-              <stop stop-color="rgba(0,200,255,0.10)"/>
-              <stop offset="1" stop-color="rgba(0,200,255,0.02)"/>
-            </linearGradient>
-          </defs>
-          <text x="60" y="33" font-family="'Space Grotesk', 'Segoe UI', system-ui, sans-serif" font-weight="700" font-size="24" fill="currentColor" letter-spacing="-.8">Aler</text>
-          <text x="103" y="33" font-family="'Space Grotesk', 'Segoe UI', system-ui, sans-serif" font-weight="700" font-size="24" fill="var(--cyan)" letter-spacing="-.8">o</text>
-          <text x="117" y="33" font-family="'Space Grotesk', 'Segoe UI', system-ui, sans-serif" font-weight="700" font-size="24" fill="currentColor" letter-spacing="-.8">Sec</text>
-        </svg>
+        <img class="logo-svg" src="alerosec-mark-v2.png" alt="">
+        <span class="logo-copy">
+          <span class="logo-wordmark">Alero<span>Sec</span></span>
+          <span class="logo-tagline">Cybersecurity &amp; IT Consultancy</span>
+        </span>
       </a>
 
       <button class="hamburger" aria-label="Toggle navigation" onclick="document.querySelector('header').classList.toggle('nav-open')">
@@ -1038,8 +1043,8 @@
 
   <section class="hero" aria-label="Hero">
     <div class="hero-inner">
+      <div class="hero-eyebrow">Cybersecurity • Enterprise Networking • Collaboration • AI • IT Enablement</div>
       <div>
-        <div class="hero-eyebrow">Cybersecurity • Enterprise Networking • Collaboration • AI • IT Enablement</div>
         <h1>Technology, Security &amp;<br><span class="accent">Collaboration</span><br>Built for Modern Business.</h1>
         <p class="hero-desc">Over a decade of hands-on expertise across cybersecurity, enterprise networking, collaboration technology, voice &amp; video, AI integration, and IT enablement helping organisations strengthen operations, modernise infrastructure, improve collaboration, and build resilient governance aligned to business goals. Delivered by CISSP, ITIL, and CCIE certified professionals.</p>
         <div class="hero-certs">
@@ -1403,12 +1408,11 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a href="index.html" class="footer-wordmark" aria-label="AleroSec home">
-            <svg class="footer-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M24 2 L42 10 V27.5 C42 37.5 35.2 45.2 24 49 C12.8 45.2 6 37.5 6 27.5 V10 Z" fill="none" stroke="#00c8ff" stroke-width="2.2" stroke-linejoin="round"/>
-              <path d="M24 14 L15.6 37.5 H20.1 L24 26.4 L27.9 37.5 H32.4 L24 14 Z" fill="#ffffff"/>
-              <path d="M24 14 L28.8 25.9 L32.3 37.5 H36.4 L28 14 Z" fill="#00c8ff"/>
-            </svg>
-            <span class="footer-wordmark-text">Aler<span>o</span>Sec</span>
+            <img class="footer-mark" src="alerosec-mark-v2.png" alt="">
+            <span class="footer-wordmark-copy">
+              <span class="footer-wordmark-text">Alero<span>Sec</span></span>
+              <span class="footer-wordmark-tagline">Cybersecurity &amp; IT Consultancy</span>
+            </span>
           </a>
           <p class="footer-tagline">Technology, security, networking, collaboration, voice and video, AI, and IT enablement delivered with certified expertise and practical focus.</p>
         </div>
@@ -1468,5 +1472,5 @@
   </script>
 
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"1b7af3a7ff59473fabe9e14c750cfb45"}'></script>
-</body>
+<!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1b7af3a7ff59473fabe9e14c750cfb45"}'></script><!-- Cloudflare Pages Analytics --></body>
 </html>
