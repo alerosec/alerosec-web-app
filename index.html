@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AleroSec | Technology, Security & Collaboration Solutions</title>
-  <meta name="description" content="AleroSec cybersecurity, enterprise networking, collaboration technology, voice & video, AI integration, and IT enablement. CISSP, ITIL, and CCIE certified specialists helping organisations modernise infrastructure, strengthen governance, and improve resilience.">
-  <meta name="keywords" content="cybersecurity, CISSP, ITIL, CCIE, collaboration, voice and video, enterprise networking, AI integration, IT enablement, governance, NIST CSF, GDPR, unified communications">
+  <meta name="description" content="AleroSec — cybersecurity, enterprise networking, collaboration, AI, compliance, risk assessment, business continuity, and disaster recovery planning. CISSP, ITIL, and CCIE certified specialists helping organisations modernise infrastructure, strengthen governance, and improve resilience.">
+  <meta name="keywords" content="cybersecurity, CISSP, ITIL, CCIE, compliance, risk assessment, business continuity, disaster recovery, collaboration, enterprise networking, AI integration, IT enablement, governance, NIST CSF, GDPR">
   <meta name="robots" content="index, follow">
   <meta property="og:title" content="AleroSec Technology, Security & Collaboration Solutions">
   <meta property="og:description" content="Over a decade of expertise across cybersecurity, enterprise networking, collaboration technology, voice & video, AI integration, and IT enablement.">
@@ -154,7 +153,7 @@
     .logo-copy { display: flex; flex-direction: column; gap: .24rem; padding-top: .08rem; }
     .logo-wordmark { font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; letter-spacing: -.06em; line-height: 1; }
     .logo-wordmark span { color: var(--cyan); }
-    .logo-tagline { color: var(--text-muted); font-size: .48rem; font-weight: 800; letter-spacing: .12em; line-height: 1; text-transform: uppercase; white-space: nowrap; }
+    .logo-tagline { color: var(--text-muted); font-size: .52rem; font-weight: 700; letter-spacing: .035em; line-height: 1; white-space: nowrap; }
     nav { display: flex; align-items: center; gap: .1rem; }
     nav a {
       color: var(--text-muted);
@@ -531,6 +530,20 @@
       width: auto;
       max-width: 110px;
       height: 48px;
+    }
+    .cert-badge-img--itil {
+      display: grid;
+      place-items: center;
+      width: 72px;
+      height: 72px;
+      color: var(--cyan);
+      background: linear-gradient(145deg, var(--cyan-dim), rgba(0,200,255,.02));
+      border: 1px solid var(--border-strong);
+      border-radius: 14px;
+      font-family: var(--font-display);
+      font-size: .9rem;
+      font-weight: 800;
+      letter-spacing: -.06em;
     }
     .cert-card h3, .gov-card h3, .phase h3, .feature h3 {
       font-family: var(--font-display);
@@ -927,7 +940,7 @@
       line-height: 1;
     }
     .footer-wordmark-text span { color: #00c8ff; }
-    .footer-wordmark-tagline { color: rgba(184,199,214,.76); font-size: .46rem; font-weight: 800; letter-spacing: .12em; line-height: 1; text-transform: uppercase; white-space: nowrap; }
+    .footer-wordmark-tagline { color: rgba(184,199,214,.76); font-size: .5rem; font-weight: 700; letter-spacing: .025em; line-height: 1; white-space: nowrap; }
     .footer-tagline {
       font-size: .85rem;
       color: #b8c7d6;
@@ -1006,7 +1019,7 @@
       .cards-grid, .features-grid, .phases, .experience-pillars, .footer-top, .form-row { grid-template-columns: 1fr; }
       .logo-svg { width: 40px; height: 40px; }
       .logo-wordmark { font-size: 1.2rem; }
-      .logo-tagline { font-size: .44rem; letter-spacing: .05em; }
+      .logo-tagline { font-size: .45rem; letter-spacing: .02em; }
       .course-stats-row { flex-direction: column; gap: 1rem; }
       .hero-eyebrow { max-width: 100%; }
       .hero-eyebrow span { font-size: .58rem; padding: .28rem .6rem; }
@@ -1021,7 +1034,7 @@
         <img class="logo-svg" src="alerosec-mark-v2.png" alt="">
         <span class="logo-copy">
           <span class="logo-wordmark">Alero<span>Sec</span></span>
-          <span class="logo-tagline">Cybersecurity &amp; IT Consultancy</span>
+          <span class="logo-tagline">Cybersecurity Advisory &amp; Digital Resilience Consultancy</span>
         </span>
       </a>
 
@@ -1031,6 +1044,7 @@
 
       <nav aria-label="Primary navigation">
         <a href="#services">Services</a>
+        <a href="about.html">About Us</a>
         <a href="#certifications">Certifications</a>
         <a href="#governance">Governance</a>
         <a href="courses.html">Courses</a>
@@ -1052,11 +1066,15 @@
           <span>Cybersecurity</span>
           <span>Enterprise Networking</span>
           <span>Collaboration</span>
-          <span>AI</span>
+          <span>AI Security</span>
           <span>IT Enablement</span>
+          <span>Compliance</span>
+          <span>Risk Assessment</span>
+          <span>Business Continuity</span>
+          <span>Disaster Recovery</span>
         </div>
         <h1>Technology, Security &amp;<br><span class="accent">Collaboration</span><br>Built for Modern Business.</h1>
-        <p class="hero-desc">Over a decade of hands-on expertise across cybersecurity, enterprise networking, collaboration technology, voice &amp; video, AI integration, and IT enablement helping organisations strengthen operations, modernise infrastructure, improve collaboration, and build resilient governance aligned to business goals. Delivered by CISSP, ITIL, and CCIE certified professionals.</p>
+        <p class="hero-desc">Over a decade of hands-on expertise across cybersecurity, enterprise networking, collaboration technology, voice &amp; video, AI integration, IT enablement, compliance, risk assessment, business continuity, and disaster recovery planning — helping organisations strengthen operations, modernise infrastructure, improve collaboration, and build resilient governance aligned to business goals. Delivered by CISSP, ITIL, and CCIE certified professionals.</p>
         <div class="hero-certs">
           <span class="cert-badge">CISSP Certified</span>
           <span class="cert-badge">ITIL Certified</span>
@@ -1099,6 +1117,8 @@
       <span class="trust-label">Capabilities</span>
       <div class="trust-items">
         <span class="trust-item">Cybersecurity &amp; Governance</span>
+        <span class="trust-item">Compliance &amp; Risk Assessment</span>
+        <span class="trust-item">Business Continuity &amp; DR</span>
         <span class="trust-item">Enterprise Networking</span>
         <span class="trust-item">Collaboration Platforms</span>
         <span class="trust-item">Voice &amp; Video Technology</span>
@@ -1113,14 +1133,17 @@
       <div class="experience-decade">
         <div class="decade-number">10+</div>
         <div class="decade-label">Years of Expertise</div>
-        <div class="decade-sub">Security • Networking • Collaboration • AI • Enablement</div>
+        <div class="decade-sub">Security • Compliance • Risk • BC/DR • Networking • AI</div>
       </div>
       <div class="experience-content">
         <h2><span>A Decade of Delivery</span> Across Modern Technology</h2>
-        <p>Since our founding, AleroSec has built a track record of excellence across cybersecurity, enterprise networking, collaboration technology, and modern IT delivery. Our practitioners have supported organisations in strengthening resilience, modernising infrastructure, and enabling more secure and effective ways of working.</p>
-        <p>Our depth of experience spans governance, infrastructure design, voice and video environments, AI-enabled solutions, and professional IT enablement helping organisations remain connected, capable, and ready to adapt.</p>
+        <p>Since our founding, AleroSec has built a track record of excellence across cybersecurity, enterprise networking, collaboration technology, compliance, risk assessment, and resilience planning. Our practitioners have supported organisations in strengthening governance, managing risk, and preparing for disruption while modernising infrastructure and enabling more secure ways of working.</p>
+        <p>Our depth of experience spans governance, compliance programmes, risk assessments, business continuity and disaster recovery planning, infrastructure design, voice and video environments, AI-enabled solutions, and professional IT enablement — helping organisations remain connected, compliant, and ready to adapt.</p>
         <div class="experience-pillars">
           <div class="pillar"><div class="pillar-name">Cybersecurity</div><div class="pillar-desc">Governance, assurance, policy and risk support</div></div>
+          <div class="pillar"><div class="pillar-name">Compliance</div><div class="pillar-desc">Regulatory alignment, control mapping and audit readiness</div></div>
+          <div class="pillar"><div class="pillar-name">Risk Assessment</div><div class="pillar-desc">Structured analysis, treatment planning and reporting</div></div>
+          <div class="pillar"><div class="pillar-name">BC &amp; DR</div><div class="pillar-desc">Business continuity and disaster recovery planning</div></div>
           <div class="pillar"><div class="pillar-name">Networking</div><div class="pillar-desc">Architecture, resilience and connectivity design</div></div>
           <div class="pillar"><div class="pillar-name">Collaboration</div><div class="pillar-desc">Voice, video and unified communications strategy</div></div>
           <div class="pillar"><div class="pillar-name">AI</div><div class="pillar-desc">AI integration, governance and operational use</div></div>
@@ -1146,12 +1169,12 @@
           </div>
           <p class="cert-summary">The world’s premier cybersecurity certification from ISC2 validating enterprise-grade security leadership, architecture, risk management, and governance capability.</p>
           <div class="cert-domains">
-            <span>Risk Management</span><span>Security Architecture</span><span>IAM</span><span>Operations</span><span>Governance</span>
+            <span>Risk Management</span><span>Compliance</span><span>Security Architecture</span><span>IAM</span><span>Operations</span><span>Governance</span><span>BC &amp; DR</span>
           </div>
         </article>
         <article class="cert-card">
           <div class="cert-card-header">
-            <img src="itil-logo.webp" alt="ITIL Certified" class="cert-badge-img cert-badge-img--wide" width="110" height="48" loading="lazy">
+            <div class="cert-badge-img cert-badge-img--itil" aria-hidden="true">ITIL</div>
             <div class="cert-card-title">
               <h3>ITIL</h3>
               <div class="cert-full-name">Information Technology Infrastructure Library</div>
@@ -1183,12 +1206,18 @@
     <div class="section-inner">
       <span class="section-tag">What We Deliver</span>
       <h2 class="section-title">Advisory, delivery and enablement across modern technology.</h2>
-      <p class="section-sub">AleroSec supports organisations across cybersecurity, enterprise networking, collaboration, AI adoption, and operational IT capability with practical, business-aligned expertise.</p>
+      <p class="section-sub">AleroSec supports organisations across cybersecurity, compliance, risk assessment, business continuity, disaster recovery planning, enterprise networking, collaboration, AI adoption, and operational IT capability with practical, business-aligned expertise.</p>
       <div class="cards-grid">
         <a href="#governance" class="card">
           <div class="card-icon-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16v-2H4v2Zm2-4h12V8H6v8Zm1.5-6.5h9v2h-9v-2Zm0 3h6v2h-6v-2Z"/></svg></div>
           <h3>Cybersecurity Governance</h3>
-          <p>Security strategy, governance structures, policy architecture, assurance, and ongoing leadership support aligned to organisational priorities.</p>
+          <p>Security strategy, governance structures, policy architecture, compliance alignment, risk assessment, assurance, and ongoing leadership support aligned to organisational priorities.</p>
+          <span class="card-link">Learn more</span>
+        </a>
+        <a href="#governance" class="card">
+          <div class="card-icon-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/></svg></div>
+          <h3>Compliance &amp; Resilience</h3>
+          <p>Compliance programmes, structured risk assessments, business continuity planning, and disaster recovery design to help organisations prepare for disruption and meet regulatory expectations.</p>
           <span class="card-link">Learn more</span>
         </a>
         <a href="#capabilities" class="card">
@@ -1229,7 +1258,7 @@
     <div class="section-inner">
       <span class="section-tag">Security Governance</span>
       <h2 class="section-title">Governance that gives leadership clarity, structure and confidence.</h2>
-      <p class="section-sub">We help organisations define accountability, shape policy, and build decision-making structures that support stronger cyber resilience and more consistent operational control.</p>
+      <p class="section-sub">We help organisations define accountability, shape policy, manage risk, meet compliance obligations, and build continuity and recovery capability that supports stronger cyber resilience and operational control.</p>
       <div class="gov-grid">
         <article class="gov-card">
           <span class="gov-num">01</span>
@@ -1244,6 +1273,17 @@
         </article>
         <article class="gov-card">
           <span class="gov-num">02</span>
+          <h3>Compliance &amp; Risk</h3>
+          <p>Practical support for compliance alignment, structured risk assessments, control mapping, and prioritised treatment planning tied to business context.</p>
+          <ul class="gov-list">
+            <li>Compliance gap analysis</li>
+            <li>Risk assessment programmes</li>
+            <li>Control alignment</li>
+            <li>Regulatory mapping</li>
+          </ul>
+        </article>
+        <article class="gov-card">
+          <span class="gov-num">03</span>
           <h3>Policy Architecture</h3>
           <p>A complete, layered policy and standards structure that translates strategic intent into operational practice without creating unnecessary overhead.</p>
           <ul class="gov-list">
@@ -1254,7 +1294,18 @@
           </ul>
         </article>
         <article class="gov-card">
-          <span class="gov-num">03</span>
+          <span class="gov-num">04</span>
+          <h3>BC &amp; DR Planning</h3>
+          <p>Business continuity and disaster recovery planning that defines priorities, response paths, recovery objectives, and operational readiness for disruption.</p>
+          <ul class="gov-list">
+            <li>Business impact analysis</li>
+            <li>Continuity strategies</li>
+            <li>Disaster recovery plans</li>
+            <li>Testing and exercises</li>
+          </ul>
+        </article>
+        <article class="gov-card">
+          <span class="gov-num">05</span>
           <h3>Executive Enablement</h3>
           <p>Metrics, reporting, and decision support that help leadership teams understand exposure, prioritise action, and manage cyber risk with confidence.</p>
           <ul class="gov-list">
@@ -1309,6 +1360,9 @@
       <p class="section-sub">Our work spans the technical, strategic, and operational layers that modern organisations rely on every day.</p>
       <div class="features-grid">
         <article class="feature"><h3>Cybersecurity</h3><p>Governance, policy, risk, assurance, security leadership support, and practical alignment with recognised control and governance models.</p></article>
+        <article class="feature"><h3>Compliance</h3><p>Regulatory alignment, control mapping, audit readiness, and practical support for meeting security and data protection obligations.</p></article>
+        <article class="feature"><h3>Risk Assessment</h3><p>Structured risk identification, analysis, prioritisation, treatment planning, and reporting aligned to business context.</p></article>
+        <article class="feature"><h3>BC &amp; DR Planning</h3><p>Business continuity and disaster recovery planning, impact analysis, recovery strategies, and operational readiness for disruption.</p></article>
         <article class="feature"><h3>Networking</h3><p>Enterprise networking strategy, resilient architecture, routing and switching depth, and secure infrastructure foundations.</p></article>
         <article class="feature"><h3>Collaboration</h3><p>Unified communications, team collaboration tooling, digital workplace enablement, and platform adoption support.</p></article>
         <article class="feature"><h3>Voice &amp; Video</h3><p>Voice systems, video environments, communications architecture, and user experience support across collaboration estates.</p></article>
@@ -1342,7 +1396,7 @@
           <a href="courses.html#security" class="course-track">
             <div>
               <div class="track-name">Security &amp; Governance</div>
-              <div class="track-desc">Governance, policy, risk, control design, and practical cyber management.</div>
+              <div class="track-desc">Governance, compliance, risk assessment, BC/DR planning, policy, and practical cyber management.</div>
             </div>
             <div class="track-arrow">→</div>
           </a>
@@ -1371,7 +1425,7 @@
 
   <section class="cta-band" aria-label="Call to action">
     <h2>Ready to strengthen your <span>technology capability</span>?</h2>
-    <p>Whether you need governance support, technical delivery, collaboration expertise, or practical learning tracks, AleroSec brings certified experience and a business-focused approach.</p>
+    <p>Whether you need governance support, compliance and risk assessment, business continuity planning, technical delivery, collaboration expertise, or practical learning tracks, AleroSec brings certified experience and a business-focused approach.</p>
     <a href="#contact" class="btn btn-cyan">Start the Conversation</a>
   </section>
 
@@ -1421,13 +1475,14 @@
             <img class="footer-mark" src="alerosec-mark-v2.png" alt="">
             <span class="footer-wordmark-copy">
               <span class="footer-wordmark-text">Alero<span>Sec</span></span>
-              <span class="footer-wordmark-tagline">Cybersecurity &amp; IT Consultancy</span>
+              <span class="footer-wordmark-tagline">Cybersecurity Advisory &amp; Digital Resilience Consultancy</span>
             </span>
           </a>
-          <p class="footer-tagline">Technology, security, networking, collaboration, voice and video, AI, and IT enablement delivered with certified expertise and practical focus.</p>
+          <p class="footer-tagline">Technology, security, compliance, risk assessment, business continuity, disaster recovery, networking, collaboration, voice and video, AI, and IT enablement delivered with certified expertise and practical focus.</p>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
+          <a href="about.html">About Us</a>
           <a href="#services">Services</a>
           <a href="#certifications">Certifications</a>
           <a href="#governance">Governance</a>
@@ -1441,6 +1496,8 @@
         </div>
         <div class="footer-col">
           <h4>Focus Areas</h4>
+          <a href="#governance">Compliance &amp; Risk</a>
+          <a href="#governance">BC &amp; DR Planning</a>
           <a href="#capabilities">Cybersecurity</a>
           <a href="#capabilities">Networking</a>
           <a href="#capabilities">Collaboration</a>
@@ -1450,6 +1507,8 @@
       <div class="footer-bottom">
         <div>© 2026 AleroSec. All rights reserved.</div>
         <div class="footer-badges">
+          <span class="badge">Compliance</span>
+          <span class="badge">BC/DR</span>
           <span class="badge">CISSP</span>
           <span class="badge">ITIL</span>
           <span class="badge">CCIE</span>
