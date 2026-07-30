@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us | AleroSec</title>
+  <meta name="description" content="Learn about Joshua Alero and AleroSec: cybersecurity advisory, digital resilience, enterprise collaboration, governance, and expert-led IT enablement.">
+  <meta name="keywords" content="Joshua Alero, AleroSec, cybersecurity advisory, digital resilience, CISSP, ITIL, CCIE, enterprise collaboration, IT enablement">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="About AleroSec | Cybersecurity Advisory & Digital Resilience Consultancy">
+  <meta property="og:description" content="AleroSec combines cybersecurity leadership, enterprise collaboration expertise, and practical delivery experience to build resilient technology environments.">
+  <meta property="og:image" content="https://placehold.co/1200x630/060f1e/00c8ff?text=AleroSec">
+  <meta property="og:url" content="https://alerosec.com/about.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="alerosec-mark-v2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --font-body: Inter, system-ui, -apple-system, sans-serif; --font-display: 'Space Grotesk', Inter, system-ui, sans-serif; }
+    [data-theme="dark"] {
+      --bg: #07111d; --bg-2: #0b1726; --bg-3: #102033; --card: rgba(255,255,255,.028); --card-strong: rgba(255,255,255,.045);
+      --border: rgba(0,200,255,.11); --border-strong: rgba(0,200,255,.25); --text: #f7fbff; --text-2: #c9d5e2; --muted: #7f91a6;
+      --cyan: #00c8ff; --cyan-dim: rgba(0,200,255,.08); --header: rgba(7,17,29,.88); --footer: #0a1624; --shadow: 0 18px 48px rgba(0,0,0,.18);
+    }
+    [data-theme="light"] {
+      --bg: #f3f6f8; --bg-2: #fbfcfd; --bg-3: #e8eef3; --card: rgba(255,255,255,.82); --card-strong: rgba(255,255,255,.98);
+      --border: rgba(0,111,168,.13); --border-strong: rgba(0,111,168,.24); --text: #102030; --text-2: #27405d; --muted: #617790;
+      --cyan: #006fa8; --cyan-dim: rgba(0,122,168,.08); --header: rgba(243,246,248,.92); --footer: #102030; --shadow: 0 18px 48px rgba(24,67,96,.12);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; transition: background .3s, color .3s; }
+    header { position: sticky; top: 0; z-index: 20; background: var(--header); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+    .header-inner { max-width: 1160px; height: 78px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .logo, .footer-wordmark { display: inline-flex; align-items: center; text-decoration: none; color: var(--text); flex-shrink: 0; }
+    .logo { gap: .65rem; }
+    .logo-svg { width: 46px; height: 46px; object-fit: contain; filter: drop-shadow(0 3px 8px rgba(0,200,255,.18)); }
+    .logo-copy, .footer-wordmark-copy { display: flex; flex-direction: column; gap: .24rem; }
+    .logo-wordmark, .footer-wordmark-text { font-family: var(--font-display); font-weight: 700; letter-spacing: -.06em; line-height: 1; }
+    .logo-wordmark { font-size: 1.35rem; }
+    .logo-wordmark span, .footer-wordmark-text span { color: var(--cyan); }
+    .logo-tagline { color: var(--muted); font-size: .52rem; font-weight: 700; letter-spacing: .035em; line-height: 1; white-space: nowrap; }
+    nav { display: flex; align-items: center; gap: .1rem; }
+    nav a { color: var(--muted); text-decoration: none; font-size: .85rem; font-weight: 600; padding: .45rem .8rem; border-radius: 8px; white-space: nowrap; }
+    nav a:hover, nav a.active { color: var(--cyan); background: var(--cyan-dim); }
+    .nav-cta { background: var(--cyan) !important; color: #fff !important; font-weight: 800 !important; margin-left: .35rem; }
+    [data-theme="dark"] .nav-cta { color: #07111d !important; }
+    .theme-toggle { display: inline-grid; place-items: center; width: 42px; height: 42px; flex-shrink: 0; margin-left: .35rem; color: var(--text); background: linear-gradient(145deg, var(--card), var(--bg-3)); border: 1px solid var(--border-strong); border-radius: 50%; cursor: pointer; }
+    .theme-toggle:hover { border-color: var(--cyan); transform: translateY(-1px); }
+    .theme-toggle svg { width: 18px; height: 18px; fill: currentColor; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; padding: .5rem; background: none; border: 0; cursor: pointer; }
+    .hamburger span { width: 22px; height: 2px; background: var(--text); border-radius: 2px; display: block; }
+    .nav-open .hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-open .hamburger span:nth-child(2) { opacity: 0; }
+    .nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .hero { min-height: 465px; padding: 6.5rem 2rem 5.75rem; position: relative; overflow: hidden; background: var(--bg-2); }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 65% at 82% 40%, rgba(0,200,255,.08), transparent 67%), radial-gradient(ellipse 44% 50% at 7% 105%, rgba(0,103,209,.07), transparent 65%); }
+    .hero::after { content: ''; position: absolute; inset: 0; opacity: .6; background-image: linear-gradient(rgba(0,200,255,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(0,200,255,.025) 1px, transparent 1px); background-size: 70px 70px; pointer-events: none; }
+    .hero-inner, .section-inner { max-width: 1160px; margin: 0 auto; position: relative; z-index: 1; }
+    .breadcrumb { display: flex; gap: .55rem; align-items: center; color: var(--muted); font-size: .78rem; margin-bottom: 1.35rem; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--cyan); }
+    .eyebrow, .section-tag { display: inline-block; color: var(--cyan); background: var(--cyan-dim); border: 1px solid var(--border-strong); border-radius: 999px; padding: .33rem .82rem; font-size: .67rem; line-height: 1.2; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+    .hero h1 { max-width: 780px; margin: 1.35rem 0 1.15rem; font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4.1rem); font-weight: 700; letter-spacing: -.055em; line-height: 1.02; }
+    .hero h1 span, .section-title span { color: var(--cyan); }
+    .hero p { max-width: 700px; font-size: 1.05rem; line-height: 1.75; color: var(--text-2); }
+    .hero-pills { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1.8rem; }
+    .hero-pills span { color: var(--text-2); background: rgba(255,255,255,.035); border: 1px solid var(--border); border-radius: 999px; padding: .38rem .75rem; font-size: .75rem; font-weight: 700; }
+    section { padding: 5.75rem 2rem; }
+    .section-tag { margin-bottom: 1.2rem; }
+    .section-title { max-width: 770px; font-family: var(--font-display); color: var(--text); font-size: clamp(1.95rem, 4vw, 2.85rem); letter-spacing: -.045em; line-height: 1.08; margin-bottom: .85rem; }
+    .section-intro { max-width: 760px; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+    .story { background: var(--bg); }
+    .story-grid { margin-top: 2.4rem; display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(280px, .65fr); gap: 1.5rem; align-items: stretch; }
+    .story-copy, .at-a-glance, .cert-card, .value-card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; box-shadow: var(--shadow); }
+    .story-copy { padding: 2.25rem; }
+    .story-copy p { color: var(--text-2); font-size: 1rem; line-height: 1.82; }
+    .story-copy p + p { margin-top: 1.1rem; }
+    .at-a-glance { padding: 1.5rem; display: grid; gap: .8rem; }
+    .glance-heading { padding: .2rem .35rem .65rem; font-size: .72rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--cyan); }
+    .glance-item { padding: 1.05rem; background: var(--cyan-dim); border: 1px solid var(--border); border-radius: 13px; }
+    .glance-item strong { font-family: var(--font-display); font-size: 1.45rem; color: var(--text); letter-spacing: -.035em; line-height: 1; display: block; margin-bottom: .35rem; }
+    .glance-item span { color: var(--muted); font-size: .79rem; line-height: 1.45; display: block; }
+    .credentials { background: linear-gradient(145deg, var(--bg-2), var(--bg-3)); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .cert-grid { margin-top: 2.4rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .cert-card { padding: 1.7rem; display: flex; flex-direction: column; transition: transform .22s ease, border-color .22s ease; }
+    .cert-card:hover { transform: translateY(-4px); border-color: var(--border-strong); }
+    .cert-head { display: flex; align-items: center; gap: 1rem; min-height: 72px; margin-bottom: 1.15rem; }
+    .cert-logo { width: 66px; height: 66px; object-fit: contain; flex-shrink: 0; }
+    .cert-logo--ccie { width: 78px; }
+    .cert-mark { display: grid; place-items: center; width: 66px; height: 66px; flex-shrink: 0; border: 1px solid var(--border-strong); border-radius: 16px; color: var(--cyan); background: linear-gradient(145deg, var(--cyan-dim), rgba(0,200,255,.02)); font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; letter-spacing: -.07em; }
+    .cert-name { font-family: var(--font-display); font-size: 1.35rem; letter-spacing: -.035em; line-height: 1.05; color: var(--text); }
+    .cert-full { color: var(--cyan); font-size: .65rem; line-height: 1.35; font-weight: 800; letter-spacing: .075em; text-transform: uppercase; margin-top: .35rem; }
+    .cert-card p { color: var(--muted); font-size: .87rem; line-height: 1.68; }
+    .cert-domains { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: auto; padding-top: 1.25rem; }
+    .cert-domains span { color: var(--text-2); border: 1px solid var(--border); background: var(--cyan-dim); padding: .25rem .54rem; border-radius: 999px; font-size: .66rem; font-weight: 700; }
+    .approach { background: var(--bg); }
+    .value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2.3rem; }
+    .value-card { padding: 1.7rem; position: relative; overflow: hidden; }
+    .value-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: linear-gradient(180deg, var(--cyan), #0081ff); }
+    .value-num { color: var(--cyan); font-size: .68rem; font-weight: 800; letter-spacing: .16em; }
+    .value-card h3 { margin: .9rem 0 .55rem; color: var(--text); font-family: var(--font-display); font-size: 1.12rem; letter-spacing: -.02em; }
+    .value-card p { color: var(--muted); font-size: .88rem; line-height: 1.65; }
+    .cta { padding: 5.6rem 2rem; background: radial-gradient(ellipse 60% 140% at 50% 0%, rgba(0,200,255,.1), transparent 60%), var(--bg-2); text-align: center; border-top: 1px solid var(--border); }
+    .cta h2 { margin: 0 auto .85rem; max-width: 660px; font-family: var(--font-display); font-size: clamp(1.9rem, 4vw, 2.85rem); letter-spacing: -.045em; line-height: 1.08; }
+    .cta h2 span { color: var(--cyan); }
+    .cta p { max-width: 620px; margin: 0 auto 1.75rem; color: var(--muted); }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: .9rem 1.45rem; border-radius: 10px; color: #fff; background: var(--cyan); font-size: .92rem; font-weight: 800; text-decoration: none; }
+    [data-theme="dark"] .btn { color: #07111d; }
+    footer { padding: 3.5rem 2rem 2rem; color: #b8c7d6; background: var(--footer); border-top: 1px solid rgba(0,200,255,.1); }
+    .footer-inner { max-width: 1160px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2.5rem; padding-bottom: 2.4rem; border-bottom: 1px solid rgba(255,255,255,.07); }
+    .footer-brand { display: flex; flex-direction: column; gap: .9rem; }
+    .footer-wordmark { gap: .8rem; color: #fff; width: fit-content; }
+    .footer-mark { width: 30px; height: 30px; }
+    .footer-wordmark-text { font-size: 1.08rem; color: #fff; letter-spacing: -.03em; }
+    .footer-wordmark-tagline { color: rgba(184,199,214,.82); font-size: .5rem; font-weight: 700; letter-spacing: .025em; line-height: 1; white-space: nowrap; }
+    .footer-tagline { max-width: 345px; color: #b8c7d6; font-size: .85rem; line-height: 1.6; }
+    .footer-col h4 { margin-bottom: .8rem; color: #00c8ff; font-family: var(--font-display); font-size: .7rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+    .footer-col a { display: block; padding: .25rem 0; color: #b8c7d6; text-decoration: none; font-size: .85rem; }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-top: 1.45rem; font-size: .75rem; }
+    .footer-badges { display: flex; flex-wrap: wrap; gap: .55rem; }
+    .badge { color: #00c8ff; background: rgba(0,200,255,.06); border: 1px solid rgba(0,200,255,.18); border-radius: 999px; padding: .23rem .58rem; font-size: .63rem; font-weight: 800; letter-spacing: .08em; }
+    @media (max-width: 1024px) { .cert-grid, .value-grid { grid-template-columns: 1fr 1fr; } .footer-top { grid-template-columns: 1.6fr 1fr 1fr; } .footer-top .footer-col:last-child { display: none; } }
+    @media (max-width: 800px) { .hamburger { display: flex; } nav { display: none; position: absolute; top: 78px; left: 0; right: 0; padding: 1rem; background: var(--header); border-bottom: 1px solid var(--border); flex-direction: column; align-items: stretch; } nav a { padding: .7rem .9rem; } .nav-open nav { display: flex; } .story-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 600px) { .header-inner { padding: 0 1.15rem; } .hero, section { padding-left: 1.2rem; padding-right: 1.2rem; } .hero { padding-top: 4.5rem; padding-bottom: 4.25rem; } .cert-grid, .value-grid, .footer-top { grid-template-columns: 1fr; } .footer-top .footer-col:last-child { display: block; } .logo-svg { width: 40px; height: 40px; } .logo-wordmark { font-size: 1.2rem; } .logo-tagline { font-size: .45rem; letter-spacing: .02em; } .story-copy, .cert-card, .value-card { padding: 1.4rem; } .footer-wordmark-tagline { font-size: .46rem; } }
+    @media (max-width: 390px) { .logo-tagline { display: none; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="AleroSec home">
+        <img class="logo-svg" src="alerosec-mark-v2.png" alt="">
+        <span class="logo-copy">
+          <span class="logo-wordmark">Alero<span>Sec</span></span>
+          <span class="logo-tagline">Cybersecurity Advisory &amp; Digital Resilience Consultancy</span>
+        </span>
+      </a>
+      <button class="hamburger" aria-label="Toggle navigation" onclick="document.querySelector('header').classList.toggle('nav-open')"><span></span><span></span><span></span></button>
+      <nav aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="about.html" class="active" aria-current="page">About Us</a>
+        <a href="courses.html">Courses</a>
+        <a href="index.html#contact" class="nav-cta">Get in Touch</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme" title="Toggle theme"></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-inner">
+        <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span>About Us</span></div>
+        <span class="eyebrow">About AleroSec</span>
+        <h1 id="page-title">Security leadership with <span>operational depth.</span></h1>
+        <p>AleroSec helps organisations make confident, well-governed technology decisions that reduce risk, protect critical operations, and build enduring digital resilience.</p>
+        <div class="hero-pills" aria-label="AleroSec areas of expertise"><span>Cybersecurity Advisory</span><span>Digital Resilience</span><span>Enterprise Collaboration</span><span>IT Enablement</span></div>
+      </div>
+    </section>
+
+    <section class="story" aria-labelledby="story-title">
+      <div class="section-inner">
+        <span class="section-tag">Our Story</span>
+        <h2 class="section-title" id="story-title">Experience that connects <span>security, technology and business.</span></h2>
+        <div class="story-grid">
+          <div class="story-copy">
+            <p>Founded by cybersecurity professional and collaboration expert Joshua Alero, AleroSec brings over a decade of experience helping organisations protect enterprise environments, reduce cyber risk, and strengthen digital resilience. With deep expertise in cybersecurity, enterprise collaboration platforms, and complex IT infrastructures, Joshua has designed, deployed, supported, and troubleshot large-scale enterprise systems and business-critical applications across demanding environments. Through AleroSec, he helps organisations navigate modern security challenges by delivering cybersecurity advisory services, risk assessments, compliance guidance, business continuity strategies, AI security frameworks, and expert-led IT enablement and training programmes. Combining technical depth with a business-focused approach, Joshua empowers organisations to build secure, resilient, and future-ready technology environments.</p>
+            <p>Every engagement is grounded in practical experience: understanding the technology landscape, clarifying the business context, and helping teams turn security priorities into sustainable action.</p>
+          </div>
+          <aside class="at-a-glance" aria-label="AleroSec at a glance">
+            <div class="glance-heading">At a glance</div>
+            <div class="glance-item"><strong>10+ years</strong><span>Experience supporting complex enterprise technology environments.</span></div>
+            <div class="glance-item"><strong>CISSP · ITIL · CCIE</strong><span>Credentials spanning security, service management, networking, and collaboration.</span></div>
+            <div class="glance-item"><strong>Business-led</strong><span>Advice that is technically rigorous and aligned with operational goals.</span></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="credentials" aria-labelledby="credentials-title">
+      <div class="section-inner">
+        <span class="section-tag">Professional Credentials</span>
+        <h2 class="section-title" id="credentials-title">Certified expertise, <span>applied with purpose.</span></h2>
+        <p class="section-intro">AleroSec’s work is supported by recognised professional credentials across cybersecurity, IT service management, enterprise networking, and collaboration technology.</p>
+        <div class="cert-grid">
+          <article class="cert-card">
+            <div class="cert-head">
+              <img class="cert-logo" src="isc2-logo.png" alt="ISC2 CISSP certification mark" width="66" height="66" loading="lazy">
+              <div><h3 class="cert-name">CISSP</h3><div class="cert-full">Certified Information Systems Security Professional</div></div>
+            </div>
+            <p>Enterprise-grade knowledge of security leadership, architecture, governance, risk management, and the controls that protect critical information assets.</p>
+            <div class="cert-domains"><span>Governance</span><span>Risk</span><span>Security Architecture</span><span>BC &amp; DR</span></div>
+          </article>
+          <article class="cert-card">
+            <div class="cert-head">
+              <div class="cert-mark" aria-hidden="true">ITIL</div>
+              <div><h3 class="cert-name">ITIL</h3><div class="cert-full">Information Technology Infrastructure Library</div></div>
+            </div>
+            <p>Service management knowledge that helps connect technology delivery, operational performance, governance, and continual improvement.</p>
+            <div class="cert-domains"><span>ITSM</span><span>Change</span><span>Service Delivery</span><span>Improvement</span></div>
+          </article>
+          <article class="cert-card">
+            <div class="cert-head">
+              <img class="cert-logo cert-logo--ccie" src="ccie-logo.png" alt="Cisco CCIE certification mark" width="78" height="66" loading="lazy">
+              <div><h3 class="cert-name">CCIE</h3><div class="cert-full">Cisco Certified Internetwork Expert</div></div>
+            </div>
+            <p>Expert-level depth in enterprise networking and collaboration environments, including resilient communications, voice, video, and infrastructure architecture.</p>
+            <div class="cert-domains"><span>Networking</span><span>Collaboration</span><span>Voice &amp; Video</span><span>Architecture</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="approach" aria-labelledby="approach-title">
+      <div class="section-inner">
+        <span class="section-tag">How We Work</span>
+        <h2 class="section-title" id="approach-title">Practical advice for <span>complex environments.</span></h2>
+        <p class="section-intro">AleroSec brings clarity to the overlap between cybersecurity, digital workplace technology, and enterprise operations.</p>
+        <div class="value-grid">
+          <article class="value-card"><span class="value-num">01 — CONTEXT</span><h3>Start with what matters</h3><p>We assess priorities, dependencies, risk appetite, and the realities of the environment before recommending a course of action.</p></article>
+          <article class="value-card"><span class="value-num">02 — CLARITY</span><h3>Make risk actionable</h3><p>We translate complex security and technology considerations into clear decisions, practical roadmaps, and proportionate controls.</p></article>
+          <article class="value-card"><span class="value-num">03 — CAPABILITY</span><h3>Enable lasting progress</h3><p>We help strengthen the people, processes, and technology foundations that keep resilience effective over the long term.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" aria-labelledby="cta-title">
+      <h2 id="cta-title">Build a more <span>resilient future.</span></h2>
+      <p>Talk to AleroSec about cybersecurity advisory, risk and compliance, digital resilience, AI security, or technology enablement.</p>
+      <a href="index.html#contact" class="btn">Get in Touch</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-wordmark" aria-label="AleroSec home">
+            <img class="footer-mark" src="alerosec-mark-v2.png" alt="">
+            <span class="footer-wordmark-copy"><span class="footer-wordmark-text">Alero<span>Sec</span></span><span class="footer-wordmark-tagline">Cybersecurity Advisory &amp; Digital Resilience Consultancy</span></span>
+          </a>
+          <p class="footer-tagline">Cybersecurity advisory and digital resilience consultancy combining technical depth with practical business focus.</p>
+        </div>
+        <div class="footer-col"><h4>Company</h4><a href="about.html">About Us</a><a href="index.html#services">Services</a><a href="index.html#certifications">Credentials</a><a href="index.html#contact">Contact</a></div>
+        <div class="footer-col"><h4>Courses</h4><a href="courses.html#ai">AI &amp; Security</a><a href="courses.html#networking">Networking &amp; Collaboration</a><a href="courses.html#security">Security &amp; Governance</a></div>
+        <div class="footer-col"><h4>Focus Areas</h4><a href="index.html#governance">Compliance &amp; Risk</a><a href="index.html#governance">Business Continuity</a><a href="index.html#capabilities">Cybersecurity</a><a href="index.html#capabilities">AI Security</a></div>
+      </div>
+      <div class="footer-bottom"><div>© 2026 AleroSec. All rights reserved.</div><div class="footer-badges"><span class="badge">CISSP</span><span class="badge">ITIL</span><span class="badge">CCIE</span></div></div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const toggle = document.getElementById('themeToggle');
+      let theme = root.getAttribute('data-theme') || 'dark';
+      function updateToggle() {
+        toggle.innerHTML = theme === 'dark'
+          ? '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5a.9.9 0 0 1 .9.9v1.3a.9.9 0 1 1-1.8 0V3.4a.9.9 0 0 1 .9-.9Zm0 15.9a4.4 4.4 0 1 0 0-8.8 4.4 4.4 0 0 0 0 8.8Zm8-4.4a.9.9 0 0 1-.9.9h-1.3a.9.9 0 1 1 0-1.8h1.3a.9.9 0 0 1 .9.9ZM4.2 12a.9.9 0 0 1-.9.9H2a.9.9 0 1 1 0-1.8h1.3a.9.9 0 0 1 .9.9Zm13.1-5.1a.9.9 0 0 1 0 1.3l-.9.9a.9.9 0 1 1-1.3-1.3l.9-.9a.9.9 0 0 1 1.3 0ZM6 17.4a.9.9 0 0 1 0 1.3l-.9.9a.9.9 0 1 1-1.3-1.3l.9-.9a.9.9 0 0 1 1.3 0Zm11.1 2.2a.9.9 0 0 1-1.3 0l-.9-.9a.9.9 0 1 1 1.3-1.3l.9.9a.9.9 0 0 1 0 1.3ZM6.9 7.2a.9.9 0 0 1-1.3 0l-.9-.9A.9.9 0 1 1 6 5l.9.9a.9.9 0 0 1 0 1.3Z"/></svg>'
+          : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 13.1A8.5 8.5 0 1 1 10.9 3a.9.9 0 0 1 .9 1.1A6.7 6.7 0 1 0 19.9 13a.9.9 0 0 1 1.1.1Z"/></svg>';
+      }
+      updateToggle();
+      toggle.addEventListener('click', () => { theme = theme === 'dark' ? 'light' : 'dark'; root.setAttribute('data-theme', theme); updateToggle(); });
+    })();
+  </script>
+</body>
+</html>
